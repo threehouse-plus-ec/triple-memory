@@ -223,6 +223,22 @@ header h2,
     .match-overlay { animation: none; }
 }
 
+/* Small-viewport text relaxation: the §18 18px gameplay-text floor
+   applies at desktop/tablet default zoom. On phones (< 480px) cards
+   and chrome become too cramped at 18px, so gameplay text is allowed
+   to drop to 14px here. Card text floors are handled in scaleBoard(). */
+@media (max-width: 480px) {
+    header h2,
+    .score,
+    .mode-note,
+    .tutorial-instructions p,
+    .fact-text,
+    .variant-text,
+    .dismiss-hint {
+        font-size: 0.875rem;
+    }
+}
+
 /* Post-Match Overlay (Engine §16) */
 .match-overlay {
     position: fixed;

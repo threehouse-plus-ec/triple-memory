@@ -79,6 +79,14 @@ Single-operator remediation applied directly against §1 findings, ahead of the 
 
 ### Known follow-ups after this pass
 
-- **Small-viewport layout:** card-text floors at 18px may now force text wrap or visual crowding on 54–96px cards used on phones. The `scaleBoard()` column-count heuristic ([engine/app.js:188-205](engine/app.js#L188-L205)) does not currently reduce column count further on phones to compensate. Needs a visual review on a real small viewport.
 - **Auto-dismiss and focus:** the 3.5s auto-dismiss still fires even when the user has given the dialog focus. A keyboard user who starts reading may be interrupted. Consider pausing the timer on keyboard focus or extending it while focus is inside the dialog.
 - **Cross-check still owed:** this remediation was applied by a single operator. The §1 cross-check tasks (independent contrast, SR smoke test, keyboard-only run) are still required and should now target the remediated build.
+
+### Deliberate §18 concession — small viewports
+
+Confirmed on device: 18px gameplay text is too large on phones (viewport < 480px); cards and chrome become cramped and break layout. The §18 floor was therefore relaxed for small viewports only:
+
+- **Card text** (`--card-type-size`, `--card-label-size`): floor drops from 18px to 14px when `viewportWidth < 480` in `scaleBoard()` ([engine/app.js:232-234](engine/app.js#L232-L234)).
+- **Chrome text** (`.score`, `header h2`, `.mode-note`, `.tutorial-instructions p`, `.fact-text`, `.variant-text`, `.dismiss-hint`): drops to 0.875rem (14px) under `@media (max-width: 480px)` ([engine/style.css](engine/style.css)).
+
+The §18 "18px at default zoom" baseline is interpreted as a desktop/tablet requirement. Contrast, live regions, keyboard dismiss, and the rest of §18 remain in full force on phones.

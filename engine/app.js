@@ -235,8 +235,9 @@ class TripleMemoryEngine {
         board.style.setProperty('--card-radius', `${Math.round(this.clamp(cardWidth * 0.055, 6, 14))}px`);
         board.style.setProperty('--card-icon-size', `${Math.round(this.clamp(cardWidth * 0.26, 18, 54))}px`);
         board.style.setProperty('--card-inner-gap', `${Math.round(this.clamp(cardWidth * 0.045, 3, 10))}px`);
-        board.style.setProperty('--card-type-size', `${Math.round(this.clamp(cardWidth * 0.12, 18, 22))}px`);
-        board.style.setProperty('--card-label-size', `${Math.round(this.clamp(cardWidth * 0.18, 18, 28))}px`);
+        const textFloor = viewportWidth < 480 ? 14 : 18;
+        board.style.setProperty('--card-type-size', `${Math.round(this.clamp(cardWidth * 0.12, textFloor, 22))}px`);
+        board.style.setProperty('--card-label-size', `${Math.round(this.clamp(cardWidth * 0.18, textFloor, 28))}px`);
         board.style.setProperty('--card-back-size', `${Math.round(this.clamp(cardWidth * 0.35, 24, 72))}px`);
     }
 
