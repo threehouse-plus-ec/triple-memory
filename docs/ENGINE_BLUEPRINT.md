@@ -371,9 +371,11 @@ Level 4 is explicit opt-in.
 
 ## 20. Multiplayer
 
-2–4 local players, turn-based, one shared screen. No hidden private information beyond memory.
+**Status:** Deferred. The v0.4 prototype is single-player only — one score counter, no turn-passing, no player identity. The concept below describes the intended shape of local multiplayer when it is implemented; it is not part of the current MVP build.
 
-Deferred: team mode, timed turns, cooperative mode, classroom mode.
+**Intended shape:** 2–4 local players, turn-based, one shared screen. No hidden private information beyond memory. Each player has their own score; a turn ends after one triple attempt (match or flip-back).
+
+Also deferred: team mode, timed turns, cooperative mode, classroom mode.
 
 ---
 
@@ -400,12 +402,11 @@ Deferred: team mode, timed turns, cooperative mode, classroom mode.
 - Tutorial Mode (three steps).
 - Post-match information reveal (labels-only minimum; richer if pack supplies).
 - Difficulty Levels 1–3 default, Level 4 opt-in.
-- 2–4-player local mode.
 - Board sizes 12 / 18 / 24, default 18.
 - Strict triple turn; turn ends after attempt.
 - Card type visible by default.
 - Accessibility baseline met.
-- Score tracking, turn handling, flip animation, end screen.
+- Single-player score tracking, flip animation, end screen.
 - Pack manifest validation at load.
 - Single-pack MVP launch (Geography Pack v0.4).
 - Dispute channel: contact line in engine README.
@@ -413,6 +414,7 @@ Deferred: team mode, timed turns, cooperative mode, classroom mode.
 
 ### 22.2 Phase-2-valuable
 
+- 2–4-player local mode with per-player score tracking and turn handling (see §20).
 - Multi-pack selection UI.
 - Full fact content surfaces (if pack supplies).
 - Multi-locale label switching.
