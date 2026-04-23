@@ -164,27 +164,32 @@ class TripleMemoryEngine {
         return visibleLabel;
     }
 
-    getCardSupplement(card) {
+    getCardSupplements(card) {
         const entity = this.getCardEntity(card);
-        if (!entity) return null;
+        if (!entity) return [];
 
         const effectiveLocale = this.usesPrimaryLabelSet(card)
             ? this.pack.manifest.primary_locale
             : this.currentLocale;
+        const isPrimary = effectiveLocale === this.pack.manifest.primary_locale;
+        const currentLabel = this.getCardLabel(card);
+        const variants = entity.label_variants && entity.label_variants[card.card_type];
+        const supplements = [];
 
         const facts = entity.facts && entity.facts[card.card_type];
-        if (effectiveLocale === this.pack.manifest.primary_locale && Array.isArray(facts) && facts.length > 0) {
-            return { kind: 'fact', text: facts[0] };
+        if (isPrimary && Array.isArray(facts) && facts.length > 0) {
+            supplements.push({ kind: 'fact', text: facts[0] });
         }
 
-        const variants = entity.label_variants && entity.label_variants[card.card_type];
-        if (effectiveLocale === this.pack.manifest.primary_locale) return null;
-        if (!variants || !variants.local_display) return null;
+        if (!isPrimary && variants && variants.local_display && variants.local_display !== currentLabel) {
+            supplements.push({ kind: 'variant', text: `Local name: ${variants.local_display}` });
+        }
 
-        const currentLabel = this.getCardLabel(card);
-        if (variants.local_display === currentLabel) return null;
+        if (variants && variants.native_display && variants.native_display !== currentLabel) {
+            supplements.push({ kind: 'native', text: variants.native_display });
+        }
 
-        return { kind: 'variant', text: `Local name: ${variants.local_display}` };
+        return supplements;
     }
 
     clamp(value, min, max) {
@@ -474,15 +479,15 @@ class TripleMemoryEngine {
         let contentHtml = `<h2>Triple Matched!</h2><div class="match-facts">`;
         
         matchedCards.forEach(card => {
-            const supplement = this.getCardSupplement(card);
-            let detailHtml = '';
+            const supplements = this.getCardSupplements(card);
+            const detailHtml = supplements.map(s => {
+                const cls = s.kind === 'fact' ? 'fact-text'
+                          : s.kind === 'native' ? 'native-text'
+                          : 'variant-text';
+                const extraAttr = s.kind === 'native' ? ' lang="und" dir="auto"' : '';
+                return `<p class="${cls}"${extraAttr}>${s.text}</p>`;
+            }).join('');
 
-            if (supplement) {
-                detailHtml = supplement.kind === 'fact'
-                    ? `<p class="fact-text">${supplement.text}</p>`
-                    : `<p class="variant-text">${supplement.text}</p>`;
-            }
-            
             contentHtml += `
                 <div class="match-fact-item">
                     <div class="match-fact-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>

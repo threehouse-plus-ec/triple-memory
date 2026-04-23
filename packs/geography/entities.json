@@ -415,17 +415,20 @@
       "country": {
         "en": "China",
         "de": "China",
-        "local_display": "Zhōngguó"
+        "local_display": "Zhōngguó",
+        "native_display": "中国"
       },
       "capital": {
         "en": "Beijing",
         "de": "Peking",
-        "local_display": "Běijīng"
+        "local_display": "Běijīng",
+        "native_display": "北京"
       },
       "river": {
         "en": "Yangtze",
         "de": "Jangtse",
-        "local_display": "Cháng Jiāng"
+        "local_display": "Cháng Jiāng",
+        "native_display": "长江"
       }
     },
     "facts": {
@@ -470,17 +473,20 @@
       "country": {
         "en": "India",
         "de": "Indien",
-        "local_display": "Bhārat"
+        "local_display": "Bhārat",
+        "native_display": "भारत"
       },
       "capital": {
         "en": "New Delhi",
         "de": "Neu-Delhi",
-        "local_display": "Naī Dillī"
+        "local_display": "Naī Dillī",
+        "native_display": "नई दिल्ली"
       },
       "river": {
         "en": "Ganges",
         "de": "Ganges",
-        "local_display": "Gaṅgā"
+        "local_display": "Gaṅgā",
+        "native_display": "गंगा"
       }
     },
     "facts": {
@@ -523,17 +529,20 @@
       "country": {
         "en": "Japan",
         "de": "Japan",
-        "local_display": "Nihon"
+        "local_display": "Nihon",
+        "native_display": "日本"
       },
       "capital": {
         "en": "Tokyo",
         "de": "Tokio",
-        "local_display": "Tōkyō"
+        "local_display": "Tōkyō",
+        "native_display": "東京"
       },
       "river": {
         "en": "Shinano",
         "de": "Shinano",
-        "local_display": "Shinano-gawa"
+        "local_display": "Shinano-gawa",
+        "native_display": "信濃川"
       }
     },
     "facts": {
@@ -578,17 +587,20 @@
       "country": {
         "en": "South Korea",
         "de": "Südkorea",
-        "local_display": "Daehan Minguk"
+        "local_display": "Daehan Minguk",
+        "native_display": "대한민국"
       },
       "capital": {
         "en": "Seoul",
         "de": "Seoul",
-        "local_display": "Seoul"
+        "local_display": "Seoul",
+        "native_display": "서울"
       },
       "river": {
         "en": "Han",
         "de": "Han",
-        "local_display": "Hangang"
+        "local_display": "Hangang",
+        "native_display": "한강"
       }
     },
     "facts": {
@@ -858,17 +870,20 @@
       "country": {
         "en": "Egypt",
         "de": "Ägypten",
-        "local_display": "Miṣr"
+        "local_display": "Miṣr",
+        "native_display": "مِصْر"
       },
       "capital": {
         "en": "Cairo",
         "de": "Kairo",
-        "local_display": "Al-Qāhirah"
+        "local_display": "Al-Qāhirah",
+        "native_display": "القاهرة"
       },
       "river": {
         "en": "Nile",
         "de": "Nil",
-        "local_display": "An-Nīl"
+        "local_display": "An-Nīl",
+        "native_display": "النيل"
       }
     },
     "facts": {
@@ -1103,6 +1118,291 @@
         "Longest river in New Zealand (~425 km).",
         "Flows from Lake Taupo to the Tasman Sea.",
         "Has deep cultural significance for the Māori people."
+      ]
+    }
+  },
+  {
+    "entity_id": "PSE",
+    "entity_name": "State of Palestine",
+    "difficulty": 3,
+    "is_active": false,
+    "endorsement_marker": "geography_pack_v0.5_draft",
+    "country_id": "PSE",
+    "capital_name": "East Jerusalem",
+    "alternative_capitals": [
+      "Ramallah"
+    ],
+    "river_name": "Jordan",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "ISR",
+      "JOR",
+      "SYR",
+      "LBN"
+    ],
+    "selection_reason": "cross_border_reference",
+    "capital_selection_reason": "contested_documented",
+    "provenance": "UN General Assembly Resolution 67/19; Palestinian Authority government portal; Britannica",
+    "recognition_status": "un_observer",
+    "region": "Asia",
+    "label_variants": {
+      "language_note": "Arabic is the official language. East Jerusalem is the capital declared by the State of Palestine; Ramallah is the de facto administrative seat.",
+      "country": {
+        "en": "State of Palestine",
+        "de": "Staat Palästina",
+        "local_display": "Dawlat Filasṭīn",
+        "native_display": "دولة فلسطين"
+      },
+      "capital": {
+        "en": "East Jerusalem",
+        "de": "Ost-Jerusalem",
+        "local_display": "Al-Quds ash-Sharqiyyah",
+        "native_display": "القدس الشرقية"
+      },
+      "river": {
+        "en": "Jordan",
+        "de": "Jordan",
+        "local_display": "Al-Urdun",
+        "native_display": "نهر الأردن"
+      }
+    },
+    "facts": {
+      "country": [
+        "UN non-member observer state since 2012.",
+        "Claims the West Bank and Gaza Strip as its territory.",
+        "Recognised as a state by a large majority of UN members."
+      ],
+      "capital": [
+        "Declared capital under the 1988 Palestinian declaration of independence.",
+        "Its status is a central issue in the Israeli–Palestinian conflict.",
+        "Ramallah hosts the seat of the Palestinian Authority."
+      ],
+      "river": [
+        "Forms part of the eastern boundary of the West Bank.",
+        "Shared with Israel, Jordan, Syria, and Lebanon.",
+        "Empties into the Dead Sea, the lowest point on land."
+      ]
+    }
+  },
+  {
+    "entity_id": "TWN",
+    "entity_name": "Taiwan",
+    "difficulty": 3,
+    "is_active": false,
+    "endorsement_marker": "geography_pack_v0.5_draft",
+    "country_id": "TWN",
+    "capital_name": "Taipei",
+    "alternative_capitals": [],
+    "river_name": "Zhuoshui",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "Government Portal of the Republic of China (Taiwan); CIA World Factbook (entry: Taiwan)",
+    "recognition_status": "limited_recognition",
+    "region": "Asia",
+    "label_variants": {
+      "language_note": "Mandarin Chinese is the official language; native form uses Han characters (traditional). Latin local_display uses standard Pinyin romanisation.",
+      "country": {
+        "en": "Taiwan",
+        "de": "Taiwan",
+        "local_display": "Táiwān",
+        "native_display": "臺灣"
+      },
+      "capital": {
+        "en": "Taipei",
+        "de": "Taipeh",
+        "local_display": "Táiběi",
+        "native_display": "臺北"
+      },
+      "river": {
+        "en": "Zhuoshui",
+        "de": "Zhuoshui",
+        "local_display": "Zhuóshuǐ",
+        "native_display": "濁水溪"
+      }
+    },
+    "facts": {
+      "country": [
+        "Island country in East Asia, off the southeast coast of China.",
+        "Officially styled the Republic of China (ROC).",
+        "Recognised as a state by a small and changing number of UN members."
+      ],
+      "capital": [
+        "Largest city and the seat of Taiwan's government.",
+        "Home to Taipei 101, once the tallest building in the world.",
+        "Situated in the Taipei Basin in northern Taiwan."
+      ],
+      "river": [
+        "Longest river in Taiwan (~187 km).",
+        "Rises in the central mountain range and empties into the Taiwan Strait.",
+        "Divides the island roughly into northern and southern halves."
+      ]
+    }
+  },
+  {
+    "entity_id": "XKX",
+    "entity_name": "Kosovo",
+    "difficulty": 3,
+    "is_active": false,
+    "endorsement_marker": "geography_pack_v0.5_draft",
+    "country_id": "XKX",
+    "capital_name": "Pristina",
+    "alternative_capitals": [],
+    "river_name": "White Drin",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "ALB"
+    ],
+    "selection_reason": "cross_border_reference",
+    "capital_selection_reason": "sole_official",
+    "provenance": "Government of the Republic of Kosovo portal; CIA World Factbook (entry: Kosovo)",
+    "recognition_status": "limited_recognition",
+    "region": "Europe",
+    "label_variants": {
+      "language_note": "Albanian and Serbian are official languages of Kosovo.",
+      "country": {
+        "en": "Kosovo",
+        "de": "Kosovo",
+        "local_display": "Kosova / Косово"
+      },
+      "capital": {
+        "en": "Pristina",
+        "de": "Priština",
+        "local_display": "Prishtina / Приштина"
+      },
+      "river": {
+        "en": "White Drin",
+        "de": "Weißer Drin",
+        "local_display": "Drini i Bardhë / Бели Дрим"
+      }
+    },
+    "facts": {
+      "country": [
+        "Landlocked country in the Western Balkans.",
+        "Declared independence from Serbia in 2008.",
+        "Recognised by roughly half of UN member states."
+      ],
+      "capital": [
+        "Largest city and political centre of Kosovo.",
+        "Seat of the Assembly and the President.",
+        "Name spelled Priština in Serbian and Prishtina in Albanian."
+      ],
+      "river": [
+        "Rises in the Accursed Mountains in western Kosovo.",
+        "Joins the Black Drin in Albania to form the Drin river.",
+        "Shared with Albania along its lower course."
+      ]
+    }
+  },
+  {
+    "entity_id": "ESH",
+    "entity_name": "Western Sahara",
+    "difficulty": 4,
+    "is_active": false,
+    "endorsement_marker": "geography_pack_v0.5_draft",
+    "country_id": "ESH",
+    "capital_name": "El Aaiún",
+    "alternative_capitals": [
+      "Tifariti"
+    ],
+    "river_name": "Saguia el-Hamra",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "iconic",
+    "capital_selection_reason": "contested_documented",
+    "provenance": "UN list of Non-Self-Governing Territories; Sahrawi Arab Democratic Republic declarations; Britannica",
+    "recognition_status": "limited_recognition",
+    "region": "Africa",
+    "label_variants": {
+      "language_note": "Arabic (Hassaniya and Modern Standard) is the dominant language; Spanish retains limited official use. Western Sahara is disputed between Morocco (which administers most of the territory) and the Sahrawi Arab Democratic Republic.",
+      "country": {
+        "en": "Western Sahara",
+        "de": "Westsahara",
+        "local_display": "As-Saḥrāʾ al-Gharbiyyah",
+        "native_display": "الصحراء الغربية"
+      },
+      "capital": {
+        "en": "El Aaiún",
+        "de": "El Aaiún",
+        "local_display": "Al-ʿUyūn",
+        "native_display": "العيون"
+      },
+      "river": {
+        "en": "Saguia el-Hamra",
+        "de": "Saguia el-Hamra",
+        "local_display": "Sāqiyah al-Ḥamrāʾ",
+        "native_display": "الساقية الحمراء"
+      }
+    },
+    "facts": {
+      "country": [
+        "Disputed territory on the northwest coast of Africa.",
+        "Claimed by Morocco and by the Sahrawi Arab Democratic Republic.",
+        "Listed by the UN as a Non-Self-Governing Territory."
+      ],
+      "capital": [
+        "Largest city in Western Sahara, under Moroccan administration.",
+        "Declared capital by the Sahrawi Arab Democratic Republic.",
+        "Tifariti hosts administrative functions in the Free Zone."
+      ],
+      "river": [
+        "Seasonal watercourse (wadi) flowing through El Aaiún.",
+        "Gave its name to the northern Saguia el-Hamra province under Spanish rule.",
+        "Typical of the region, it carries water only after rare rainfall."
+      ]
+    }
+  },
+  {
+    "entity_id": "TRNC",
+    "entity_name": "Northern Cyprus",
+    "difficulty": 4,
+    "is_active": false,
+    "endorsement_marker": "geography_pack_v0.5_draft",
+    "country_id": "TRNC",
+    "capital_name": "North Nicosia",
+    "alternative_capitals": [],
+    "river_name": "Pedieos",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "iconic",
+    "capital_selection_reason": "de_facto",
+    "provenance": "Government portal of the Turkish Republic of Northern Cyprus; UN Cyprus mission documents; Britannica",
+    "recognition_status": "limited_recognition",
+    "region": "Europe",
+    "label_variants": {
+      "language_note": "Turkish is the official language of the Turkish Republic of Northern Cyprus. The TRNC is recognised only by Turkey; the rest of the international community considers the territory part of the Republic of Cyprus.",
+      "country": {
+        "en": "Northern Cyprus",
+        "de": "Nordzypern",
+        "local_display": "Kuzey Kıbrıs"
+      },
+      "capital": {
+        "en": "North Nicosia",
+        "de": "Nord-Nikosia",
+        "local_display": "Lefkoşa"
+      },
+      "river": {
+        "en": "Pedieos",
+        "de": "Pedieos",
+        "local_display": "Kanlıdere"
+      }
+    },
+    "facts": {
+      "country": [
+        "Self-declared state on the northern third of Cyprus.",
+        "Recognised only by Turkey; considered occupied territory by the UN.",
+        "Separated from the Republic of Cyprus by the UN buffer zone."
+      ],
+      "capital": [
+        "Northern half of the divided city of Nicosia.",
+        "Seat of the TRNC Assembly and President.",
+        "One of the last divided capital cities in the world."
+      ],
+      "river": [
+        "Longest river on the island of Cyprus (~100 km).",
+        "Rises in the Kyrenia (Girne) mountains and flows through Nicosia.",
+        "Largely seasonal, with flow concentrated in the winter months."
       ]
     }
   }

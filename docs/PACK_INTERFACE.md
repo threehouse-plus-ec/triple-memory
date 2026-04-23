@@ -122,7 +122,10 @@ This document contains JSON Schema (draft-07) definitions for the engine and pac
         "enum": ["un_member", "un_observer", "widely_recognised", "limited_recognition", "dependency"]
       },
       "region": { "type": "string" },
-      "label_variants": { "type": "object" },
+      "label_variants": {
+        "type": "object",
+        "description": "Per-card-type label map. Keys are card_type IDs (country/capital/river for geography); each value is an object with locale codes ('en', 'de', ...), 'local_display' (Latin-script official local form), and optional 'native_display' (native-script form, e.g. Arabic, Han, Devanagari). A 'language_note' key at the top level of label_variants documents multilingual or contested cases."
+      },
       "facts": { "type": "object" }
     }
   }

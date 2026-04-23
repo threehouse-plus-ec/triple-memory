@@ -598,5 +598,155 @@
     "initial_letter": "W",
     "romanisation_source": "standard_english",
     "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "PSE_capital",
+    "entity_id": "PSE",
+    "card_type": "capital",
+    "label": "East Jerusalem",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "PSE_country",
+    "entity_id": "PSE",
+    "card_type": "country",
+    "label": "State of Palestine",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "PSE_river",
+    "entity_id": "PSE",
+    "card_type": "river",
+    "label": "Jordan",
+    "label_script": "latin",
+    "initial_letter": "J",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TWN_capital",
+    "entity_id": "TWN",
+    "card_type": "capital",
+    "label": "Taipei",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TWN_country",
+    "entity_id": "TWN",
+    "card_type": "country",
+    "label": "Taiwan",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TWN_river",
+    "entity_id": "TWN",
+    "card_type": "river",
+    "label": "Zhuoshui",
+    "label_script": "latin",
+    "initial_letter": "Z",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "XKX_capital",
+    "entity_id": "XKX",
+    "card_type": "capital",
+    "label": "Pristina",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "XKX_country",
+    "entity_id": "XKX",
+    "card_type": "country",
+    "label": "Kosovo",
+    "label_script": "latin",
+    "initial_letter": "K",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "XKX_river",
+    "entity_id": "XKX",
+    "card_type": "river",
+    "label": "White Drin",
+    "label_script": "latin",
+    "initial_letter": "W",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ESH_capital",
+    "entity_id": "ESH",
+    "card_type": "capital",
+    "label": "El Aaiún",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ESH_country",
+    "entity_id": "ESH",
+    "card_type": "country",
+    "label": "Western Sahara",
+    "label_script": "latin",
+    "initial_letter": "W",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ESH_river",
+    "entity_id": "ESH",
+    "card_type": "river",
+    "label": "Saguia el-Hamra",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TRNC_capital",
+    "entity_id": "TRNC",
+    "card_type": "capital",
+    "label": "North Nicosia",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TRNC_country",
+    "entity_id": "TRNC",
+    "card_type": "country",
+    "label": "Northern Cyprus",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "TRNC_river",
+    "entity_id": "TRNC",
+    "card_type": "river",
+    "label": "Pedieos",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
   }
 ]

@@ -69,14 +69,15 @@ If you believe an entry in this pack is wrong, misleading, or culturally inappro
 | Marker | Date | Notes |
 |--------|------|-------|
 | `geography_pack_v0.4` | 2026-04-23 | Current MVP prototype datasets, icons, and worked examples aligned to the v0.4 pack blueprint. |
+| `geography_pack_v0.5_draft` | 2026-04-23 | Phase 2 content expansion: full 20-entity DE and facts coverage; 5 contested-recognition entities added with `is_active: false`; optional `native_display` field introduced for non-Latin scripts. **Single-operator draft — the TC-31 / TC-32 / TC-35 two-person cross-check protocol has not yet been run on the new content.** The entity-level marker stays at `geography_pack_v0.4` for the original 20 entities (core entity choices are still cross-checked); only the additive metadata and the 5 new contested entities carry the `_draft` marker. |
 
 ---
 
 ## 6. Known limitations
 
-- Non-Latin scripts not supported at MVP.
-- Contested recognition cases (Palestine, Taiwan, Kosovo, Western Sahara, Northern Cyprus) deferred to Phase 2.
-- Translation coverage limited to a 5–8 entry pilot for DE and local_display at MVP.
-- Fact coverage limited to a 3–5 entry pilot at MVP.
+- Non-Latin scripts now render in the post-match overlay when a pack supplies `native_display` (v0.5_draft). Card-side labels and `initial_letter` logic remain Latin-only.
+- Contested recognition cases (Palestine, Taiwan, Kosovo, Western Sahara, Northern Cyprus) present in the dataset as v0.5_draft with `is_active: false` — surfaced in Teacher View only; Shared Entity Mode board generation is unchanged until cross-check lands.
+- Translation coverage extended from the 8-entry pilot to all 20 original entities at v0.5_draft; awaits cross-check sign-off before promotion.
+- Fact coverage extended from the 5-entry pilot to all 20 original entities at v0.5_draft; awaits cross-check sign-off before promotion.
 
-These limitations are MVP scoping decisions, not permanent choices.
+v0.4 limitations were MVP scoping decisions; v0.5_draft limitations are single-operator sourcing decisions awaiting the cross-check step.
