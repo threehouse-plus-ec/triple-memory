@@ -83,6 +83,12 @@ class TripleMemoryEngine {
         return names[locale] || locale.toUpperCase();
     }
 
+    setLocale(locale) {
+        this.currentLocale = locale;
+        document.documentElement.lang = locale;
+        this.render();
+    }
+
     usesPrimaryLabelSet(card = null) {
         return this.currentMode === 'shared_letter' || Boolean(card && card.sourceLetterGroupId);
     }
@@ -229,8 +235,8 @@ class TripleMemoryEngine {
         board.style.setProperty('--card-radius', `${Math.round(this.clamp(cardWidth * 0.055, 6, 14))}px`);
         board.style.setProperty('--card-icon-size', `${Math.round(this.clamp(cardWidth * 0.26, 18, 54))}px`);
         board.style.setProperty('--card-inner-gap', `${Math.round(this.clamp(cardWidth * 0.045, 3, 10))}px`);
-        board.style.setProperty('--card-type-size', `${Math.round(this.clamp(cardWidth * 0.105, 10, 18))}px`);
-        board.style.setProperty('--card-label-size', `${Math.round(this.clamp(cardWidth * 0.15, 13, 28))}px`);
+        board.style.setProperty('--card-type-size', `${Math.round(this.clamp(cardWidth * 0.12, 18, 22))}px`);
+        board.style.setProperty('--card-label-size', `${Math.round(this.clamp(cardWidth * 0.18, 18, 28))}px`);
         board.style.setProperty('--card-back-size', `${Math.round(this.clamp(cardWidth * 0.35, 24, 72))}px`);
     }
 
@@ -264,6 +270,7 @@ class TripleMemoryEngine {
 
             this.pack = { manifest, entities, cards, letterGroups, icons };
             this.currentLocale = manifest.primary_locale || 'en';
+            document.documentElement.lang = this.currentLocale;
             console.log(`Successfully loaded pack: ${this.pack.manifest.pack_name}`);
         } catch (error) {
             console.error("Failed to load or validate pack data.", error);
@@ -486,18 +493,32 @@ class TripleMemoryEngine {
             `;
         });
         
-        contentHtml += `</div><p class="dismiss-hint">(Tap anywhere to dismiss)</p>`;
-        overlay.innerHTML = `<div class="match-overlay-content" role="dialog" aria-modal="true" aria-live="polite">${contentHtml}</div>`;
-        
+        contentHtml += `</div><p class="dismiss-hint">(Press Escape, Enter, or tap anywhere to dismiss)</p>`;
+        overlay.innerHTML = `<div class="match-overlay-content" role="dialog" aria-modal="true" aria-live="polite" tabindex="-1">${contentHtml}</div>`;
+
+        const previouslyFocused = document.activeElement;
+        const onKeydown = (event) => {
+            if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                dismiss();
+            }
+        };
         const dismiss = () => {
             if (this.matchTimeout) clearTimeout(this.matchTimeout);
             this.matchTimeout = null;
+            document.removeEventListener('keydown', onKeydown);
             if (document.body.contains(overlay)) document.body.removeChild(overlay);
+            if (previouslyFocused && document.body.contains(previouslyFocused) && typeof previouslyFocused.focus === 'function') {
+                previouslyFocused.focus();
+            }
             this.completeRound();
         };
-        
+
         overlay.onclick = dismiss;
+        document.addEventListener('keydown', onKeydown);
         document.body.appendChild(overlay);
+        const dialog = overlay.querySelector('.match-overlay-content');
+        if (dialog) dialog.focus();
         this.matchTimeout = setTimeout(dismiss, 3500);
     }
 
@@ -628,7 +649,7 @@ class TripleMemoryEngine {
                         ${this.pack.manifest.supported_locales && this.pack.manifest.supported_locales.length > 1 ? `
                         <div class="menu-settings">
                             <label for="locale-select">Language:</label>
-                            <select id="locale-select" onchange="game.currentLocale = this.value; game.render();">
+                            <select id="locale-select" onchange="game.setLocale(this.value)">
                                 ${this.pack.manifest.supported_locales.map(loc => `
                                     <option value="${loc}" ${this.currentLocale === loc ? 'selected' : ''}>${this.getLocaleName(loc)}</option>
                                 `).join('')}
@@ -703,7 +724,7 @@ class TripleMemoryEngine {
                                     <p class="mode-note">Using English labels for letter matching.</p>
                                 ` : ''}
                             </div>
-                            <div class="score" id="score-display">Score: ${this.score}</div>
+                            <div class="score" id="score-display" aria-live="polite" aria-atomic="true">Score: ${this.score}</div>
                             <button onclick="game.state = 'MENU'; game.render()">Quit to Menu</button>
                         </header>
                         <div class="board" id="board">
@@ -751,7 +772,7 @@ class TripleMemoryEngine {
                         </header>
                         <div class="tutorial-instructions">
                             <p>${instructions}</p>
-                            <p class="tutorial-msg">${this.tutorialMessage}</p>
+                            <p class="tutorial-msg" aria-live="polite" aria-atomic="true">${this.tutorialMessage}</p>
                             ${actionBtn}
                         </div>
                         <div class="board" id="board">

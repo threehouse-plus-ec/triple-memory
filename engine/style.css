@@ -65,19 +65,19 @@ header {
     border-bottom: 2px solid var(--card-border);
 }
 
-header h2 { margin: 0; font-size: clamp(1.1rem, 2vmin, 1.5rem); }
+header h2 { margin: 0; font-size: clamp(1.125rem, 2vmin, 1.5rem); }
 header h2,
 .score {
     font-family: var(--font-mono);
 }
 
-.score { font-size: clamp(1rem, 1.8vmin, 1.25rem); font-weight: 500; }
+.score { font-size: clamp(1.125rem, 1.8vmin, 1.25rem); font-weight: 500; }
 
 .mode-note {
     margin: 0.25rem 0 0;
     color: var(--ink);
     font-family: var(--font-mono);
-    font-size: clamp(0.85rem, 1.45vmin, 1rem);
+    font-size: clamp(1.125rem, 1.45vmin, 1.25rem);
 }
 
 /* Board Grid */
@@ -296,20 +296,20 @@ header h2,
 
 .variant-text {
     margin: 0.25rem 0 0 0;
-    font-size: 0.95rem;
+    font-size: 1.125rem;
     color: var(--ink);
 }
 
 .fact-text {
     margin: 0.25rem 0 0 0;
-    font-size: 0.9rem;
+    font-size: 1.125rem;
     color: var(--ink);
 }
 
 .dismiss-hint {
     text-align: center;
     color: var(--ink);
-    font-size: 0.85rem;
+    font-size: 1.125rem;
     margin-bottom: 0;
 }
 
@@ -329,7 +329,7 @@ header h2,
 }
 
 .tutorial-instructions p {
-    font-size: clamp(1rem, 1.8vmin, 1.1rem);
+    font-size: clamp(1.125rem, 1.8vmin, 1.25rem);
     line-height: 1.5;
     margin-top: 0;
 }
@@ -357,10 +357,14 @@ button:not(.card) {
 }
 button:not(.card):hover {
     background-color: var(--ink);
-    transform: translateY(-2px);
 }
-button:not(.card):active {
-    transform: translateY(0);
+@media (prefers-reduced-motion: no-preference) {
+    button:not(.card):hover {
+        transform: translateY(-2px);
+    }
+    button:not(.card):active {
+        transform: translateY(0);
+    }
 }
 button:not(.card):focus-visible {
     outline: var(--focus-outline);
