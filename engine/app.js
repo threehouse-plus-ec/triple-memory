@@ -44,6 +44,18 @@ class TripleMemoryEngine {
         return this.formatList(typeNames);
     }
 
+    getLocaleName(locale) {
+        const names = {
+            en: 'English',
+            de: 'Deutsch'
+        };
+        return names[locale] || locale.toUpperCase();
+    }
+
+    usesPrimaryLabelSet(card = null) {
+        return this.currentMode === 'shared_letter' || Boolean(card && card.sourceLetterGroupId);
+    }
+
     getCardEntity(card) {
         if (card.canUseEntityMetadata === false) return null;
         return this.pack.entities.find(entity => entity.entity_id === card.entity_id) || null;
@@ -119,18 +131,23 @@ class TripleMemoryEngine {
         const entity = this.getCardEntity(card);
         if (!entity) return null;
 
+        const effectiveLocale = this.usesPrimaryLabelSet(card)
+            ? this.pack.manifest.primary_locale
+            : this.currentLocale;
+
         const facts = entity.facts && entity.facts[card.card_type];
-        if (Array.isArray(facts) && facts.length > 0) {
+        if (effectiveLocale === this.pack.manifest.primary_locale && Array.isArray(facts) && facts.length > 0) {
             return { kind: 'fact', text: facts[0] };
         }
 
         const variants = entity.label_variants && entity.label_variants[card.card_type];
+        if (effectiveLocale === this.pack.manifest.primary_locale) return null;
         if (!variants || !variants.local_display) return null;
 
         const currentLabel = this.getCardLabel(card);
         if (variants.local_display === currentLabel) return null;
 
-        return { kind: 'variant', text: variants.local_display };
+        return { kind: 'variant', text: `Local name: ${variants.local_display}` };
     }
 
     clamp(value, min, max) {
@@ -240,6 +257,7 @@ class TripleMemoryEngine {
 
     getCardLabel(card) {
         if (card.canUseEntityMetadata === false) return card.label;
+        if (this.usesPrimaryLabelSet(card)) return card.label;
         if (this.currentLocale === this.pack.manifest.primary_locale) return card.label;
         const entity = this.getCardEntity(card);
         if (entity && entity.label_variants && entity.label_variants[card.card_type] && entity.label_variants[card.card_type][this.currentLocale]) {
@@ -581,9 +599,12 @@ class TripleMemoryEngine {
                             <label for="locale-select">Language:</label>
                             <select id="locale-select" onchange="game.currentLocale = this.value; game.render();">
                                 ${this.pack.manifest.supported_locales.map(loc => `
-                                    <option value="${loc}" ${this.currentLocale === loc ? 'selected' : ''}>${loc.toUpperCase()}</option>
+                                    <option value="${loc}" ${this.currentLocale === loc ? 'selected' : ''}>${this.getLocaleName(loc)}</option>
                                 `).join('')}
                             </select>
+                            ${this.currentLocale !== this.pack.manifest.primary_locale ? `
+                                <p class="language-note">Shared Letter Mode keeps English labels because its letter groups are curated by English initials.</p>
+                            ` : ''}
                         </div>
                         ` : ''}
 
@@ -645,7 +666,12 @@ class TripleMemoryEngine {
                 appRoot.innerHTML = `
                     <div class="screen playing">
                         <header>
-                            <h2>Mode: ${this.currentMode === 'shared_entity' ? 'Shared Entity' : 'Shared Letter'}</h2>
+                            <div>
+                                <h2>Mode: ${this.currentMode === 'shared_entity' ? 'Shared Entity' : 'Shared Letter'}</h2>
+                                ${this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
+                                    <p class="mode-note">Using English labels for letter matching.</p>
+                                ` : ''}
+                            </div>
                             <div class="score" id="score-display">Score: ${this.score}</div>
                             <button onclick="game.state = 'MENU'; game.render()">Quit to Menu</button>
                         </header>
