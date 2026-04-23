@@ -27,9 +27,21 @@
     "recognition_status": "un_member",
     "region": "Europe",
     "label_variants": {
-      "country": { "en": "Austria", "de": "Österreich", "local_display": "Österreich" },
-      "capital": { "en": "Vienna", "de": "Wien", "local_display": "Wien" },
-      "river": { "en": "Danube", "de": "Donau", "local_display": "Donau" }
+      "country": {
+        "en": "Austria",
+        "de": "Österreich",
+        "local_display": "Österreich"
+      },
+      "capital": {
+        "en": "Vienna",
+        "de": "Wien",
+        "local_display": "Wien"
+      },
+      "river": {
+        "en": "Danube",
+        "de": "Donau",
+        "local_display": "Donau"
+      }
     },
     "facts": {
       "country": [
@@ -71,11 +83,39 @@
     "region": "Europe",
     "label_variants": {
       "language_note": "Belgium is highly multilingual. Dutch and French official forms are presented together to reflect federal bilingual equality at the national level.",
-      "country": { "en": "Belgium", "de": "Belgien", "local_display": "België / Belgique" },
-      "capital": { "en": "Brussels", "de": "Brüssel", "local_display": "Brussel / Bruxelles" },
-      "river": { "en": "Meuse", "de": "Maas", "local_display": "Maas / Meuse" }
+      "country": {
+        "en": "Belgium",
+        "de": "Belgien",
+        "local_display": "België / Belgique"
+      },
+      "capital": {
+        "en": "Brussels",
+        "de": "Brüssel",
+        "local_display": "Brussel / Bruxelles"
+      },
+      "river": {
+        "en": "Meuse",
+        "de": "Maas",
+        "local_display": "Maas / Meuse"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Western European country bordering the North Sea.",
+        "Federal state with three official languages (Dutch, French, German).",
+        "Founding member of the European Union."
+      ],
+      "capital": [
+        "Houses the main institutions of the European Union.",
+        "Officially bilingual (Dutch and French).",
+        "Historic centre of Flemish textile trade."
+      ],
+      "river": [
+        "Flows approximately 950 km through three countries.",
+        "Rises in France and reaches the North Sea via the Netherlands.",
+        "Major waterway for inland shipping in northwest Europe."
+      ]
+    }
   },
   {
     "entity_id": "DEU",
@@ -101,11 +141,39 @@
     "recognition_status": "un_member",
     "region": "Europe",
     "label_variants": {
-      "country": { "en": "Germany", "de": "Deutschland", "local_display": "Deutschland" },
-      "capital": { "en": "Berlin", "de": "Berlin", "local_display": "Berlin" },
-      "river": { "en": "Rhine", "de": "Rhein", "local_display": "Rhein" }
+      "country": {
+        "en": "Germany",
+        "de": "Deutschland",
+        "local_display": "Deutschland"
+      },
+      "capital": {
+        "en": "Berlin",
+        "de": "Berlin",
+        "local_display": "Berlin"
+      },
+      "river": {
+        "en": "Rhine",
+        "de": "Rhein",
+        "local_display": "Rhein"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Central European country and EU member.",
+        "Most populous member state of the European Union.",
+        "Primary official language is German."
+      ],
+      "capital": [
+        "Most populous city in the European Union.",
+        "Reunified after 1990 following decades of division.",
+        "Seat of the Federal Government and Bundestag."
+      ],
+      "river": [
+        "Flows approximately 1,230 km through six countries.",
+        "Forms part of the French–German border in Alsace.",
+        "Empties into the North Sea via the Netherlands."
+      ]
+    }
   },
   {
     "entity_id": "ESP",
@@ -127,11 +195,39 @@
     "recognition_status": "un_member",
     "region": "Europe",
     "label_variants": {
-      "country": { "en": "Spain", "de": "Spanien", "local_display": "España" },
-      "capital": { "en": "Madrid", "de": "Madrid", "local_display": "Madrid" },
-      "river": { "en": "Tagus", "de": "Tajo", "local_display": "Tajo" }
+      "country": {
+        "en": "Spain",
+        "de": "Spanien",
+        "local_display": "España"
+      },
+      "capital": {
+        "en": "Madrid",
+        "de": "Madrid",
+        "local_display": "Madrid"
+      },
+      "river": {
+        "en": "Tagus",
+        "de": "Tajo",
+        "local_display": "Tajo"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Country on the Iberian Peninsula in southwestern Europe.",
+        "Constitutional monarchy and EU member state.",
+        "Primary official language is Spanish (Castilian)."
+      ],
+      "capital": [
+        "Largest city and political centre of Spain.",
+        "Located near the geographic centre of the Iberian Peninsula.",
+        "Home to the Royal Palace and the Prado Museum."
+      ],
+      "river": [
+        "Longest river on the Iberian Peninsula (~1,038 km).",
+        "Rises in Spain and reaches the Atlantic at Lisbon.",
+        "Known in Portuguese as the Tejo."
+      ]
+    }
   },
   {
     "entity_id": "FRA",
@@ -150,7 +246,23 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Europe",
-    "label_variants": {},
+    "label_variants": {
+      "country": {
+        "en": "France",
+        "de": "Frankreich",
+        "local_display": "France"
+      },
+      "capital": {
+        "en": "Paris",
+        "de": "Paris",
+        "local_display": "Paris"
+      },
+      "river": {
+        "en": "Loire",
+        "de": "Loire",
+        "local_display": "Loire"
+      }
+    },
     "facts": {
       "country": [
         "Western European country.",
@@ -187,11 +299,39 @@
     "recognition_status": "un_member",
     "region": "Europe",
     "label_variants": {
-      "country": { "en": "Italy", "de": "Italien", "local_display": "Italia" },
-      "capital": { "en": "Rome", "de": "Rom", "local_display": "Roma" },
-      "river": { "en": "Po", "de": "Po", "local_display": "Po" }
+      "country": {
+        "en": "Italy",
+        "de": "Italien",
+        "local_display": "Italia"
+      },
+      "capital": {
+        "en": "Rome",
+        "de": "Rom",
+        "local_display": "Roma"
+      },
+      "river": {
+        "en": "Po",
+        "de": "Po",
+        "local_display": "Po"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Southern European country shaped like a boot.",
+        "Founding member of the European Union.",
+        "Primary official language is Italian."
+      ],
+      "capital": [
+        "Capital of Italy and historic seat of the Roman Empire.",
+        "Encloses the independent state of Vatican City.",
+        "Situated on the Tiber river."
+      ],
+      "river": [
+        "Longest river entirely within Italy (~652 km).",
+        "Drains the northern Italian plain into the Adriatic.",
+        "Its delta is a protected UNESCO biosphere reserve."
+      ]
+    }
   },
   {
     "entity_id": "NLD",
@@ -219,11 +359,39 @@
     "recognition_status": "un_member",
     "region": "Europe",
     "label_variants": {
-      "country": { "en": "Netherlands", "de": "Niederlande", "local_display": "Nederland" },
-      "capital": { "en": "Amsterdam", "de": "Amsterdam", "local_display": "Amsterdam" },
-      "river": { "en": "Rhine", "de": "Rhein", "local_display": "Rijn" }
+      "country": {
+        "en": "Netherlands",
+        "de": "Niederlande",
+        "local_display": "Nederland"
+      },
+      "capital": {
+        "en": "Amsterdam",
+        "de": "Amsterdam",
+        "local_display": "Amsterdam"
+      },
+      "river": {
+        "en": "Rhine",
+        "de": "Rhein",
+        "local_display": "Rijn"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Low-lying country in northwestern Europe.",
+        "Constitutional monarchy and EU member state.",
+        "Primary official language is Dutch."
+      ],
+      "capital": [
+        "Constitutional capital of the Netherlands.",
+        "The Hague is the seat of government, not Amsterdam.",
+        "Known for its canal ring, a UNESCO World Heritage Site."
+      ],
+      "river": [
+        "Enters the Netherlands from Germany and splits into delta branches.",
+        "Known locally as the Rijn; the main branch is the Nederrijn.",
+        "Major commercial waterway linking the Ruhr to Rotterdam."
+      ]
+    }
   },
   {
     "entity_id": "CHN",
@@ -242,8 +410,41 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Asia",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "language_note": "Chinese (Mandarin) is the official language; native form uses Han characters. Latin local_display uses standard Pinyin romanisation.",
+      "country": {
+        "en": "China",
+        "de": "China",
+        "local_display": "Zhōngguó"
+      },
+      "capital": {
+        "en": "Beijing",
+        "de": "Peking",
+        "local_display": "Běijīng"
+      },
+      "river": {
+        "en": "Yangtze",
+        "de": "Jangtse",
+        "local_display": "Cháng Jiāng"
+      }
+    },
+    "facts": {
+      "country": [
+        "Most populous country in East Asia.",
+        "One of the world's oldest continuous civilisations.",
+        "Primary official language is Mandarin Chinese."
+      ],
+      "capital": [
+        "Political centre of the People's Republic of China.",
+        "Home to the Forbidden City and Tiananmen Square.",
+        "Host of the 2008 and 2022 Olympic Games."
+      ],
+      "river": [
+        "Longest river in Asia (~6,300 km).",
+        "Drains much of central China into the East China Sea.",
+        "Site of the Three Gorges Dam, one of the largest hydroelectric projects."
+      ]
+    }
   },
   {
     "entity_id": "IND",
@@ -264,8 +465,41 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Asia",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "language_note": "India has 22 scheduled languages plus English; Hindi is the most widely spoken. Latin local_display uses standard Hindi romanisation.",
+      "country": {
+        "en": "India",
+        "de": "Indien",
+        "local_display": "Bhārat"
+      },
+      "capital": {
+        "en": "New Delhi",
+        "de": "Neu-Delhi",
+        "local_display": "Naī Dillī"
+      },
+      "river": {
+        "en": "Ganges",
+        "de": "Ganges",
+        "local_display": "Gaṅgā"
+      }
+    },
+    "facts": {
+      "country": [
+        "Most populous country in South Asia.",
+        "Federal parliamentary republic with 28 states.",
+        "Hindi and English are the official languages of the union."
+      ],
+      "capital": [
+        "Designated as India's capital in 1911, replacing Calcutta.",
+        "Part of the National Capital Territory of Delhi.",
+        "Seat of the Parliament, President, and Supreme Court."
+      ],
+      "river": [
+        "Sacred to Hindus and central to Indian civilisation.",
+        "Flows approximately 2,525 km from the Himalayas to the Bay of Bengal.",
+        "Its basin is one of the most fertile and densely populated on Earth."
+      ]
+    }
   },
   {
     "entity_id": "JPN",
@@ -284,7 +518,24 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Asia",
-    "label_variants": {},
+    "label_variants": {
+      "language_note": "Japanese is the official language; native form uses kanji, hiragana, and katakana. Latin local_display uses standard Hepburn romanisation.",
+      "country": {
+        "en": "Japan",
+        "de": "Japan",
+        "local_display": "Nihon"
+      },
+      "capital": {
+        "en": "Tokyo",
+        "de": "Tokio",
+        "local_display": "Tōkyō"
+      },
+      "river": {
+        "en": "Shinano",
+        "de": "Shinano",
+        "local_display": "Shinano-gawa"
+      }
+    },
     "facts": {
       "country": [
         "Island country in East Asia.",
@@ -322,8 +573,41 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Asia",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "language_note": "Korean is the official language; native form uses Hangul. Latin local_display uses the Revised Romanisation of Korean.",
+      "country": {
+        "en": "South Korea",
+        "de": "Südkorea",
+        "local_display": "Daehan Minguk"
+      },
+      "capital": {
+        "en": "Seoul",
+        "de": "Seoul",
+        "local_display": "Seoul"
+      },
+      "river": {
+        "en": "Han",
+        "de": "Han",
+        "local_display": "Hangang"
+      }
+    },
+    "facts": {
+      "country": [
+        "Country occupying the southern half of the Korean Peninsula.",
+        "Presidential republic and major East Asian economy.",
+        "Primary official language is Korean, written in Hangul."
+      ],
+      "capital": [
+        "Largest metropolitan area in South Korea.",
+        "Situated along the Han river, about 50 km from the DMZ.",
+        "Host of the 1988 Summer Olympics."
+      ],
+      "river": [
+        "Major river of South Korea, flowing through Seoul.",
+        "Formed by the confluence of the Namhan and Bukhan.",
+        "Empties into the Yellow Sea at the border with North Korea."
+      ]
+    }
   },
   {
     "entity_id": "ARG",
@@ -345,8 +629,40 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Americas",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "country": {
+        "en": "Argentina",
+        "de": "Argentinien",
+        "local_display": "Argentina"
+      },
+      "capital": {
+        "en": "Buenos Aires",
+        "de": "Buenos Aires",
+        "local_display": "Buenos Aires"
+      },
+      "river": {
+        "en": "Paraná",
+        "de": "Paraná",
+        "local_display": "Paraná"
+      }
+    },
+    "facts": {
+      "country": [
+        "Second-largest country in South America.",
+        "Federal republic of 23 provinces plus the capital district.",
+        "Primary official language is Spanish."
+      ],
+      "capital": [
+        "Largest city and chief port of Argentina.",
+        "Located on the western shore of the Río de la Plata estuary.",
+        "Famous for tango, football, and European-style architecture."
+      ],
+      "river": [
+        "Second-longest river in South America (~4,880 km).",
+        "Rises in Brazil and empties into the Río de la Plata.",
+        "Forms part of the Argentina–Paraguay border."
+      ]
+    }
   },
   {
     "entity_id": "BRA",
@@ -368,7 +684,23 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Americas",
-    "label_variants": {},
+    "label_variants": {
+      "country": {
+        "en": "Brazil",
+        "de": "Brasilien",
+        "local_display": "Brasil"
+      },
+      "capital": {
+        "en": "Brasília",
+        "de": "Brasília",
+        "local_display": "Brasília"
+      },
+      "river": {
+        "en": "Amazon",
+        "de": "Amazonas",
+        "local_display": "Amazonas"
+      }
+    },
     "facts": {
       "country": [
         "Largest country in South America.",
@@ -406,8 +738,40 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Americas",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "country": {
+        "en": "Mexico",
+        "de": "Mexiko",
+        "local_display": "México"
+      },
+      "capital": {
+        "en": "Mexico City",
+        "de": "Mexiko-Stadt",
+        "local_display": "Ciudad de México"
+      },
+      "river": {
+        "en": "Rio Grande",
+        "de": "Rio Grande",
+        "local_display": "Río Bravo del Norte"
+      }
+    },
+    "facts": {
+      "country": [
+        "Federal republic in southern North America.",
+        "Most populous Spanish-speaking country in the world.",
+        "Primary official language is Spanish."
+      ],
+      "capital": [
+        "Largest metropolitan area in North America.",
+        "Built on the site of the Aztec capital of Tenochtitlan.",
+        "Situated at ~2,240 m elevation in the Valley of Mexico."
+      ],
+      "river": [
+        "Forms most of the border between Mexico and the United States.",
+        "Known in Mexico as the Río Bravo del Norte.",
+        "Flows approximately 3,050 km from Colorado to the Gulf of Mexico."
+      ]
+    }
   },
   {
     "entity_id": "USA",
@@ -426,8 +790,40 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Americas",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "country": {
+        "en": "United States",
+        "de": "Vereinigte Staaten",
+        "local_display": "United States"
+      },
+      "capital": {
+        "en": "Washington, D.C.",
+        "de": "Washington, D.C.",
+        "local_display": "Washington, D.C."
+      },
+      "river": {
+        "en": "Mississippi",
+        "de": "Mississippi",
+        "local_display": "Mississippi"
+      }
+    },
+    "facts": {
+      "country": [
+        "Federal republic of 50 states in North America.",
+        "Third-largest country by area and population.",
+        "Primary de facto language is English."
+      ],
+      "capital": [
+        "Federal district not part of any U.S. state.",
+        "Seat of Congress, the White House, and the Supreme Court.",
+        "Named after the first U.S. president, George Washington."
+      ],
+      "river": [
+        "Second-longest river in North America (~3,766 km).",
+        "Drains most of the continental United States.",
+        "Forms the border of ten U.S. states."
+      ]
+    }
   },
   {
     "entity_id": "EGY",
@@ -459,9 +855,21 @@
     "region": "Africa",
     "label_variants": {
       "language_note": "Arabic is the official language. Rendered in standard Latin romanisation per MVP conventions.",
-      "country": { "en": "Egypt", "de": "Ägypten", "local_display": "Miṣr" },
-      "capital": { "en": "Cairo", "de": "Kairo", "local_display": "Al-Qāhirah" },
-      "river": { "en": "Nile", "de": "Nil", "local_display": "An-Nīl" }
+      "country": {
+        "en": "Egypt",
+        "de": "Ägypten",
+        "local_display": "Miṣr"
+      },
+      "capital": {
+        "en": "Cairo",
+        "de": "Kairo",
+        "local_display": "Al-Qāhirah"
+      },
+      "river": {
+        "en": "Nile",
+        "de": "Nil",
+        "local_display": "An-Nīl"
+      }
     },
     "facts": {
       "country": [
@@ -498,8 +906,41 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Africa",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "language_note": "Kenya has two official languages (Swahili and English); both use Latin script.",
+      "country": {
+        "en": "Kenya",
+        "de": "Kenia",
+        "local_display": "Kenya"
+      },
+      "capital": {
+        "en": "Nairobi",
+        "de": "Nairobi",
+        "local_display": "Nairobi"
+      },
+      "river": {
+        "en": "Tana",
+        "de": "Tana",
+        "local_display": "Tana"
+      }
+    },
+    "facts": {
+      "country": [
+        "East African country on the Indian Ocean.",
+        "Official languages are Swahili and English.",
+        "Contains the Great Rift Valley and Mount Kenya."
+      ],
+      "capital": [
+        "Largest city in Kenya and major East African hub.",
+        "Location of the Kenya national parliament.",
+        "Name derives from a Maasai phrase meaning \"cool water\"."
+      ],
+      "river": [
+        "Longest river in Kenya (~1,000 km).",
+        "Flows from the Mount Kenya highlands to the Indian Ocean.",
+        "Supports extensive agricultural irrigation schemes."
+      ]
+    }
   },
   {
     "entity_id": "ZAF",
@@ -526,11 +967,39 @@
     "region": "Africa",
     "label_variants": {
       "language_note": "South Africa has 12 official languages. Afrikaans and Zulu are widely used alongside English. The most common alternative Latin-script forms are provided here as a representative baseline.",
-      "country": { "en": "South Africa", "de": "Südafrika", "local_display": "Suid-Afrika / iNingizimu Afrika" },
-      "capital": { "en": "Pretoria", "de": "Pretoria", "local_display": "Pretoria" },
-      "river": { "en": "Orange", "de": "Oranje", "local_display": "Oranjerivier" }
+      "country": {
+        "en": "South Africa",
+        "de": "Südafrika",
+        "local_display": "Suid-Afrika / iNingizimu Afrika"
+      },
+      "capital": {
+        "en": "Pretoria",
+        "de": "Pretoria",
+        "local_display": "Pretoria"
+      },
+      "river": {
+        "en": "Orange",
+        "de": "Oranje",
+        "local_display": "Oranjerivier"
+      }
     },
-    "facts": {}
+    "facts": {
+      "country": [
+        "Southernmost country in Africa.",
+        "Has three capital cities (executive, legislative, judicial).",
+        "Recognises twelve official languages."
+      ],
+      "capital": [
+        "Executive capital and seat of the President.",
+        "Known for its jacaranda-lined streets.",
+        "Cape Town is the legislative capital; Bloemfontein is judicial."
+      ],
+      "river": [
+        "Longest river in South Africa (~2,200 km).",
+        "Rises in Lesotho and empties into the Atlantic Ocean.",
+        "Forms part of the border with Namibia."
+      ]
+    }
   },
   {
     "entity_id": "AUS",
@@ -549,8 +1018,40 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Oceania",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "country": {
+        "en": "Australia",
+        "de": "Australien",
+        "local_display": "Australia"
+      },
+      "capital": {
+        "en": "Canberra",
+        "de": "Canberra",
+        "local_display": "Canberra"
+      },
+      "river": {
+        "en": "Murray",
+        "de": "Murray",
+        "local_display": "Murray"
+      }
+    },
+    "facts": {
+      "country": [
+        "Smallest continent and one of the largest countries.",
+        "Federal parliamentary constitutional monarchy.",
+        "Primary de facto language is English."
+      ],
+      "capital": [
+        "Purpose-built capital inaugurated in 1927.",
+        "Located inland, between Sydney and Melbourne.",
+        "Seat of the Australian Parliament and High Court."
+      ],
+      "river": [
+        "Longest river in Australia (~2,508 km).",
+        "Forms much of the border between Victoria and New South Wales.",
+        "Central to the Murray–Darling river basin, the country's most important agricultural system."
+      ]
+    }
   },
   {
     "entity_id": "NZL",
@@ -569,7 +1070,40 @@
     "provenance": "CIA World Factbook; UN FAO Aquastat",
     "recognition_status": "un_member",
     "region": "Oceania",
-    "label_variants": {},
-    "facts": {}
+    "label_variants": {
+      "language_note": "New Zealand has two de jure official languages (English and Māori); Aotearoa is the widely used Māori name for the country.",
+      "country": {
+        "en": "New Zealand",
+        "de": "Neuseeland",
+        "local_display": "New Zealand / Aotearoa"
+      },
+      "capital": {
+        "en": "Wellington",
+        "de": "Wellington",
+        "local_display": "Wellington / Te Whanganui-a-Tara"
+      },
+      "river": {
+        "en": "Waikato",
+        "de": "Waikato",
+        "local_display": "Waikato"
+      }
+    },
+    "facts": {
+      "country": [
+        "Island country in the southwestern Pacific.",
+        "Parliamentary constitutional monarchy.",
+        "Official languages are English, Māori, and NZ Sign Language."
+      ],
+      "capital": [
+        "Southernmost capital city of any sovereign state.",
+        "Seat of the New Zealand Parliament since 1865.",
+        "Known for its windy weather and harbour setting."
+      ],
+      "river": [
+        "Longest river in New Zealand (~425 km).",
+        "Flows from Lake Taupo to the Tasman Sea.",
+        "Has deep cultural significance for the Māori people."
+      ]
+    }
   }
 ]
