@@ -1,5 +1,108 @@
 // Triple Memory - Core Game Engine
 
+const UI_STRINGS = {
+    en: {
+        loading: 'Loading assets...',
+        activePack: 'Active Pack: {name}',
+        boardSize: 'Board Size:',
+        boardOption: '{cards} Cards ({triples} Triples)',
+        language: 'Language:',
+        expertMode: 'Expert Mode (Hide card types & icons)',
+        expertReveal: 'Show post-match reveal in Expert Mode',
+        teacherView: 'Teacher View (Show Governance Info)',
+        governanceHeader: 'Governance & Provenance',
+        endorsement: 'Endorsement:',
+        curationStatement: 'Curation Statement:',
+        readHere: 'Read Here',
+        tableEntity: 'Entity',
+        tableRecognition: 'Recognition',
+        tableProvenance: 'Provenance',
+        playTutorial: 'Play: Tutorial',
+        playSharedEntity: 'Play: Shared Entity Mode',
+        playSharedLetter: 'Play: Shared Letter Mode',
+        readCurationStatement: 'Read the Curation Statement',
+        modePrefix: 'Mode: {mode}',
+        modeSharedEntity: 'Shared Entity',
+        modeSharedLetter: 'Shared Letter',
+        modeNoteEnglishLabels: 'Using English labels for letter matching.',
+        languageNoteLetter: 'Shared Letter Mode keeps English labels because its letter groups are curated by English initials.',
+        score: 'Score: {n}',
+        quitToMenu: 'Quit to Menu',
+        tutorialHeader: 'Tutorial - Step {n} of {total}',
+        skipTutorial: 'Skip Tutorial',
+        gotItNext: 'Got it! Next Step',
+        tripleMatched: 'Triple Matched!',
+        dismissHint: '(Press Escape, Enter, or tap anywhere to dismiss)',
+        gameComplete: 'Game Complete!',
+        tutorialComplete: 'Tutorial Complete!',
+        readyToPlay: "You're ready to play!",
+        finalScore: 'Final Score: {n}',
+        returnToMenu: 'Return to Menu',
+        hiddenCard: 'Hidden card, position {n}',
+        matchedSuffix: ', matched',
+        selectedSuffix: ', selected',
+        localName: 'Local name: {name}',
+        tutorialStep1: "Welcome to Triple Memory! A match isn't a pair, it's a <strong>TRIPLE</strong>. Every valid match needs {required}.",
+        tutorialStep2: '<strong>Shared Entity Mode:</strong> Find three cards that belong to the same pack entry. Click 3 matching cards below.',
+        tutorialStep3: '<strong>Shared Letter Mode:</strong> Find three cards that start with the same letter AND have one of each type. Click a valid triple.',
+        tutorialCorrect: 'Correct! Great job.',
+        tutorialWrong: 'Not quite! You need {required} that share the required relation.',
+        errorLoading: 'Error Loading Pack Data',
+        errorHint: 'Check the console for details. (Note: The Fetch API requires a local web server).',
+        schemaViolations: 'Schema Violations:'
+    },
+    de: {
+        loading: 'Lade Ressourcen...',
+        activePack: 'Aktives Paket: {name}',
+        boardSize: 'Spielfeldgröße:',
+        boardOption: '{cards} Karten ({triples} Tripel)',
+        language: 'Sprache:',
+        expertMode: 'Expertenmodus (Kartentypen & Symbole ausblenden)',
+        expertReveal: 'Nachmatch-Anzeige im Expertenmodus aktivieren',
+        teacherView: 'Lehreransicht (Kuratierungsdaten anzeigen)',
+        governanceHeader: 'Kuratierung & Herkunft',
+        endorsement: 'Freigabe:',
+        curationStatement: 'Kuratierungserklärung:',
+        readHere: 'Hier lesen',
+        tableEntity: 'Eintrag',
+        tableRecognition: 'Anerkennung',
+        tableProvenance: 'Herkunft',
+        playTutorial: 'Spielen: Tutorial',
+        playSharedEntity: 'Spielen: Modus Gemeinsame Entität',
+        playSharedLetter: 'Spielen: Modus Gemeinsamer Buchstabe',
+        readCurationStatement: 'Kuratierungserklärung lesen',
+        modePrefix: 'Modus: {mode}',
+        modeSharedEntity: 'Gemeinsame Entität',
+        modeSharedLetter: 'Gemeinsamer Buchstabe',
+        modeNoteEnglishLabels: 'Für das Buchstaben-Matching werden englische Bezeichnungen verwendet.',
+        languageNoteLetter: 'Der Modus Gemeinsamer Buchstabe verwendet englische Bezeichnungen, da die Buchstabengruppen nach englischen Anfangsbuchstaben kuratiert sind.',
+        score: 'Punkte: {n}',
+        quitToMenu: 'Zum Menü',
+        tutorialHeader: 'Tutorial – Schritt {n} von {total}',
+        skipTutorial: 'Tutorial überspringen',
+        gotItNext: 'Verstanden! Weiter',
+        tripleMatched: 'Tripel gefunden!',
+        dismissHint: '(Escape, Enter oder irgendwo tippen zum Schließen)',
+        gameComplete: 'Spiel beendet!',
+        tutorialComplete: 'Tutorial abgeschlossen!',
+        readyToPlay: 'Du kannst jetzt loslegen!',
+        finalScore: 'Endstand: {n}',
+        returnToMenu: 'Zurück zum Menü',
+        hiddenCard: 'Verdeckte Karte, Position {n}',
+        matchedSuffix: ', gefunden',
+        selectedSuffix: ', ausgewählt',
+        localName: 'Lokaler Name: {name}',
+        tutorialStep1: 'Willkommen bei Triple Memory! Ein Treffer ist kein Paar, sondern ein <strong>TRIPEL</strong>. Jeder gültige Treffer braucht {required}.',
+        tutorialStep2: '<strong>Modus Gemeinsame Entität:</strong> Finde drei Karten, die zum selben Eintrag gehören. Klicke unten 3 passende Karten an.',
+        tutorialStep3: '<strong>Modus Gemeinsamer Buchstabe:</strong> Finde drei Karten, die mit demselben Buchstaben beginnen und je einen Kartentyp abdecken. Klicke ein gültiges Tripel an.',
+        tutorialCorrect: 'Richtig! Gut gemacht.',
+        tutorialWrong: 'Nicht ganz! Du brauchst {required}, die die geforderte Beziehung teilen.',
+        errorLoading: 'Fehler beim Laden der Paketdaten',
+        errorHint: 'Details in der Konsole. (Hinweis: Die Fetch API benötigt einen lokalen Webserver.)',
+        schemaViolations: 'Schemaverstöße:'
+    }
+};
+
 class TripleMemoryEngine {
     constructor() {
         this.state = 'LOADING'; // States: LOADING, MENU, PLAYING, END
@@ -26,6 +129,13 @@ class TripleMemoryEngine {
 
     getAppRoot() {
         return document.getElementById('app') || document.body;
+    }
+
+    t(key, params) {
+        const table = UI_STRINGS[this.currentLocale] || UI_STRINGS.en;
+        const s = (table[key] !== undefined ? table[key] : (UI_STRINGS.en[key] !== undefined ? UI_STRINGS.en[key] : key));
+        if (!params) return s;
+        return s.replace(/\{(\w+)\}/g, (_, k) => params[k] !== undefined ? params[k] : `{${k}}`);
     }
 
     getCardTypeDefinition(cardType) {
@@ -149,7 +259,7 @@ class TripleMemoryEngine {
 
     getCardAriaLabel(card, index) {
         if (card.status === 'hidden') {
-            return `Hidden card, position ${index + 1}`;
+            return this.t('hiddenCard', { n: index + 1 });
         }
 
         const typeDef = this.getCardTypeDefinition(card.card_type);
@@ -158,7 +268,7 @@ class TripleMemoryEngine {
             : this.getCardLabel(card);
 
         if (card.status === 'matched') {
-            return `${visibleLabel}, matched`;
+            return `${visibleLabel}${this.t('matchedSuffix')}`;
         }
 
         return visibleLabel;
@@ -182,7 +292,7 @@ class TripleMemoryEngine {
         }
 
         if (!isPrimary && variants && variants.local_display && variants.local_display !== currentLabel) {
-            supplements.push({ kind: 'variant', text: `Local name: ${variants.local_display}` });
+            supplements.push({ kind: 'variant', text: this.t('localName', { name: variants.local_display }) });
         }
 
         if (variants && variants.native_display && variants.native_display !== currentLabel) {
@@ -284,15 +394,15 @@ class TripleMemoryEngine {
             let errorDetails = error.message;
             if (error.validationErrors) {
                 errorDetails += `<br><br><div style="text-align: left; font-size: 0.85rem; max-height: 250px; overflow-y: auto; background: var(--bg-color); padding: 15px; border-radius: 8px; border: 1px solid var(--grid);">
-                    <strong>Schema Violations:</strong><br>
+                    <strong>${this.t('schemaViolations')}</strong><br>
                     ${error.validationErrors.join('<br>')}
                 </div>`;
             }
 
             this.getAppRoot().innerHTML = `
                 <div class="screen end" style="text-align: center; margin: 50px auto;">
-                    <h2 style="color: var(--signal); margin-top: 0;">Error Loading Pack Data</h2>
-                    <p>Check the console for details. (Note: The Fetch API requires a local web server).</p>
+                    <h2 style="color: var(--signal); margin-top: 0;">${this.t('errorLoading')}</h2>
+                    <p>${this.t('errorHint')}</p>
                     <p>${errorDetails}</p>
                 </div>
             `;
@@ -476,7 +586,7 @@ class TripleMemoryEngine {
         const overlay = document.createElement('div');
         overlay.className = 'match-overlay';
         
-        let contentHtml = `<h2>Triple Matched!</h2><div class="match-facts">`;
+        let contentHtml = `<h2>${this.t('tripleMatched')}</h2><div class="match-facts">`;
         
         matchedCards.forEach(card => {
             const supplements = this.getCardSupplements(card);
@@ -499,7 +609,7 @@ class TripleMemoryEngine {
             `;
         });
         
-        contentHtml += `</div><p class="dismiss-hint">(Press Escape, Enter, or tap anywhere to dismiss)</p>`;
+        contentHtml += `</div><p class="dismiss-hint">${this.t('dismissHint')}</p>`;
         overlay.innerHTML = `<div class="match-overlay-content" role="dialog" aria-modal="true" aria-live="polite" tabindex="-1">${contentHtml}</div>`;
 
         const previouslyFocused = document.activeElement;
@@ -623,14 +733,14 @@ class TripleMemoryEngine {
         }
 
         if (isValid) {
-            this.tutorialMessage = "<span style='color: var(--success-color);'>Correct! Great job.</span>";
+            this.tutorialMessage = `<span style='color: var(--success-color);'>${this.t('tutorialCorrect')}</span>`;
             this.render();
             setTimeout(() => {
                 this.tutorialStep++;
                 this.setupTutorialStep();
             }, 1500);
         } else {
-            this.tutorialMessage = `Not quite! You need ${this.getRequiredTypePhrase()} that share the required relation.`;
+            this.tutorialMessage = this.t('tutorialWrong', { required: this.getRequiredTypePhrase() });
             selectedCards.forEach(c => c.selected = false);
             this.render();
         }
@@ -642,34 +752,34 @@ class TripleMemoryEngine {
         
         switch (this.state) {
             case 'LOADING':
-                appRoot.innerHTML = `<div class="screen loading"><h1>Triple Memory</h1><p>Loading assets...</p></div>`;
+                appRoot.innerHTML = `<div class="screen loading"><h1>Triple Memory</h1><p>${this.t('loading')}</p></div>`;
                 break;
                 
             case 'MENU':
                 appRoot.innerHTML = `
                     <div class="screen menu">
                         <h1>Triple Memory</h1>
-                        <p class="subtitle">Active Pack: ${this.pack.manifest.pack_name}</p>
-                        
+                        <p class="subtitle">${this.t('activePack', { name: this.pack.manifest.pack_name })}</p>
+
                         <div class="menu-settings">
-                            <label for="board-size">Board Size:</label>
+                            <label for="board-size">${this.t('boardSize')}</label>
                             <select id="board-size" onchange="game.selectedBoardSize = parseInt(this.value)">
                                 ${this.pack.manifest.supported_board_sizes.map(size => `
-                                    <option value="${size}" ${this.selectedBoardSize === size ? 'selected' : ''}>${size} Cards (${size / 3} Triples)</option>
+                                    <option value="${size}" ${this.selectedBoardSize === size ? 'selected' : ''}>${this.t('boardOption', { cards: size, triples: size / 3 })}</option>
                                 `).join('')}
                             </select>
                         </div>
 
                         ${this.pack.manifest.supported_locales && this.pack.manifest.supported_locales.length > 1 ? `
                         <div class="menu-settings">
-                            <label for="locale-select">Language:</label>
+                            <label for="locale-select">${this.t('language')}</label>
                             <select id="locale-select" onchange="game.setLocale(this.value)">
                                 ${this.pack.manifest.supported_locales.map(loc => `
                                     <option value="${loc}" ${this.currentLocale === loc ? 'selected' : ''}>${this.getLocaleName(loc)}</option>
                                 `).join('')}
                             </select>
                             ${this.currentLocale !== this.pack.manifest.primary_locale ? `
-                                <p class="language-note">Shared Letter Mode keeps English labels because its letter groups are curated by English initials.</p>
+                                <p class="language-note">${this.t('languageNoteLetter')}</p>
                             ` : ''}
                         </div>
                         ` : ''}
@@ -677,7 +787,7 @@ class TripleMemoryEngine {
                         <div class="menu-settings checkbox-setting">
                             <label>
                                 <input type="checkbox" onchange="game.expertMode = this.checked; if (!this.checked) game.expertRevealEnabled = false; game.render();" ${this.expertMode ? 'checked' : ''}>
-                                Expert Mode (Hide card types & icons)
+                                ${this.t('expertMode')}
                             </label>
                         </div>
 
@@ -685,7 +795,7 @@ class TripleMemoryEngine {
                         <div class="menu-settings checkbox-setting">
                             <label>
                                 <input type="checkbox" onchange="game.expertRevealEnabled = this.checked" ${this.expertRevealEnabled ? 'checked' : ''}>
-                                Show post-match reveal in Expert Mode
+                                ${this.t('expertReveal')}
                             </label>
                         </div>
                         ` : ''}
@@ -693,18 +803,18 @@ class TripleMemoryEngine {
                         <div class="menu-settings checkbox-setting">
                             <label>
                                 <input type="checkbox" onchange="game.teacherView = this.checked; game.render();" ${this.teacherView ? 'checked' : ''}>
-                                Teacher View (Show Governance Info)
+                                ${this.t('teacherView')}
                             </label>
                         </div>
 
                         ${this.teacherView ? `
                         <div class="teacher-view-panel">
-                            <h3>Governance & Provenance</h3>
-                            <p><strong>Endorsement:</strong> <code>${this.pack.manifest.endorsement_marker}</code></p>
-                            <p><strong>Curation Statement:</strong> <a href="../packs/${this.pack.manifest.pack_id}/${this.pack.manifest.curation_statement_path}" target="_blank">Read Here</a></p>
+                            <h3>${this.t('governanceHeader')}</h3>
+                            <p><strong>${this.t('endorsement')}</strong> <code>${this.pack.manifest.endorsement_marker}</code></p>
+                            <p><strong>${this.t('curationStatement')}</strong> <a href="../packs/${this.pack.manifest.pack_id}/${this.pack.manifest.curation_statement_path}" target="_blank">${this.t('readHere')}</a></p>
                             <div class="governance-table-container">
                                 <table class="governance-table">
-                                    <thead><tr><th>Entity</th><th>Recognition</th><th>Provenance</th></tr></thead>
+                                    <thead><tr><th>${this.t('tableEntity')}</th><th>${this.t('tableRecognition')}</th><th>${this.t('tableProvenance')}</th></tr></thead>
                                     <tbody>
                                         ${this.pack.entities.map(e => `
                                             <tr><td>${e.entity_name}</td><td><code>${e.recognition_status}</code></td><td>${e.provenance}</td></tr>
@@ -716,13 +826,13 @@ class TripleMemoryEngine {
                         ` : ''}
 
                         <div class="menu-actions">
-                            <button onclick="game.startTutorial()">Play: Tutorial</button>
-                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_entity')">Play: Shared Entity Mode</button>
-                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">Play: Shared Letter Mode</button>
+                            <button onclick="game.startTutorial()">${this.t('playTutorial')}</button>
+                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_entity')">${this.t('playSharedEntity')}</button>
+                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">${this.t('playSharedLetter')}</button>
                         </div>
 
                         <p class="menu-footer">
-                            <a href="../packs/${this.pack.manifest.pack_id}/${this.pack.manifest.curation_statement_path}" target="_blank">Read the Curation Statement</a>
+                            <a href="../packs/${this.pack.manifest.pack_id}/${this.pack.manifest.curation_statement_path}" target="_blank">${this.t('readCurationStatement')}</a>
                         </p>
                     </div>
                 `;
@@ -733,13 +843,13 @@ class TripleMemoryEngine {
                     <div class="screen playing">
                         <header>
                             <div>
-                                <h2>Mode: ${this.currentMode === 'shared_entity' ? 'Shared Entity' : 'Shared Letter'}</h2>
+                                <h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>
                                 ${this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
-                                    <p class="mode-note">Using English labels for letter matching.</p>
+                                    <p class="mode-note">${this.t('modeNoteEnglishLabels')}</p>
                                 ` : ''}
                             </div>
-                            <div class="score" id="score-display" aria-live="polite" aria-atomic="true">Score: ${this.score}</div>
-                            <button onclick="game.state = 'MENU'; game.render()">Quit to Menu</button>
+                            <div class="score" id="score-display" aria-live="polite" aria-atomic="true">${this.t('score', { n: this.score })}</div>
+                            <button onclick="game.state = 'MENU'; game.render()">${this.t('quitToMenu')}</button>
                         </header>
                         <div class="board" id="board">
                             ${this.boardCards.map((card, index) => {
@@ -770,19 +880,19 @@ class TripleMemoryEngine {
                 let instructions = "";
                 let actionBtn = "";
                 if (this.tutorialStep === 1) {
-                    instructions = `Welcome to Triple Memory! A match isn't a pair, it's a <strong>TRIPLE</strong>. Every valid match needs ${this.getRequiredTypePhrase()}.`;
-                    actionBtn = `<button onclick="game.tutorialStep++; game.setupTutorialStep();">Got it! Next Step</button>`;
+                    instructions = this.t('tutorialStep1', { required: this.getRequiredTypePhrase() });
+                    actionBtn = `<button onclick="game.tutorialStep++; game.setupTutorialStep();">${this.t('gotItNext')}</button>`;
                 } else if (this.tutorialStep === 2) {
-                    instructions = "<strong>Shared Entity Mode:</strong> Find three cards that belong to the same pack entry. Click 3 matching cards below.";
+                    instructions = this.t('tutorialStep2');
                 } else if (this.tutorialStep === 3) {
-                    instructions = "<strong>Shared Letter Mode:</strong> Find three cards that start with the same letter AND have one of each type. Click a valid triple.";
+                    instructions = this.t('tutorialStep3');
                 }
 
                 appRoot.innerHTML = `
                     <div class="screen tutorial">
                         <header>
-                            <h2>Tutorial - Step ${this.tutorialStep} of 3</h2>
-                            <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">Skip Tutorial</button>
+                            <h2>${this.t('tutorialHeader', { n: this.tutorialStep, total: 3 })}</h2>
+                            <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">${this.t('skipTutorial')}</button>
                         </header>
                         <div class="tutorial-instructions">
                             <p>${instructions}</p>
@@ -796,7 +906,7 @@ class TripleMemoryEngine {
                                 const clickHandler = this.tutorialStep === 1 ? '' : `onclick="game.handleTutorialClick(${index})"`;
                                 const selectedClass = card.selected ? 'selected' : '';
                                 return `
-                                <button type="button" class="card ${card.status} ${selectedClass}" id="card-${index}" ${clickHandler} aria-label="${this.getCardAriaLabel(card, index)}${card.selected ? ', selected' : ''}" aria-pressed="${card.selected ? 'true' : 'false'}" tabindex="${this.tutorialStep === 1 ? '-1' : '0'}">
+                                <button type="button" class="card ${card.status} ${selectedClass}" id="card-${index}" ${clickHandler} aria-label="${this.getCardAriaLabel(card, index)}${card.selected ? this.t('selectedSuffix') : ''}" aria-pressed="${card.selected ? 'true' : 'false'}" tabindex="${this.tutorialStep === 1 ? '-1' : '0'}">
                                     <div class="card-inner" aria-hidden="true">
                                         <div class="card-front">
                                             <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
@@ -815,13 +925,13 @@ class TripleMemoryEngine {
                 break;
                 
             case 'END':
-                const title = this.isTutorial ? "Tutorial Complete!" : "Game Complete!";
-                const subtitle = this.isTutorial ? "You're ready to play!" : `Final Score: ${this.score}`;
+                const title = this.isTutorial ? this.t('tutorialComplete') : this.t('gameComplete');
+                const subtitle = this.isTutorial ? this.t('readyToPlay') : this.t('finalScore', { n: this.score });
                 appRoot.innerHTML = `
                     <div class="screen end">
                         <h1>${title}</h1>
                         <p class="subtitle">${subtitle}</p>
-                        <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">Return to Menu</button>
+                        <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">${this.t('returnToMenu')}</button>
                     </div>
                 `;
                 break;
