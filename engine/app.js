@@ -133,6 +133,59 @@ class TripleMemoryEngine {
         return { kind: 'variant', text: variants.local_display };
     }
 
+    clamp(value, min, max) {
+        return Math.min(max, Math.max(min, value));
+    }
+
+    getBoardColumnCount(cardCount) {
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1024;
+
+        if (cardCount <= 3) return Math.max(1, cardCount);
+        if (viewportWidth < 420) {
+            if (cardCount <= 6) return 2;
+            if (cardCount <= 12) return 3;
+            return 4;
+        }
+        if (viewportWidth < 760) {
+            if (cardCount <= 6) return 3;
+            if (cardCount <= 12) return 4;
+            return 4;
+        }
+        if (cardCount <= 6) return 3;
+        if (cardCount <= 12) return 4;
+        return 6;
+    }
+
+    scaleBoard() {
+        const board = document.getElementById('board');
+        if (!board || this.boardCards.length === 0) return;
+
+        const cardCount = this.boardCards.length;
+        const columns = this.getBoardColumnCount(cardCount);
+        const rows = Math.ceil(cardCount / columns);
+        const viewportWidth = window.innerWidth || document.documentElement.clientWidth || 1024;
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight || 768;
+        const boardTop = board.getBoundingClientRect().top;
+        const parentWidth = board.parentElement ? board.parentElement.clientWidth : viewportWidth;
+        const gap = Math.round(this.clamp(Math.min(viewportWidth, viewportHeight) * 0.014, 6, 16));
+        const availableWidth = Math.max(240, Math.min(parentWidth, viewportWidth - 16));
+        const availableHeight = Math.max(180, viewportHeight - boardTop - 12);
+        const widthLimitedCard = (availableWidth - gap * (columns - 1)) / columns;
+        const heightLimitedCard = ((availableHeight - gap * (rows - 1)) / rows) * 0.75;
+        const cardWidth = Math.floor(this.clamp(Math.min(widthLimitedCard, heightLimitedCard), 54, 220));
+
+        board.style.setProperty('--card-columns', columns);
+        board.style.setProperty('--board-gap', `${gap}px`);
+        board.style.setProperty('--card-width', `${cardWidth}px`);
+        board.style.setProperty('--card-padding', `${Math.round(this.clamp(cardWidth * 0.07, 5, 15))}px`);
+        board.style.setProperty('--card-radius', `${Math.round(this.clamp(cardWidth * 0.055, 6, 14))}px`);
+        board.style.setProperty('--card-icon-size', `${Math.round(this.clamp(cardWidth * 0.26, 18, 54))}px`);
+        board.style.setProperty('--card-inner-gap', `${Math.round(this.clamp(cardWidth * 0.045, 3, 10))}px`);
+        board.style.setProperty('--card-type-size', `${Math.round(this.clamp(cardWidth * 0.105, 10, 18))}px`);
+        board.style.setProperty('--card-label-size', `${Math.round(this.clamp(cardWidth * 0.15, 13, 28))}px`);
+        board.style.setProperty('--card-back-size', `${Math.round(this.clamp(cardWidth * 0.35, 24, 72))}px`);
+    }
+
     async init() {
         this.render();
         await this.loadPack('geography'); // Default to geography pack for MVP
@@ -284,7 +337,10 @@ class TripleMemoryEngine {
         this.revealedCards.push(card);
 
         const cardEl = document.getElementById(`card-${index}`);
-        if (cardEl) cardEl.className = `card ${card.status}`;
+        if (cardEl) {
+            cardEl.className = `card ${card.status}`;
+            cardEl.setAttribute('aria-label', this.getCardAriaLabel(card, index));
+        }
 
         if (this.revealedCards.length === 3) {
             this.validateTriple();
@@ -312,7 +368,12 @@ class TripleMemoryEngine {
             this.revealedCards.forEach(card => {
                 card.status = 'matched';
                 const el = document.getElementById(`card-${card.boardIndex}`);
-                if (el) el.className = `card ${card.status}`;
+                if (el) {
+                    el.className = `card ${card.status}`;
+                    el.setAttribute('aria-label', this.getCardAriaLabel(card, card.boardIndex));
+                    el.setAttribute('aria-disabled', 'true');
+                    el.setAttribute('tabindex', '-1');
+                }
             });
             this.score++;
             const scoreEl = document.getElementById('score-display');
@@ -331,7 +392,10 @@ class TripleMemoryEngine {
                 this.revealedCards.forEach(card => {
                     card.status = 'hidden';
                     const el = document.getElementById(`card-${card.boardIndex}`);
-                    if (el) el.className = `card ${card.status}`;
+                    if (el) {
+                        el.className = `card ${card.status}`;
+                        el.setAttribute('aria-label', this.getCardAriaLabel(card, card.boardIndex));
+                    }
                 });
                 this.revealedCards = [];
                 this.isChecking = false;
@@ -666,6 +730,10 @@ class TripleMemoryEngine {
                 `;
                 break;
         }
+
+        if (this.state === 'PLAYING' || this.state === 'TUTORIAL') {
+            window.requestAnimationFrame(() => this.scaleBoard());
+        }
     }
 
     startGame(mode, isTutorial = false) {
@@ -693,4 +761,5 @@ let game;
 window.addEventListener('DOMContentLoaded', () => {
     game = new TripleMemoryEngine();
     game.init();
+    window.addEventListener('resize', () => game.scaleBoard());
 });
