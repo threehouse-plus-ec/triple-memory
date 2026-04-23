@@ -32,8 +32,16 @@ This document contains JSON Schema (draft-07) definitions for the engine and pac
         "properties": {
           "type_id": { "type": "string", "enum": ["capital", "country", "river"] },
           "display_name": { "type": "string" },
+          "display_names": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          },
           "icon": { "type": "string" },
-          "aria_label_template": { "type": "string" }
+          "aria_label_template": { "type": "string" },
+          "aria_label_templates": {
+            "type": "object",
+            "additionalProperties": { "type": "string" }
+          }
         }
       }
     },

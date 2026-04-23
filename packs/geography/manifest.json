@@ -7,20 +7,44 @@
     {
       "type_id": "capital",
       "display_name": "Capital",
+      "display_names": {
+        "en": "Capital",
+        "de": "Hauptstadt"
+      },
       "icon": "icons/capital.svg",
-      "aria_label_template": "Capital: {label}"
+      "aria_label_template": "Capital: {label}",
+      "aria_label_templates": {
+        "en": "Capital: {label}",
+        "de": "Hauptstadt: {label}"
+      }
     },
     {
       "type_id": "country",
       "display_name": "Country",
+      "display_names": {
+        "en": "Country",
+        "de": "Land"
+      },
       "icon": "icons/country.svg",
-      "aria_label_template": "Country: {label}"
+      "aria_label_template": "Country: {label}",
+      "aria_label_templates": {
+        "en": "Country: {label}",
+        "de": "Land: {label}"
+      }
     },
     {
       "type_id": "river",
       "display_name": "River",
+      "display_names": {
+        "en": "River",
+        "de": "Fluss"
+      },
       "icon": "icons/river.svg",
-      "aria_label_template": "River: {label}"
+      "aria_label_template": "River: {label}",
+      "aria_label_templates": {
+        "en": "River: {label}",
+        "de": "Fluss: {label}"
+      }
     }
   ],
   "shared_entity_field": "country_id",

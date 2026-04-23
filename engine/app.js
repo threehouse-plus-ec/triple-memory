@@ -32,15 +32,46 @@ class TripleMemoryEngine {
         return this.pack.manifest.card_types.find(typeDef => typeDef.type_id === cardType) || null;
     }
 
+    getCardTypeLabel(typeDef) {
+        if (!typeDef) return '';
+        if (typeDef.display_names && typeDef.display_names[this.currentLocale]) {
+            return typeDef.display_names[this.currentLocale];
+        }
+        return typeDef.display_name;
+    }
+
+    getCardTypeAriaLabel(typeDef, cardLabel) {
+        if (!typeDef) return cardLabel;
+        const template = typeDef.aria_label_templates && typeDef.aria_label_templates[this.currentLocale]
+            ? typeDef.aria_label_templates[this.currentLocale]
+            : typeDef.aria_label_template;
+        return template.replace('{label}', cardLabel);
+    }
+
     formatList(items) {
+        const conjunction = this.currentLocale === 'de' ? 'und' : 'and';
         if (items.length === 0) return '';
         if (items.length === 1) return items[0];
-        if (items.length === 2) return `${items[0]} and ${items[1]}`;
-        return `${items.slice(0, -1).join(', ')}, and ${items[items.length - 1]}`;
+        if (items.length === 2) return `${items[0]} ${conjunction} ${items[1]}`;
+        const serialComma = this.currentLocale === 'de' ? '' : ',';
+        return `${items.slice(0, -1).join(', ')}${serialComma} ${conjunction} ${items[items.length - 1]}`;
+    }
+
+    getCardTypeRequirement(typeDef) {
+        const localizedRequirements = {
+            de: {
+                capital: 'eine Hauptstadt',
+                country: 'ein Land',
+                river: 'ein Fluss'
+            }
+        };
+        const requirement = localizedRequirements[this.currentLocale] &&
+            localizedRequirements[this.currentLocale][typeDef.type_id];
+        return requirement || `one ${this.getCardTypeLabel(typeDef)}`;
     }
 
     getRequiredTypePhrase() {
-        const typeNames = this.pack.manifest.card_types.map(typeDef => `one ${typeDef.display_name}`);
+        const typeNames = this.pack.manifest.card_types.map(typeDef => this.getCardTypeRequirement(typeDef));
         return this.formatList(typeNames);
     }
 
@@ -117,7 +148,7 @@ class TripleMemoryEngine {
 
         const typeDef = this.getCardTypeDefinition(card.card_type);
         const visibleLabel = typeDef
-            ? typeDef.aria_label_template.replace('{label}', this.getCardLabel(card))
+            ? this.getCardTypeAriaLabel(typeDef, this.getCardLabel(card))
             : this.getCardLabel(card);
 
         if (card.status === 'matched') {
@@ -239,7 +270,7 @@ class TripleMemoryEngine {
 
             let errorDetails = error.message;
             if (error.validationErrors) {
-                errorDetails += `<br><br><div style="text-align: left; font-size: 0.85rem; max-height: 250px; overflow-y: auto; background: var(--bg-color); padding: 15px; border-radius: 8px; border: 1px solid #bdc3c7;">
+                errorDetails += `<br><br><div style="text-align: left; font-size: 0.85rem; max-height: 250px; overflow-y: auto; background: var(--bg-color); padding: 15px; border-radius: 8px; border: 1px solid var(--grid);">
                     <strong>Schema Violations:</strong><br>
                     ${error.validationErrors.join('<br>')}
                 </div>`;
@@ -247,7 +278,7 @@ class TripleMemoryEngine {
 
             this.getAppRoot().innerHTML = `
                 <div class="screen end" style="text-align: center; margin: 50px auto;">
-                    <h2 style="color: #e74c3c; margin-top: 0;">Error Loading Pack Data</h2>
+                    <h2 style="color: var(--signal); margin-top: 0;">Error Loading Pack Data</h2>
                     <p>Check the console for details. (Note: The Fetch API requires a local web server).</p>
                     <p>${errorDetails}</p>
                 </div>
@@ -685,11 +716,13 @@ class TripleMemoryEngine {
                                         <div class="card-front">
                                             ${!this.expertMode ? `
                                                 <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
-                                                <div class="card-type">${typeDef.display_name}</div>
+                                                <div class="card-type">${this.getCardTypeLabel(typeDef)}</div>
                                             ` : ''}
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
-                                        <div class="card-back">?</div>
+                                        <div class="card-back">
+                                            <img class="card-back-emblem" src="../assets/cd/emblem-64.svg" alt="">
+                                        </div>
                                     </div>
                                 </button>
                             `}).join('')}
@@ -732,10 +765,12 @@ class TripleMemoryEngine {
                                     <div class="card-inner" aria-hidden="true">
                                         <div class="card-front">
                                             <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
-                                            <div class="card-type">${typeDef.display_name}</div>
+                                            <div class="card-type">${this.getCardTypeLabel(typeDef)}</div>
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
-                                        <div class="card-back">?</div>
+                                        <div class="card-back">
+                                            <img class="card-back-emblem" src="../assets/cd/emblem-64.svg" alt="">
+                                        </div>
                                     </div>
                                 </button>
                             `}).join('')}
