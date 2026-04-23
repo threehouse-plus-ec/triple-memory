@@ -46,7 +46,7 @@ Additional rule for v2.0:
 | 7 | TC-70 to TC-72 | Content cross-check (DE, local_display, facts) | v1.0 sign-off |
 | 8 | TC-73, TC-78 | Contested-recognition verification and curation | TC-70 for DE |
 | 9 | TC-74 | Native-script verification | Readers of each script |
-| 10 | TC-75 to TC-77 | UI accessibility cross-check and second playtest | ACCESSIBILITY.md §2 remediation |
+| 10 | TC-75 to TC-77, TC-80 | UI accessibility cross-check and second playtest | ACCESSIBILITY.md §2 remediation |
 | 11 | TC-79 | v0.5 promotion | All above |
 
 ---
