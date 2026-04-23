@@ -1,0 +1,46 @@
+{
+  "pack_id": "geography",
+  "pack_name": "Geography — Capitals, Countries, Rivers",
+  "pack_version": "0.4",
+  "endorsement_marker": "geography_pack_v0.4",
+  "card_types": [
+    {
+      "type_id": "capital",
+      "display_name": "Capital",
+      "icon": "icons/capital.svg",
+      "aria_label_template": "Capital: {label}"
+    },
+    {
+      "type_id": "country",
+      "display_name": "Country",
+      "icon": "icons/country.svg",
+      "aria_label_template": "Country: {label}"
+    },
+    {
+      "type_id": "river",
+      "display_name": "River",
+      "icon": "icons/river.svg",
+      "aria_label_template": "River: {label}"
+    }
+  ],
+  "shared_entity_field": "country_id",
+  "supported_modes": [
+    "shared_entity",
+    "shared_letter"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true
+  }
+}

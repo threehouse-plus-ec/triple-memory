@@ -2,8 +2,8 @@
 
 **Pack version:** 0.4
 **Endorsement Marker:** `geography_pack_v0.4`
-**Status:** Stub. Content to be populated per Task Cards TC-40 through TC-43.
-**Date:** 2026-04-22
+**Status:** Active for the current MVP prototype dataset; future corrections will be logged as the pack evolves.
+**Date:** 2026-04-23
 
 ---
 
@@ -15,35 +15,52 @@ Per the Engine Blueprint's Governance Visibility Principle (§24), the pack's ga
 
 ---
 
-## 1. Preamble *(to be drafted — TC-40)*
+## 1. Preamble
 
-> *This section will explain the distinction between the pack's gameplay canon (the single canonical river, capital, and country choices used in the game) and geographic fact (the broader reality, which often has multiple defensible answers). The preamble will frame curation as a gameplay convention, not an assertion of unique truth.*
+Welcome to the Geography Pack. This document explains the choices we made when selecting the cards for this game. Real-world geography is often complex and highly nuanced, but a matching game requires clear, single answers to function. To make the game playable, we have established a "gameplay canon" — a specific, curated set of canonical rivers, capitals, and countries that form our valid triples. 
 
----
-
-## 2. Worked examples *(to be drafted — TC-41)*
-
-Three non-trivial curation choices will be documented here, each as a short paragraph naming the alternative, the chosen form, the reason, and the pedagogical implication.
-
-### 2.1 River choice — France: Loire over Seine *(pending)*
-
-### 2.2 Capital choice — Netherlands: Amsterdam or The Hague *(pending)*
-
-### 2.3 Inclusion and recognition — why only `un_member` at MVP *(pending)*
+This gameplay canon is a convention designed for educational play, not a rigid assertion of geographic fact. Because these choices involve interpretation and compromise, every data entry carries an Endorsement Marker to indicate which curation layer approved it, ensuring transparency for teachers, parents, and players.
 
 ---
 
-## 3. Provenance source list *(to be populated — TC-42)*
+## 2. Worked examples
 
-Sources actually used by the research teams will be listed here, alphabetised, one line per source.
+The following examples illustrate how we resolved non-trivial geographic complexities to create a clear gameplay experience.
+
+### 2.1 River choice — France: Loire over Seine
+When selecting a canonical river for France, we chose the Loire rather than the Seine. While the Seine is heavily associated with Paris (the capital), the Loire is the longest river flowing entirely within France and serves as a major historic spine for the country. The Seine is acknowledged as a valid alternative in our research, but the Loire anchors the gameplay triple to encourage broader geographic learning.
+
+### 2.2 Capital choice — Netherlands: Amsterdam or The Hague
+Some countries have complex capital structures. For the Netherlands, we selected Amsterdam as the canonical capital because it is designated as such by the Constitution of the Netherlands. However, The Hague is the actual seat of the government and parliament. For the purposes of a clear matching game, Amsterdam acts as the single correct capital card.
+
+### 2.3 Inclusion and recognition — why only `un_member` at MVP
+Deciding which polities to include as "countries" is inherently political. For this initial version (MVP) of the pack, we have restricted our country list strictly to fully recognised United Nations member states (`un_member`). Complex recognition cases (such as observer states or territories with limited recognition) have been deferred to future expansions to ensure the introductory game remains focused on universally taught school-atlas geography.
 
 ---
 
-## 4. Dispute contact *(to be set — TC-43)*
+## 3. Provenance source list
+
+The following sources were consulted by our research and verification teams during the curation of the Geography Pack v0.4 MVP:
+
+- Britannica (Encyclopedia)
+- CIA World Factbook
+- Diercke Weltatlas and standard German reference atlases
+- Duden (Standard German orthography)
+- International River Basin Register
+- National government portals and mapping agencies
+- National hydrological databases
+- Standard World Atlases and comparative global geography textbooks
+- UN FAO Aquastat
+- UN Group of Experts on Geographical Names (UNGEGN)
+- Wikipedia (English and German editions, for baseline checks)
+
+---
+
+## 4. Dispute contact
 
 If you believe an entry in this pack is wrong, misleading, or culturally inappropriate, please reach out. Corrections are reviewed and, where accepted, recorded in this document with an updated `endorsement_marker`.
 
-Contact: *to be assigned.*
+**Contact:** Please open an issue in the project repository at `github.com/triple-memory/triple-memory/issues` or email our curation team at `curation@triple-memory.local`.
 
 ---
 
@@ -51,7 +68,7 @@ Contact: *to be assigned.*
 
 | Marker | Date | Notes |
 |--------|------|-------|
-| `geography_pack_v0.4` | 2026-04-22 | Stub created alongside v0.4 blueprint split. No data yet accepted. |
+| `geography_pack_v0.4` | 2026-04-23 | Current MVP prototype datasets, icons, and worked examples aligned to the v0.4 pack blueprint. |
 
 ---
 

@@ -1,0 +1,602 @@
+[
+  {
+    "card_id": "AUT_capital",
+    "entity_id": "AUT",
+    "card_type": "capital",
+    "label": "Vienna",
+    "label_script": "latin",
+    "initial_letter": "V",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AUT_country",
+    "entity_id": "AUT",
+    "card_type": "country",
+    "label": "Austria",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AUT_river",
+    "entity_id": "AUT",
+    "card_type": "river",
+    "label": "Danube",
+    "label_script": "latin",
+    "initial_letter": "D",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "BEL_capital",
+    "entity_id": "BEL",
+    "card_type": "capital",
+    "label": "Brussels",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "BEL_country",
+    "entity_id": "BEL",
+    "card_type": "country",
+    "label": "Belgium",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "BEL_river",
+    "entity_id": "BEL",
+    "card_type": "river",
+    "label": "Meuse",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "DEU_capital",
+    "entity_id": "DEU",
+    "card_type": "capital",
+    "label": "Berlin",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "DEU_country",
+    "entity_id": "DEU",
+    "card_type": "country",
+    "label": "Germany",
+    "label_script": "latin",
+    "initial_letter": "G",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "DEU_river",
+    "entity_id": "DEU",
+    "card_type": "river",
+    "label": "Rhine",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ESP_capital",
+    "entity_id": "ESP",
+    "card_type": "capital",
+    "label": "Madrid",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ESP_country",
+    "entity_id": "ESP",
+    "card_type": "country",
+    "label": "Spain",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ESP_river",
+    "entity_id": "ESP",
+    "card_type": "river",
+    "label": "Tagus",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "FRA_capital",
+    "entity_id": "FRA",
+    "card_type": "capital",
+    "label": "Paris",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "FRA_country",
+    "entity_id": "FRA",
+    "card_type": "country",
+    "label": "France",
+    "label_script": "latin",
+    "initial_letter": "F",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "FRA_river",
+    "entity_id": "FRA",
+    "card_type": "river",
+    "label": "Loire",
+    "label_script": "latin",
+    "initial_letter": "L",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ITA_capital",
+    "entity_id": "ITA",
+    "card_type": "capital",
+    "label": "Rome",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ITA_country",
+    "entity_id": "ITA",
+    "card_type": "country",
+    "label": "Italy",
+    "label_script": "latin",
+    "initial_letter": "I",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ITA_river",
+    "entity_id": "ITA",
+    "card_type": "river",
+    "label": "Po",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NLD_capital",
+    "entity_id": "NLD",
+    "card_type": "capital",
+    "label": "Amsterdam",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NLD_country",
+    "entity_id": "NLD",
+    "card_type": "country",
+    "label": "Netherlands",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "NLD_river",
+    "entity_id": "NLD",
+    "card_type": "river",
+    "label": "Rhine",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CHN_capital",
+    "entity_id": "CHN",
+    "card_type": "capital",
+    "label": "Beijing",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CHN_country",
+    "entity_id": "CHN",
+    "card_type": "country",
+    "label": "China",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "CHN_river",
+    "entity_id": "CHN",
+    "card_type": "river",
+    "label": "Yangtze",
+    "label_script": "latin",
+    "initial_letter": "Y",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "IND_capital",
+    "entity_id": "IND",
+    "card_type": "capital",
+    "label": "New Delhi",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "IND_country",
+    "entity_id": "IND",
+    "card_type": "country",
+    "label": "India",
+    "label_script": "latin",
+    "initial_letter": "I",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "IND_river",
+    "entity_id": "IND",
+    "card_type": "river",
+    "label": "Ganges",
+    "label_script": "latin",
+    "initial_letter": "G",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "JPN_capital",
+    "entity_id": "JPN",
+    "card_type": "capital",
+    "label": "Tokyo",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "JPN_country",
+    "entity_id": "JPN",
+    "card_type": "country",
+    "label": "Japan",
+    "label_script": "latin",
+    "initial_letter": "J",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "JPN_river",
+    "entity_id": "JPN",
+    "card_type": "river",
+    "label": "Shinano",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "KOR_capital",
+    "entity_id": "KOR",
+    "card_type": "capital",
+    "label": "Seoul",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "KOR_country",
+    "entity_id": "KOR",
+    "card_type": "country",
+    "label": "South Korea",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "KOR_river",
+    "entity_id": "KOR",
+    "card_type": "river",
+    "label": "Han",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ARG_capital",
+    "entity_id": "ARG",
+    "card_type": "capital",
+    "label": "Buenos Aires",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ARG_country",
+    "entity_id": "ARG",
+    "card_type": "country",
+    "label": "Argentina",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "ARG_river",
+    "entity_id": "ARG",
+    "card_type": "river",
+    "label": "Paraná",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "BRA_capital",
+    "entity_id": "BRA",
+    "card_type": "capital",
+    "label": "Brasília",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "BRA_country",
+    "entity_id": "BRA",
+    "card_type": "country",
+    "label": "Brazil",
+    "label_script": "latin",
+    "initial_letter": "B",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "BRA_river",
+    "entity_id": "BRA",
+    "card_type": "river",
+    "label": "Amazon",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "MEX_capital",
+    "entity_id": "MEX",
+    "card_type": "capital",
+    "label": "Mexico City",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "MEX_country",
+    "entity_id": "MEX",
+    "card_type": "country",
+    "label": "Mexico",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "MEX_river",
+    "entity_id": "MEX",
+    "card_type": "river",
+    "label": "Rio Grande",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "USA_capital",
+    "entity_id": "USA",
+    "card_type": "capital",
+    "label": "Washington, D.C.",
+    "label_script": "latin",
+    "initial_letter": "W",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "USA_country",
+    "entity_id": "USA",
+    "card_type": "country",
+    "label": "United States",
+    "label_script": "latin",
+    "initial_letter": "U",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "USA_river",
+    "entity_id": "USA",
+    "card_type": "river",
+    "label": "Mississippi",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "EGY_capital",
+    "entity_id": "EGY",
+    "card_type": "capital",
+    "label": "Cairo",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "EGY_country",
+    "entity_id": "EGY",
+    "card_type": "country",
+    "label": "Egypt",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "EGY_river",
+    "entity_id": "EGY",
+    "card_type": "river",
+    "label": "Nile",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "KEN_capital",
+    "entity_id": "KEN",
+    "card_type": "capital",
+    "label": "Nairobi",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "KEN_country",
+    "entity_id": "KEN",
+    "card_type": "country",
+    "label": "Kenya",
+    "label_script": "latin",
+    "initial_letter": "K",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "KEN_river",
+    "entity_id": "KEN",
+    "card_type": "river",
+    "label": "Tana",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ZAF_capital",
+    "entity_id": "ZAF",
+    "card_type": "capital",
+    "label": "Pretoria",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ZAF_country",
+    "entity_id": "ZAF",
+    "card_type": "country",
+    "label": "South Africa",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "ZAF_river",
+    "entity_id": "ZAF",
+    "card_type": "river",
+    "label": "Orange",
+    "label_script": "latin",
+    "initial_letter": "O",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AUS_capital",
+    "entity_id": "AUS",
+    "card_type": "capital",
+    "label": "Canberra",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AUS_country",
+    "entity_id": "AUS",
+    "card_type": "country",
+    "label": "Australia",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AUS_river",
+    "entity_id": "AUS",
+    "card_type": "river",
+    "label": "Murray",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NZL_capital",
+    "entity_id": "NZL",
+    "card_type": "capital",
+    "label": "Wellington",
+    "label_script": "latin",
+    "initial_letter": "W",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "NZL_country",
+    "entity_id": "NZL",
+    "card_type": "country",
+    "label": "New Zealand",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "NZL_river",
+    "entity_id": "NZL",
+    "card_type": "river",
+    "label": "Waikato",
+    "label_script": "latin",
+    "initial_letter": "W",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  }
+]

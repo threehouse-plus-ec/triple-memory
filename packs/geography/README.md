@@ -1,11 +1,11 @@
 # Geography Pack — Triple Memory
 
-**Status:** Data collection in progress. Governed by `docs/GEOGRAPHY_PACK_BLUEPRINT.md` and tracked through `docs/TASK_CARDS.md`.
+**Status:** Draft MVP data, icons, and Curation Statement are present. The pack is currently being validated and playtested against `docs/GEOGRAPHY_PACK_BLUEPRINT.md`.
 
 **Pack version:** 0.4
 **Endorsement Marker:** `geography_pack_v0.4`
 
-## Expected contents (per Pack Blueprint §16)
+## Current contents (per Pack Blueprint §16)
 
 - `manifest.json` — pack declaration (TC-52).
 - `entities.json` — 20 UN-member country entries (TC-16).
@@ -15,7 +15,7 @@
   - `capital.svg`
   - `country.svg`
   - `river.svg`
-- `CURATION_STATEMENT.md` — canonical-choice rationale and provenance (TC-40 through TC-43).
+- `CURATION_STATEMENT.md` — canonical-choice rationale, provenance, and dispute channel.
 
 ## Scope at MVP
 
@@ -27,4 +27,4 @@
 
 ## Dispute channel
 
-See top-level `README.md` for the contact line. Pack-specific disputes are reviewed and, where accepted, recorded in `CURATION_STATEMENT.md` with an updated `endorsement_marker`.
+Please open an issue at `github.com/triple-memory/triple-memory/issues` or email `curation@triple-memory.local`. Pack-specific disputes are reviewed and, where accepted, recorded in `CURATION_STATEMENT.md` with an updated `endorsement_marker`.

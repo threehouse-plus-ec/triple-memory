@@ -1,0 +1,575 @@
+[
+  {
+    "entity_id": "AUT",
+    "entity_name": "Austria",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "AUT",
+    "capital_name": "Vienna",
+    "alternative_capitals": [],
+    "river_name": "Danube",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "DEU",
+      "SVK",
+      "HUN",
+      "HRV",
+      "SRB",
+      "ROU",
+      "BGR",
+      "MDA",
+      "UKR"
+    ],
+    "selection_reason": "cross_border_reference",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "country": { "en": "Austria", "de": "Österreich", "local_display": "Österreich" },
+      "capital": { "en": "Vienna", "de": "Wien", "local_display": "Wien" },
+      "river": { "en": "Danube", "de": "Donau", "local_display": "Donau" }
+    },
+    "facts": {
+      "country": [
+        "Central European alpine country.",
+        "EU member state since 1995.",
+        "Primary official language is German."
+      ],
+      "capital": [
+        "Austria's most populous city.",
+        "Situated on the Danube river.",
+        "Historic centre of the Habsburg empire."
+      ],
+      "river": [
+        "Flows for approximately 2,850 km.",
+        "Passes through or borders 10 countries.",
+        "Empties into the Black Sea."
+      ]
+    }
+  },
+  {
+    "entity_id": "BEL",
+    "entity_name": "Belgium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "BEL",
+    "capital_name": "Brussels",
+    "alternative_capitals": [],
+    "river_name": "Meuse",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "FRA",
+      "NLD"
+    ],
+    "selection_reason": "major_historic",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "language_note": "Belgium is highly multilingual. Dutch and French official forms are presented together to reflect federal bilingual equality at the national level.",
+      "country": { "en": "Belgium", "de": "Belgien", "local_display": "België / Belgique" },
+      "capital": { "en": "Brussels", "de": "Brüssel", "local_display": "Brussel / Bruxelles" },
+      "river": { "en": "Meuse", "de": "Maas", "local_display": "Maas / Meuse" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "DEU",
+    "entity_name": "Germany",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "DEU",
+    "capital_name": "Berlin",
+    "alternative_capitals": [],
+    "river_name": "Rhine",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "CHE",
+      "LIE",
+      "AUT",
+      "FRA",
+      "NLD"
+    ],
+    "selection_reason": "major_historic",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "country": { "en": "Germany", "de": "Deutschland", "local_display": "Deutschland" },
+      "capital": { "en": "Berlin", "de": "Berlin", "local_display": "Berlin" },
+      "river": { "en": "Rhine", "de": "Rhein", "local_display": "Rhein" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "ESP",
+    "entity_name": "Spain",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "ESP",
+    "capital_name": "Madrid",
+    "alternative_capitals": [],
+    "river_name": "Tagus",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "PRT"
+    ],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "country": { "en": "Spain", "de": "Spanien", "local_display": "España" },
+      "capital": { "en": "Madrid", "de": "Madrid", "local_display": "Madrid" },
+      "river": { "en": "Tagus", "de": "Tajo", "local_display": "Tajo" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "FRA",
+    "entity_name": "France",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "FRA",
+    "capital_name": "Paris",
+    "alternative_capitals": [],
+    "river_name": "Loire",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {},
+    "facts": {
+      "country": [
+        "Western European country.",
+        "Founding member of the European Union.",
+        "Borders the Atlantic and Mediterranean."
+      ],
+      "capital": [
+        "France's most populous city.",
+        "Situated on the Seine river.",
+        "Major historic, cultural, and economic centre."
+      ],
+      "river": [
+        "Longest river entirely within France (1,006 km).",
+        "Flows west into the Atlantic Ocean.",
+        "Valley is famous for its historic châteaux."
+      ]
+    }
+  },
+  {
+    "entity_id": "ITA",
+    "entity_name": "Italy",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "ITA",
+    "capital_name": "Rome",
+    "alternative_capitals": [],
+    "river_name": "Po",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "country": { "en": "Italy", "de": "Italien", "local_display": "Italia" },
+      "capital": { "en": "Rome", "de": "Rom", "local_display": "Roma" },
+      "river": { "en": "Po", "de": "Po", "local_display": "Po" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "NLD",
+    "entity_name": "Netherlands",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "NLD",
+    "capital_name": "Amsterdam",
+    "alternative_capitals": [
+      "The Hague"
+    ],
+    "river_name": "Rhine",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "CHE",
+      "LIE",
+      "AUT",
+      "DEU",
+      "FRA"
+    ],
+    "selection_reason": "major_historic",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Europe",
+    "label_variants": {
+      "country": { "en": "Netherlands", "de": "Niederlande", "local_display": "Nederland" },
+      "capital": { "en": "Amsterdam", "de": "Amsterdam", "local_display": "Amsterdam" },
+      "river": { "en": "Rhine", "de": "Rhein", "local_display": "Rijn" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "CHN",
+    "entity_name": "China",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "CHN",
+    "capital_name": "Beijing",
+    "alternative_capitals": [],
+    "river_name": "Yangtze",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Asia",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "IND",
+    "entity_name": "India",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "IND",
+    "capital_name": "New Delhi",
+    "alternative_capitals": [],
+    "river_name": "Ganges",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "BGD"
+    ],
+    "selection_reason": "iconic",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Asia",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "JPN",
+    "entity_name": "Japan",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "JPN",
+    "capital_name": "Tokyo",
+    "alternative_capitals": [],
+    "river_name": "Shinano",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Asia",
+    "label_variants": {},
+    "facts": {
+      "country": [
+        "Island country in East Asia.",
+        "Comprises an archipelago of over 14,000 islands.",
+        "Highly mountainous and volcanic terrain."
+      ],
+      "capital": [
+        "Most populous metropolitan area in the world.",
+        "Located on the eastern coast of Honshu.",
+        "Seat of the Japanese Emperor and government."
+      ],
+      "river": [
+        "Longest river in Japan (367 km).",
+        "Flows through Nagano and Niigata prefectures.",
+        "Empties into the Sea of Japan."
+      ]
+    }
+  },
+  {
+    "entity_id": "KOR",
+    "entity_name": "South Korea",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "KOR",
+    "capital_name": "Seoul",
+    "alternative_capitals": [],
+    "river_name": "Han",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "PRK"
+    ],
+    "selection_reason": "capital_region",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Asia",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "ARG",
+    "entity_name": "Argentina",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "ARG",
+    "capital_name": "Buenos Aires",
+    "alternative_capitals": [],
+    "river_name": "Paraná",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "BRA",
+      "PRY"
+    ],
+    "selection_reason": "largest_basin",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Americas",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "BRA",
+    "entity_name": "Brazil",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "BRA",
+    "capital_name": "Brasília",
+    "alternative_capitals": [],
+    "river_name": "Amazon",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "PER",
+      "COL"
+    ],
+    "selection_reason": "largest_basin",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Americas",
+    "label_variants": {},
+    "facts": {
+      "country": [
+        "Largest country in South America.",
+        "Primary official language is Portuguese.",
+        "Contains the majority of the Amazon Rainforest."
+      ],
+      "capital": [
+        "Purpose-built and inaugurated in 1960.",
+        "Located centrally in the Brazilian Highlands.",
+        "Known for its modernist architecture."
+      ],
+      "river": [
+        "Largest river by discharge volume in the world.",
+        "Contains the largest global drainage basin.",
+        "Flows west to east into the Atlantic Ocean."
+      ]
+    }
+  },
+  {
+    "entity_id": "MEX",
+    "entity_name": "Mexico",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "MEX",
+    "capital_name": "Mexico City",
+    "alternative_capitals": [],
+    "river_name": "Rio Grande",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "USA"
+    ],
+    "selection_reason": "cross_border_reference",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Americas",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "USA",
+    "entity_name": "United States",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "USA",
+    "capital_name": "Washington, D.C.",
+    "alternative_capitals": [],
+    "river_name": "Mississippi",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "largest_basin",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Americas",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "EGY",
+    "entity_name": "Egypt",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "EGY",
+    "capital_name": "Cairo",
+    "alternative_capitals": [],
+    "river_name": "Nile",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "BDI",
+      "COD",
+      "ERI",
+      "ETH",
+      "KEN",
+      "RWA",
+      "SDN",
+      "SSD",
+      "TZA",
+      "UGA"
+    ],
+    "selection_reason": "iconic",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Africa",
+    "label_variants": {
+      "language_note": "Arabic is the official language. Rendered in standard Latin romanisation per MVP conventions.",
+      "country": { "en": "Egypt", "de": "Ägypten", "local_display": "Miṣr" },
+      "capital": { "en": "Cairo", "de": "Kairo", "local_display": "Al-Qāhirah" },
+      "river": { "en": "Nile", "de": "Nil", "local_display": "An-Nīl" }
+    },
+    "facts": {
+      "country": [
+        "Transcontinental country in Northeast Africa.",
+        "Borders the Mediterranean and Red Seas.",
+        "Most populous country in the Arab world."
+      ],
+      "capital": [
+        "Largest metropolitan area in the Middle East.",
+        "Situated on the Nile river.",
+        "Located near the Giza pyramid complex."
+      ],
+      "river": [
+        "Often considered the world's longest river.",
+        "Flows north into the Mediterranean Sea.",
+        "Drainage basin spans 11 African countries."
+      ]
+    }
+  },
+  {
+    "entity_id": "KEN",
+    "entity_name": "Kenya",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "KEN",
+    "capital_name": "Nairobi",
+    "alternative_capitals": [],
+    "river_name": "Tana",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Africa",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "ZAF",
+    "entity_name": "South Africa",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "ZAF",
+    "capital_name": "Pretoria",
+    "alternative_capitals": [
+      "Cape Town",
+      "Bloemfontein"
+    ],
+    "river_name": "Orange",
+    "shared_river_flag": true,
+    "shared_river_countries": [
+      "LSO",
+      "NAM"
+    ],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "executive",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Africa",
+    "label_variants": {
+      "language_note": "South Africa has 12 official languages. Afrikaans and Zulu are widely used alongside English. The most common alternative Latin-script forms are provided here as a representative baseline.",
+      "country": { "en": "South Africa", "de": "Südafrika", "local_display": "Suid-Afrika / iNingizimu Afrika" },
+      "capital": { "en": "Pretoria", "de": "Pretoria", "local_display": "Pretoria" },
+      "river": { "en": "Orange", "de": "Oranje", "local_display": "Oranjerivier" }
+    },
+    "facts": {}
+  },
+  {
+    "entity_id": "AUS",
+    "entity_name": "Australia",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "AUS",
+    "capital_name": "Canberra",
+    "alternative_capitals": [],
+    "river_name": "Murray",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Oceania",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "NZL",
+    "entity_name": "New Zealand",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geography_pack_v0.4",
+    "country_id": "NZL",
+    "capital_name": "Wellington",
+    "alternative_capitals": [],
+    "river_name": "Waikato",
+    "shared_river_flag": false,
+    "shared_river_countries": [],
+    "selection_reason": "longest_in_country",
+    "capital_selection_reason": "sole_official",
+    "provenance": "CIA World Factbook; UN FAO Aquastat",
+    "recognition_status": "un_member",
+    "region": "Oceania",
+    "label_variants": {},
+    "facts": {}
+  }
+]

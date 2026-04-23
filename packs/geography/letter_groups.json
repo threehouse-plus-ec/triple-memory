@@ -1,0 +1,242 @@
+[
+  {
+    "letter_group_id": "A_01",
+    "initial_letter": "A",
+    "cards": [
+      { "card_type": "capital", "label": "Amsterdam", "country_id": "NLD" },
+      { "card_type": "country", "label": "Argentina", "country_id": "ARG" },
+      { "card_type": "river", "label": "Amazon", "country_id": "BRA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "A_02",
+    "initial_letter": "A",
+    "cards": [
+      { "card_type": "capital", "label": "Ankara", "country_id": "TUR" },
+      { "card_type": "country", "label": "Austria", "country_id": "AUT" },
+      { "card_type": "river", "label": "Amur", "country_id": "RUS" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "B_01",
+    "initial_letter": "B",
+    "cards": [
+      { "card_type": "capital", "label": "Buenos Aires", "country_id": "ARG" },
+      { "card_type": "country", "label": "Brazil", "country_id": "BRA" },
+      { "card_type": "river", "label": "Blue Nile", "country_id": "ETH" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "C_01",
+    "initial_letter": "C",
+    "cards": [
+      { "card_type": "capital", "label": "Cairo", "country_id": "EGY" },
+      { "card_type": "country", "label": "China", "country_id": "CHN" },
+      { "card_type": "river", "label": "Colorado", "country_id": "USA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "C_02",
+    "initial_letter": "C",
+    "cards": [
+      { "card_type": "capital", "label": "Canberra", "country_id": "AUS" },
+      { "card_type": "country", "label": "Canada", "country_id": "CAN" },
+      { "card_type": "river", "label": "Congo", "country_id": "COD" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "L_01",
+    "initial_letter": "L",
+    "cards": [
+      { "card_type": "capital", "label": "London", "country_id": "GBR" },
+      { "card_type": "country", "label": "Lebanon", "country_id": "LBN" },
+      { "card_type": "river", "label": "Loire", "country_id": "FRA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "L_02",
+    "initial_letter": "L",
+    "cards": [
+      { "card_type": "capital", "label": "Lima", "country_id": "PER" },
+      { "card_type": "country", "label": "Libya", "country_id": "LBY" },
+      { "card_type": "river", "label": "Lena", "country_id": "RUS" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "L_03",
+    "initial_letter": "L",
+    "cards": [
+      { "card_type": "capital", "label": "Lisbon", "country_id": "PRT" },
+      { "card_type": "country", "label": "Lithuania", "country_id": "LTU" },
+      { "card_type": "river", "label": "Limpopo", "country_id": "ZAF" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "M_01",
+    "initial_letter": "M",
+    "cards": [
+      { "card_type": "capital", "label": "Madrid", "country_id": "ESP" },
+      { "card_type": "country", "label": "Mexico", "country_id": "MEX" },
+      { "card_type": "river", "label": "Mississippi", "country_id": "USA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "M_02",
+    "initial_letter": "M",
+    "cards": [
+      { "card_type": "capital", "label": "Moscow", "country_id": "RUS" },
+      { "card_type": "country", "label": "Madagascar", "country_id": "MDG" },
+      { "card_type": "river", "label": "Mekong", "country_id": "VNM" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "M_03",
+    "initial_letter": "M",
+    "cards": [
+      { "card_type": "capital", "label": "Manila", "country_id": "PHL" },
+      { "card_type": "country", "label": "Morocco", "country_id": "MAR" },
+      { "card_type": "river", "label": "Murray", "country_id": "AUS" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "N_01",
+    "initial_letter": "N",
+    "cards": [
+      { "card_type": "capital", "label": "New Delhi", "country_id": "IND" },
+      { "card_type": "country", "label": "Norway", "country_id": "NOR" },
+      { "card_type": "river", "label": "Niger", "country_id": "NGA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "P_01",
+    "initial_letter": "P",
+    "cards": [
+      { "card_type": "capital", "label": "Prague", "country_id": "CZE" },
+      { "card_type": "country", "label": "Portugal", "country_id": "PRT" },
+      { "card_type": "river", "label": "Po", "country_id": "ITA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "R_01",
+    "initial_letter": "R",
+    "cards": [
+      { "card_type": "capital", "label": "Rome", "country_id": "ITA" },
+      { "card_type": "country", "label": "Russia", "country_id": "RUS" },
+      { "card_type": "river", "label": "Rhine", "country_id": "DEU" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "R_02",
+    "initial_letter": "R",
+    "cards": [
+      { "card_type": "capital", "label": "Riyadh", "country_id": "SAU" },
+      { "card_type": "country", "label": "Romania", "country_id": "ROU" },
+      { "card_type": "river", "label": "Rio Grande", "country_id": "MEX" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "R_03",
+    "initial_letter": "R",
+    "cards": [
+      { "card_type": "capital", "label": "Riga", "country_id": "LVA" },
+      { "card_type": "country", "label": "Rwanda", "country_id": "RWA" },
+      { "card_type": "river", "label": "Rhone", "country_id": "FRA" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "S_01",
+    "initial_letter": "S",
+    "cards": [
+      { "card_type": "capital", "label": "Seoul", "country_id": "KOR" },
+      { "card_type": "country", "label": "Spain", "country_id": "ESP" },
+      { "card_type": "river", "label": "Seine", "country_id": "FRA" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "T_01",
+    "initial_letter": "T",
+    "cards": [
+      { "card_type": "capital", "label": "Tokyo", "country_id": "JPN" },
+      { "card_type": "country", "label": "Turkey", "country_id": "TUR" },
+      { "card_type": "river", "label": "Thames", "country_id": "GBR" }
+    ],
+    "difficulty": 1,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "T_02",
+    "initial_letter": "T",
+    "cards": [
+      { "card_type": "capital", "label": "Tehran", "country_id": "IRN" },
+      { "card_type": "country", "label": "Thailand", "country_id": "THA" },
+      { "card_type": "river", "label": "Tagus", "country_id": "PRT" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  },
+  {
+    "letter_group_id": "T_03",
+    "initial_letter": "T",
+    "cards": [
+      { "card_type": "capital", "label": "Tunis", "country_id": "TUN" },
+      { "card_type": "country", "label": "Tanzania", "country_id": "TZA" },
+      { "card_type": "river", "label": "Tiber", "country_id": "ITA" }
+    ],
+    "difficulty": 2,
+    "endorsement_marker": "geography_pack_v0.4",
+    "is_active": true
+  }
+]

@@ -2,7 +2,7 @@
 
 A triple-matching memory game engine with a geography content pack as the first implementation.
 
-**Status:** Design phase. Blueprints frozen at v0.4. Implementation not yet started.
+**Status:** Prototype implementation and draft Geography Pack data are present. Blueprints are frozen at v0.4; validation, accessibility hardening, and playtesting are in progress.
 **Current blueprint set:** Engine v0.4 + Geography Pack v0.4.
 **Design standard:** Oxford British English.
 **Endorsement Marker:** `geography_pack_v0.4`
@@ -22,13 +22,13 @@ The first pack is **Geography**: Capital · Country · River (e.g., Vienna · Au
 ```
 triple-memory/
 ├── README.md                         (this file)
-├── engine/                           (implementation pending)
+├── engine/                           (prototype implementation)
 │   └── README.md
 ├── packs/
-│   └── geography/                    (data pending per task cards)
+│   └── geography/                    (draft MVP data + assets)
 │       ├── README.md
 │       ├── icons/
-│       └── CURATION_STATEMENT.md     (stub; populated per TC-40/TC-41)
+│       └── CURATION_STATEMENT.md
 ├── assets/
 │   └── common/
 └── docs/
@@ -49,6 +49,7 @@ triple-memory/
 2. `docs/ENGINE_BLUEPRINT.md` — the topic-agnostic game engine.
 3. `docs/GEOGRAPHY_PACK_BLUEPRINT.md` — the first content pack.
 4. `docs/TASK_CARDS.md` — structured work assignments for data collection.
+5. `packs/geography/CURATION_STATEMENT.md` — rationale, provenance notes, and dispute channel for the active pack.
 
 **Joining a task team?** Go straight to `docs/TASK_CARDS.md` and §2 (cross-check protocol).
 
@@ -73,15 +74,15 @@ triple-memory/
 - Engine Blueprint v0.4 (`docs/ENGINE_BLUEPRINT.md`)
 - Geography Pack Blueprint v0.4 (`docs/GEOGRAPHY_PACK_BLUEPRINT.md`)
 - Task Cards v1.0 (`docs/TASK_CARDS.md`)
+- Prototype engine implementation in `engine/`
+- Draft Geography Pack manifest, datasets, icons, and Curation Statement in `packs/geography/`
 - Full deliberation trail archived.
 
 **Pending:**
-- JSON schemas (Task Card TC-01).
-- `entities.json`, `cards.json`, `letter_groups.json` for the Geography Pack (Phase 1 task cards).
-- SVG icons for the three Geography card types (TC-50).
-- `manifest.json` (TC-52).
-- Curation Statement content beyond the stub (TC-40 through TC-43).
-- Engine implementation (post Phase 6 gate).
+- Validation and playtest passes against the current prototype.
+- Accessibility audit of the implemented UI.
+- Broader coverage of multilingual variants and fact content.
+- Additional engine features beyond the single-pack MVP prototype.
 
 See `docs/TASK_CARDS.md` for the full work breakdown and estimated effort (~70–95 person-hours for Phase 1–6 data work).
 
@@ -91,7 +92,7 @@ See `docs/TASK_CARDS.md` for the full work breakdown and estimated effort (~70�
 
 If you believe an entry in this repository is wrong, misleading, or culturally inappropriate, please open an issue or contact the maintainers. Corrections are reviewed and recorded in the relevant pack's Curation Statement.
 
-Contact address: *to be assigned per Task Card TC-43.*
+Current geography-pack dispute channel: `packs/geography/CURATION_STATEMENT.md`.
 
 ---
 
