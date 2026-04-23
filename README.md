@@ -22,19 +22,30 @@ The first pack is **Geography**: Capital · Country · River (e.g., Vienna · Au
 ```
 triple-memory/
 ├── README.md                         (this file)
+├── index.html                        (GitHub Pages redirect to engine/)
 ├── engine/                           (prototype implementation)
-│   └── README.md
+│   ├── README.md
+│   ├── index.html
+│   ├── app.js
+│   ├── style.css
+│   └── validator.js
 ├── packs/
 │   └── geography/                    (draft MVP data + assets)
 │       ├── README.md
-│       ├── icons/
-│       └── CURATION_STATEMENT.md
+│       ├── CURATION_STATEMENT.md
+│       ├── manifest.json
+│       ├── entities.json
+│       ├── cards.json
+│       ├── letter_groups.json
+│       └── icons/
 ├── assets/
-│   └── common/
+│   └── cd/                           (shared design-system tokens + emblem)
 └── docs/
     ├── ENGINE_BLUEPRINT.md           (v0.4, active)
     ├── GEOGRAPHY_PACK_BLUEPRINT.md   (v0.4, active)
+    ├── PACK_INTERFACE.md             (JSON schemas)
     ├── TASK_CARDS.md                 (v1.0, ready for assignment)
+    ├── ACCESSIBILITY.md
     ├── blueprint_history/            (v0.1, v0.2, v0.3 archived)
     └── deliberation_history/         (Council-3 and external reviews)
 ```

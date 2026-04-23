@@ -76,7 +76,7 @@ The cross-check rule is non-negotiable:
 - **Team:** Scribe.
 - **Depends on:** none.
 - **Inputs:** Engine Blueprint §23 file structure.
-- **Outputs:** empty directory tree committed to the repository (`engine/`, `packs/geography/`, `docs/`, `assets/common/`, `README.md` stub).
+- **Outputs:** empty directory tree committed to the repository (`engine/`, `packs/geography/`, `docs/`, `assets/cd/`, `README.md` stub).
 - **Acceptance criteria:** structure matches Engine §23; README links to both blueprints.
 - **Cross-check:** second team member reviews the commit and confirms no extra or missing directories.
 - **Blueprint anchor:** Engine §23, Pack §16.
