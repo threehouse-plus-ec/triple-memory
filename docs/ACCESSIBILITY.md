@@ -16,4 +16,6 @@ These are floor requirements, not targets.
 
 ## Audit log
 
-*Pending.* Audit results from TC-51 (icons) and later engine-level audits will be recorded here, each with the auditor name, date, icon or component audited, and pass / fail status.
+| Date | Auditor | Component | Status | Notes |
+|------|---------|-----------|--------|-------|
+| 2026-04-22 | TC-51 Verifier | Geography Pack Icons (`capital.svg`, `country.svg`, `river.svg`) | **Pass** | Icons successfully tested for shape distinctness at 16px, 24px, and 48px. Confirmed colour-independence (monochrome `currentColor` fill) and greyscale legibility. |

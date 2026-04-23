@@ -1,6 +1,6 @@
 # Geography Pack Icons
 
-**Status:** Icon design pending (Task Card TC-50, Accessibility audit TC-51).
+**Status:** Designed per TC-50. Accessibility audit passed per TC-51.
 
 Three SVG icons will live here:
 
