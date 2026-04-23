@@ -499,9 +499,17 @@ class TripleMemoryEngine {
 
         const previouslyFocused = document.activeElement;
         const onKeydown = (event) => {
+            if (this.matchTimeout) {
+                clearTimeout(this.matchTimeout);
+                this.matchTimeout = null;
+            }
             if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
                 dismiss();
+            } else if (event.key === 'Tab') {
+                event.preventDefault();
+                const dialog = overlay.querySelector('.match-overlay-content');
+                if (dialog) dialog.focus();
             }
         };
         const dismiss = () => {
