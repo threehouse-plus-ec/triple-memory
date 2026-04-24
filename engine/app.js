@@ -93,7 +93,25 @@ const UI_STRINGS = {
         tutorialWrong: 'Not quite! You need {required} that share the required relation.',
         errorLoading: 'Error Loading Pack Data',
         errorHint: 'Check the console for details. (Note: The Fetch API requires a local web server).',
-        schemaViolations: 'Schema Violations:'
+        schemaViolations: 'Schema Violations:',
+        viewStatistics: 'Statistics',
+        statisticsHeader: 'Your Statistics',
+        statisticsEmpty: 'No games recorded yet. Play a round and come back.',
+        statisticsPrivacy: 'Stored locally on this device; never sent anywhere.',
+        statisticsFilterPack: 'Pack:',
+        statisticsFilterMode: 'Mode:',
+        statisticsFilterSize: 'Board:',
+        statisticsAll: 'All',
+        statisticsSummaryCount: 'Games: {n}',
+        statisticsSummaryAvg: 'Avg memory: {n}%',
+        statisticsSummaryBest: 'Best memory: {n}%',
+        statisticsSummaryTime: 'Total time: {time}',
+        statisticsHistMemory: 'Memory quality (%)',
+        statisticsHistFlips: 'Flips',
+        statisticsHistTime: 'Time (seconds)',
+        statisticsBinRange: '{lo}–{hi}',
+        statisticsClear: 'Clear All Statistics',
+        statisticsClearConfirm: 'Delete every recorded game on this device? This cannot be undone.'
     },
     de: {
         loading: 'Lade Ressourcen...',
@@ -157,14 +175,33 @@ const UI_STRINGS = {
         tutorialWrong: 'Nicht ganz! Du brauchst {required}, die die geforderte Beziehung teilen.',
         errorLoading: 'Fehler beim Laden der Paketdaten',
         errorHint: 'Details in der Konsole. (Hinweis: Die Fetch API benötigt einen lokalen Webserver.)',
-        schemaViolations: 'Schemaverstöße:'
+        schemaViolations: 'Schemaverstöße:',
+        viewStatistics: 'Statistik',
+        statisticsHeader: 'Deine Statistik',
+        statisticsEmpty: 'Noch keine Spiele aufgezeichnet. Spiel eine Runde und komm wieder.',
+        statisticsPrivacy: 'Nur lokal auf diesem Gerät gespeichert; nichts wird übertragen.',
+        statisticsFilterPack: 'Paket:',
+        statisticsFilterMode: 'Modus:',
+        statisticsFilterSize: 'Spielfeld:',
+        statisticsAll: 'Alle',
+        statisticsSummaryCount: 'Spiele: {n}',
+        statisticsSummaryAvg: 'Ø Gedächtnis: {n}%',
+        statisticsSummaryBest: 'Beste Gedächtnis-Qualität: {n}%',
+        statisticsSummaryTime: 'Gesamtzeit: {time}',
+        statisticsHistMemory: 'Gedächtnis-Qualität (%)',
+        statisticsHistFlips: 'Aufdeckungen',
+        statisticsHistTime: 'Zeit (Sekunden)',
+        statisticsBinRange: '{lo}–{hi}',
+        statisticsClear: 'Alle Statistiken löschen',
+        statisticsClearConfirm: 'Wirklich alle auf diesem Gerät gespeicherten Spiele löschen? Kann nicht rückgängig gemacht werden.'
     }
 };
 
 class TripleMemoryEngine {
     constructor() {
-        this.state = 'LOADING'; // States: LOADING, MENU, PLAYING, END
+        this.state = 'LOADING'; // States: LOADING, MENU, PLAYING, END, STATS
         this.pack = null;
+        this.statsFilter = { pack: 'all', mode: 'all', size: 'all' };
         
         // Active game state
         this.currentMode = null;
@@ -872,6 +909,21 @@ class TripleMemoryEngine {
             this.state = 'END';
             this.render();
         } else {
+            if (typeof TripleMemoryStats !== 'undefined' && this.pack) {
+                TripleMemoryStats.record({
+                    pack: this.pack.manifest.pack_id,
+                    mode: this.currentMode,
+                    size: this.boardSize,
+                    locale: this.currentLocale,
+                    flips: this.flipCount,
+                    time_ms: this.elapsedMs,
+                    memory_pct: this.memoryQuality(this.flipCount),
+                    perfect: this.perfectFlips(),
+                    avg: this.averageFlips(),
+                    random: this.randomFlips(),
+                    expert: this.expertMode
+                });
+            }
             // Keep the finished board visible so the player can review every
             // matched triple; swap the header into completion mode instead of
             // transitioning to the blank END screen.
@@ -1037,6 +1089,154 @@ class TripleMemoryEngine {
         }
     }
 
+    showStatistics() {
+        this.state = 'STATS';
+        this.render();
+    }
+
+    setStatsFilter(key, value) {
+        this.statsFilter[key] = value;
+        this.render();
+    }
+
+    clearStatistics() {
+        if (!confirm(this.t('statisticsClearConfirm'))) return;
+        TripleMemoryStats.clear();
+        this.render();
+    }
+
+    formatStatsDuration(ms) {
+        const total = Math.max(0, Math.floor(ms / 1000));
+        const h = Math.floor(total / 3600);
+        const m = Math.floor((total % 3600) / 60);
+        const s = total % 60;
+        if (h > 0) return `${h}h ${String(m).padStart(2, '0')}m`;
+        return `${m}:${String(s).padStart(2, '0')}`;
+    }
+
+    renderHistogramRows(bins, labels) {
+        const max = bins.reduce((a, b) => a > b ? a : b, 0) || 1;
+        return bins.map((n, i) => {
+            const pct = (n / max) * 100;
+            const label = labels[i];
+            return `
+                <div class="stats-hist-row">
+                    <span class="stats-hist-label">${label}</span>
+                    <span class="stats-hist-bar-wrap"><span class="stats-hist-bar" style="width: ${pct}%"></span></span>
+                    <span class="stats-hist-count">${n}</span>
+                </div>
+            `;
+        }).join('');
+    }
+
+    renderStatistics() {
+        const records = TripleMemoryStats.list(this.statsFilter);
+        const summary = TripleMemoryStats.summary(records);
+
+        const packOptions = [{ id: 'all', label: this.t('statisticsAll') }]
+            .concat(AVAILABLE_PACKS.map(p => ({
+                id: p.id,
+                label: (p.display && (p.display[this.currentLocale] || p.display.en)) || p.id
+            })));
+        const modeOptions = [
+            { id: 'all', label: this.t('statisticsAll') },
+            { id: 'shared_entity', label: this.t('modeSharedEntity') },
+            { id: 'shared_letter', label: this.t('modeSharedLetter') }
+        ];
+        const sizeOptions = [{ id: 'all', label: this.t('statisticsAll') }]
+            .concat((this.pack ? this.pack.manifest.supported_board_sizes : [12, 18, 24]).map(s => ({
+                id: String(s),
+                label: String(s)
+            })));
+
+        const filterBlock = `
+            <div class="stats-filters">
+                <label>${this.t('statisticsFilterPack')}
+                    <select onchange="game.setStatsFilter('pack', this.value)">
+                        ${packOptions.map(o => `<option value="${o.id}" ${this.statsFilter.pack === o.id ? 'selected' : ''}>${o.label}</option>`).join('')}
+                    </select>
+                </label>
+                <label>${this.t('statisticsFilterMode')}
+                    <select onchange="game.setStatsFilter('mode', this.value)">
+                        ${modeOptions.map(o => `<option value="${o.id}" ${this.statsFilter.mode === o.id ? 'selected' : ''}>${o.label}</option>`).join('')}
+                    </select>
+                </label>
+                <label>${this.t('statisticsFilterSize')}
+                    <select onchange="game.setStatsFilter('size', this.value)">
+                        ${sizeOptions.map(o => `<option value="${o.id}" ${String(this.statsFilter.size) === o.id ? 'selected' : ''}>${o.label}</option>`).join('')}
+                    </select>
+                </label>
+            </div>
+        `;
+
+        if (records.length === 0) {
+            return `
+                <div class="screen stats">
+                    <h1>${this.t('statisticsHeader')}</h1>
+                    <p class="stats-privacy">${this.t('statisticsPrivacy')}</p>
+                    ${filterBlock}
+                    <p class="stats-empty">${this.t('statisticsEmpty')}</p>
+                    <div class="menu-actions">
+                        <button onclick="game.state = 'MENU'; game.render()">${this.t('returnToMenu')}</button>
+                    </div>
+                </div>
+            `;
+        }
+
+        const memoryBins = TripleMemoryStats.histogramMemory(records);
+        const memoryLabels = memoryBins.map((_, i) => this.t('statisticsBinRange', { lo: i * 10, hi: (i + 1) * 10 }));
+
+        const flipValues = records.map(r => Number(r.flips)).filter(Number.isFinite);
+        const flipHist = TripleMemoryStats.histogramLinear(flipValues, 10);
+        const flipLabels = this.binLabels(flipHist.min, flipHist.max, 10);
+
+        const timeValues = records.map(r => Math.round(Number(r.time_ms) / 1000)).filter(Number.isFinite);
+        const timeHist = TripleMemoryStats.histogramLinear(timeValues, 10);
+        const timeLabels = this.binLabels(timeHist.min, timeHist.max, 10);
+
+        return `
+            <div class="screen stats">
+                <h1>${this.t('statisticsHeader')}</h1>
+                <p class="stats-privacy">${this.t('statisticsPrivacy')}</p>
+                ${filterBlock}
+                <div class="stats-summary">
+                    <span>${this.t('statisticsSummaryCount', { n: summary.count })}</span>
+                    <span>${this.t('statisticsSummaryAvg', { n: summary.avgMemory })}</span>
+                    <span>${this.t('statisticsSummaryBest', { n: summary.bestMemory })}</span>
+                    <span>${this.t('statisticsSummaryTime', { time: this.formatStatsDuration(summary.totalTimeMs) })}</span>
+                </div>
+                <section class="stats-hist">
+                    <h3>${this.t('statisticsHistMemory')}</h3>
+                    ${this.renderHistogramRows(memoryBins, memoryLabels)}
+                </section>
+                <section class="stats-hist">
+                    <h3>${this.t('statisticsHistFlips')}</h3>
+                    ${this.renderHistogramRows(flipHist.bins, flipLabels)}
+                </section>
+                <section class="stats-hist">
+                    <h3>${this.t('statisticsHistTime')}</h3>
+                    ${this.renderHistogramRows(timeHist.bins, timeLabels)}
+                </section>
+                <div class="menu-actions stats-actions">
+                    <button onclick="game.state = 'MENU'; game.render()">${this.t('returnToMenu')}</button>
+                    <button class="stats-clear" onclick="game.clearStatistics()">${this.t('statisticsClear')}</button>
+                </div>
+            </div>
+        `;
+    }
+
+    binLabels(min, max, binCount) {
+        if (!Number.isFinite(min) || !Number.isFinite(max) || min === max) {
+            return new Array(binCount).fill('').map((_, i) => i === 0 ? String(min || 0) : '');
+        }
+        const step = (max - min) / binCount;
+        return new Array(binCount).fill(0).map((_, i) => {
+            const lo = Math.round(min + i * step);
+            const hi = Math.round(min + (i + 1) * step);
+            return this.t('statisticsBinRange', { lo, hi });
+        });
+    }
+
     render() {
         // A simple DOM-replacement render loop for the prototype
         const appRoot = this.getAppRoot();
@@ -1131,6 +1331,7 @@ class TripleMemoryEngine {
                             <button onclick="game.startTutorial()">${this.t('playTutorial')}</button>
                             <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_entity')">${this.t('playSharedEntity')}</button>
                             <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">${this.t('playSharedLetter')}</button>
+                            <button class="menu-secondary" onclick="game.showStatistics()">${this.t('viewStatistics')}</button>
                         </div>
 
                         <p class="menu-footer">
@@ -1245,6 +1446,10 @@ class TripleMemoryEngine {
                         <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">${this.t('returnToMenu')}</button>
                     </div>
                 `;
+                break;
+
+            case 'STATS':
+                appRoot.innerHTML = this.renderStatistics();
                 break;
         }
 
