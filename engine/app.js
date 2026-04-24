@@ -4,7 +4,8 @@
 // The first entry is the default if no ?pack=<id> query param is supplied.
 const AVAILABLE_PACKS = [
     { id: 'geography',  display: { en: 'Geography', de: 'Geografie' } },
-    { id: 'chemistry',  display: { en: 'Chemistry', de: 'Chemie' } }
+    { id: 'chemistry',  display: { en: 'Chemistry', de: 'Chemie' } },
+    { id: 'music',      display: { en: 'Music',     de: 'Musik'    } }
 ];
 
 // Perfect-memory optimal play — Monte Carlo mean (20000 trials each).

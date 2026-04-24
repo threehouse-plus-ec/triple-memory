@@ -1,0 +1,81 @@
+[
+  { "card_id": "BACH_composer",       "entity_id": "BACH",         "card_type": "composer",   "label": "Bach",                     "label_script": "latin", "initial_letter": "B", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "BACH_work",           "entity_id": "BACH",         "card_type": "work",       "label": "Brandenburg Concertos",    "label_script": "latin", "initial_letter": "B", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "BACH_instrument",     "entity_id": "BACH",         "card_type": "instrument", "label": "Harpsichord",              "label_script": "latin", "initial_letter": "H", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "MOZART_composer",     "entity_id": "MOZART",       "card_type": "composer",   "label": "Mozart",                   "label_script": "latin", "initial_letter": "M", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "MOZART_work",         "entity_id": "MOZART",       "card_type": "work",       "label": "Clarinet Concerto",        "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "MOZART_instrument",   "entity_id": "MOZART",       "card_type": "instrument", "label": "Clarinet",                 "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "BEETHOVEN_composer",  "entity_id": "BEETHOVEN",    "card_type": "composer",   "label": "Beethoven",                "label_script": "latin", "initial_letter": "B", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "BEETHOVEN_work",      "entity_id": "BEETHOVEN",    "card_type": "work",       "label": "Violin Concerto",          "label_script": "latin", "initial_letter": "V", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "BEETHOVEN_instrument","entity_id": "BEETHOVEN",    "card_type": "instrument", "label": "Violin",                   "label_script": "latin", "initial_letter": "V", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "SCHUBERT_composer",   "entity_id": "SCHUBERT",     "card_type": "composer",   "label": "Schubert",                 "label_script": "latin", "initial_letter": "S", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "SCHUBERT_work",       "entity_id": "SCHUBERT",     "card_type": "work",       "label": "Trout Quintet",            "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "SCHUBERT_instrument", "entity_id": "SCHUBERT",     "card_type": "instrument", "label": "Piano",                    "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "CHOPIN_composer",     "entity_id": "CHOPIN",       "card_type": "composer",   "label": "Chopin",                   "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "CHOPIN_work",         "entity_id": "CHOPIN",       "card_type": "work",       "label": "Nocturnes",                "label_script": "latin", "initial_letter": "N", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "CHOPIN_instrument",   "entity_id": "CHOPIN",       "card_type": "instrument", "label": "Piano",                    "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "CSCHUMANN_composer",  "entity_id": "CSCHUMANN",    "card_type": "composer",   "label": "Clara Schumann",           "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "CSCHUMANN_work",      "entity_id": "CSCHUMANN",    "card_type": "work",       "label": "Piano Concerto",           "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "CSCHUMANN_instrument","entity_id": "CSCHUMANN",    "card_type": "instrument", "label": "Piano",                    "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "TCHAIKOVSKY_composer",    "entity_id": "TCHAIKOVSKY", "card_type": "composer",   "label": "Tchaikovsky",          "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "TCHAIKOVSKY_work",        "entity_id": "TCHAIKOVSKY", "card_type": "work",       "label": "Nutcracker",           "label_script": "latin", "initial_letter": "N", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "TCHAIKOVSKY_instrument",  "entity_id": "TCHAIKOVSKY", "card_type": "instrument", "label": "Celesta",              "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "BRAHMS_composer",     "entity_id": "BRAHMS",       "card_type": "composer",   "label": "Brahms",                   "label_script": "latin", "initial_letter": "B", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "BRAHMS_work",         "entity_id": "BRAHMS",       "card_type": "work",       "label": "Double Concerto",          "label_script": "latin", "initial_letter": "D", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "BRAHMS_instrument",   "entity_id": "BRAHMS",       "card_type": "instrument", "label": "Cello",                    "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "DEBUSSY_composer",    "entity_id": "DEBUSSY",      "card_type": "composer",   "label": "Debussy",                  "label_script": "latin", "initial_letter": "D", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "DEBUSSY_work",        "entity_id": "DEBUSSY",      "card_type": "work",       "label": "Syrinx",                   "label_script": "latin", "initial_letter": "S", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "DEBUSSY_instrument",  "entity_id": "DEBUSSY",      "card_type": "instrument", "label": "Flute",                    "label_script": "latin", "initial_letter": "F", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "STRAVINSKY_composer",    "entity_id": "STRAVINSKY","card_type": "composer",   "label": "Stravinsky",               "label_script": "latin", "initial_letter": "S", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "STRAVINSKY_work",        "entity_id": "STRAVINSKY","card_type": "work",       "label": "Rite of Spring",           "label_script": "latin", "initial_letter": "R", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "STRAVINSKY_instrument",  "entity_id": "STRAVINSKY","card_type": "instrument", "label": "Bassoon",                  "label_script": "latin", "initial_letter": "B", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "VIVALDI_composer",    "entity_id": "VIVALDI",      "card_type": "composer",   "label": "Vivaldi",                  "label_script": "latin", "initial_letter": "V", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "VIVALDI_work",        "entity_id": "VIVALDI",      "card_type": "work",       "label": "Four Seasons",             "label_script": "latin", "initial_letter": "F", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "VIVALDI_instrument",  "entity_id": "VIVALDI",      "card_type": "instrument", "label": "Violin",                   "label_script": "latin", "initial_letter": "V", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "HANDEL_composer",     "entity_id": "HANDEL",       "card_type": "composer",   "label": "Handel",                   "label_script": "latin", "initial_letter": "H", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "HANDEL_work",         "entity_id": "HANDEL",       "card_type": "work",       "label": "Messiah",                  "label_script": "latin", "initial_letter": "M", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "HANDEL_instrument",   "entity_id": "HANDEL",       "card_type": "instrument", "label": "Trumpet",                  "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "HAYDN_composer",      "entity_id": "HAYDN",        "card_type": "composer",   "label": "Haydn",                    "label_script": "latin", "initial_letter": "H", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "HAYDN_work",          "entity_id": "HAYDN",        "card_type": "work",       "label": "Trumpet Concerto",         "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "HAYDN_instrument",    "entity_id": "HAYDN",        "card_type": "instrument", "label": "Trumpet",                  "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "LISZT_composer",      "entity_id": "LISZT",        "card_type": "composer",   "label": "Liszt",                    "label_script": "latin", "initial_letter": "L", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "LISZT_work",          "entity_id": "LISZT",        "card_type": "work",       "label": "La Campanella",            "label_script": "latin", "initial_letter": "L", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "LISZT_instrument",    "entity_id": "LISZT",        "card_type": "instrument", "label": "Piano",                    "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "MAHLER_composer",     "entity_id": "MAHLER",       "card_type": "composer",   "label": "Mahler",                   "label_script": "latin", "initial_letter": "M", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "MAHLER_work",         "entity_id": "MAHLER",       "card_type": "work",       "label": "Symphony No. 5",           "label_script": "latin", "initial_letter": "S", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "MAHLER_instrument",   "entity_id": "MAHLER",       "card_type": "instrument", "label": "Trumpet",                  "label_script": "latin", "initial_letter": "T", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "DVORAK_composer",     "entity_id": "DVORAK",       "card_type": "composer",   "label": "Dvořák",                   "label_script": "latin", "initial_letter": "D", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "DVORAK_work",         "entity_id": "DVORAK",       "card_type": "work",       "label": "Cello Concerto",           "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "DVORAK_instrument",   "entity_id": "DVORAK",       "card_type": "instrument", "label": "Cello",                    "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+
+  { "card_id": "RACHMANINOFF_composer",   "entity_id": "RACHMANINOFF", "card_type": "composer",   "label": "Rachmaninoff",         "label_script": "latin", "initial_letter": "R", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "RACHMANINOFF_work",       "entity_id": "RACHMANINOFF", "card_type": "work",       "label": "Piano Concerto No. 2", "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "RACHMANINOFF_instrument", "entity_id": "RACHMANINOFF", "card_type": "instrument", "label": "Piano",                "label_script": "latin", "initial_letter": "P", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "HILDEGARD_composer",  "entity_id": "HILDEGARD",    "card_type": "composer",   "label": "Hildegard von Bingen",     "label_script": "latin", "initial_letter": "H", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "HILDEGARD_work",      "entity_id": "HILDEGARD",    "card_type": "work",       "label": "Ordo Virtutum",            "label_script": "latin", "initial_letter": "O", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "HILDEGARD_instrument","entity_id": "HILDEGARD",    "card_type": "instrument", "label": "Voice",                    "label_script": "latin", "initial_letter": "V", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "GERSHWIN_composer",   "entity_id": "GERSHWIN",     "card_type": "composer",   "label": "Gershwin",                 "label_script": "latin", "initial_letter": "G", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "GERSHWIN_work",       "entity_id": "GERSHWIN",     "card_type": "work",       "label": "Rhapsody in Blue",         "label_script": "latin", "initial_letter": "R", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "GERSHWIN_instrument", "entity_id": "GERSHWIN",     "card_type": "instrument", "label": "Clarinet",                 "label_script": "latin", "initial_letter": "C", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+
+  { "card_id": "SHANKAR_composer",    "entity_id": "SHANKAR",      "card_type": "composer",   "label": "Ravi Shankar",             "label_script": "latin", "initial_letter": "R", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] },
+  { "card_id": "SHANKAR_work",        "entity_id": "SHANKAR",      "card_type": "work",       "label": "Raga Jog",                 "label_script": "latin", "initial_letter": "R", "romanisation_source": "standard_english", "mode_tags": ["shared_entity"] },
+  { "card_id": "SHANKAR_instrument",  "entity_id": "SHANKAR",      "card_type": "instrument", "label": "Sitar",                    "label_script": "latin", "initial_letter": "S", "romanisation_source": "standard_english", "mode_tags": ["shared_entity", "shared_letter"] }
+]

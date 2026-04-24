@@ -1,0 +1,467 @@
+[
+  {
+    "entity_id": "BACH",
+    "entity_name": "Bach",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Johann Sebastian Bach",
+    "canonical_work": "Brandenburg Concertos",
+    "canonical_instrument": "Harpsichord",
+    "era": "Baroque",
+    "nationality": "German",
+    "provenance": "Grove Music Online; standard classical repertoire references",
+    "label_variants": {
+      "composer": {
+        "en": "Bach",
+        "de": "Bach",
+        "local_display": "Bach"
+      },
+      "work": {
+        "en": "Brandenburg Concertos",
+        "de": "Brandenburgische Konzerte",
+        "local_display": "Brandenburgische Konzerte"
+      },
+      "instrument": {
+        "en": "Harpsichord",
+        "de": "Cembalo",
+        "local_display": "Harpsichord"
+      }
+    },
+    "facts": {
+      "composer": [
+        "Leading composer of the late Baroque period.",
+        "Worked for most of his career as a Lutheran church musician in Leipzig.",
+        "Father of Wilhelm Friedemann, Carl Philipp Emanuel, and Johann Christian Bach — all composers in their own right."
+      ],
+      "work": [
+        "Six instrumental concertos dedicated to the Margrave of Brandenburg in 1721.",
+        "Each concerto uses a different combination of solo instruments.",
+        "Rediscovered in the Brandenburg archives in 1849, nearly a century after Bach's death."
+      ],
+      "instrument": [
+        "Keyboard instrument in which strings are plucked by quills rather than struck.",
+        "Standard continuo instrument in Baroque ensembles.",
+        "Largely displaced by the piano in the late 18th century."
+      ]
+    }
+  },
+  {
+    "entity_id": "MOZART",
+    "entity_name": "Mozart",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Wolfgang Amadeus Mozart",
+    "canonical_work": "Clarinet Concerto",
+    "canonical_instrument": "Clarinet",
+    "era": "Classical",
+    "nationality": "Austrian",
+    "provenance": "Grove Music Online; Köchel catalogue",
+    "label_variants": {
+      "composer": {
+        "en": "Mozart",
+        "de": "Mozart",
+        "local_display": "Mozart"
+      },
+      "work": {
+        "en": "Clarinet Concerto",
+        "de": "Klarinettenkonzert",
+        "local_display": "Klarinettenkonzert"
+      },
+      "instrument": {
+        "en": "Clarinet",
+        "de": "Klarinette",
+        "local_display": "Clarinet"
+      }
+    },
+    "facts": {
+      "composer": [
+        "Prolific composer of the Classical era; catalogued by Köchel as over 600 works.",
+        "Began touring European courts as a keyboard prodigy from the age of six.",
+        "Died in Vienna in 1791 at the age of 35, leaving the Requiem unfinished."
+      ],
+      "work": [
+        "Concerto in A major, K. 622, written for the basset clarinet in 1791.",
+        "One of the last instrumental works Mozart completed before his death.",
+        "Written for the virtuoso Anton Stadler."
+      ],
+      "instrument": [
+        "Single-reed woodwind instrument with a cylindrical bore.",
+        "Invented in its early form by Johann Christoph Denner around 1700.",
+        "Standard orchestral instrument from the late 18th century onward."
+      ]
+    }
+  },
+  {
+    "entity_id": "BEETHOVEN",
+    "entity_name": "Beethoven",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Ludwig van Beethoven",
+    "canonical_work": "Violin Concerto",
+    "canonical_instrument": "Violin",
+    "era": "Classical to Romantic",
+    "nationality": "German",
+    "provenance": "Grove Music Online",
+    "label_variants": {
+      "composer": {
+        "en": "Beethoven",
+        "de": "Beethoven",
+        "local_display": "Beethoven"
+      },
+      "work": {
+        "en": "Violin Concerto",
+        "de": "Violinkonzert",
+        "local_display": "Violinkonzert"
+      },
+      "instrument": {
+        "en": "Violin",
+        "de": "Violine",
+        "local_display": "Violin"
+      }
+    },
+    "facts": {
+      "composer": [
+        "Bridge figure between the Classical and Romantic styles.",
+        "Continued composing after progressive hearing loss left him largely deaf.",
+        "Nine symphonies, 32 piano sonatas, 16 string quartets, and a single opera (Fidelio)."
+      ],
+      "work": [
+        "Concerto in D major, Op. 61, composed in 1806.",
+        "Premiered by Franz Clement, who reportedly sight-read much of the solo part.",
+        "Neglected for decades after the premiere; revived in the 1840s by the young Joseph Joachim."
+      ],
+      "instrument": [
+        "Four-stringed bowed instrument, the highest-pitched member of the violin family.",
+        "Standard solo, chamber, and orchestral instrument since the 17th century.",
+        "Leading makers include Stradivari, Guarneri, and Amati — all active in 17th- and 18th-century Cremona."
+      ]
+    }
+  },
+  {
+    "entity_id": "SCHUBERT",
+    "entity_name": "Schubert",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Franz Schubert",
+    "canonical_work": "Trout Quintet",
+    "canonical_instrument": "Piano",
+    "era": "Classical to Romantic",
+    "nationality": "Austrian",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "CHOPIN",
+    "entity_name": "Chopin",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Frédéric Chopin",
+    "canonical_work": "Nocturnes",
+    "canonical_instrument": "Piano",
+    "era": "Romantic",
+    "nationality": "Polish",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "CSCHUMANN",
+    "entity_name": "Clara Schumann",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Clara Schumann (née Wieck)",
+    "canonical_work": "Piano Concerto",
+    "canonical_instrument": "Piano",
+    "era": "Romantic",
+    "nationality": "German",
+    "provenance": "Grove Music Online; Reich, Nancy B., 'Clara Schumann: The Artist and the Woman' (1985)",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "TCHAIKOVSKY",
+    "entity_name": "Tchaikovsky",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Pyotr Ilyich Tchaikovsky",
+    "canonical_work": "Nutcracker",
+    "canonical_instrument": "Celesta",
+    "era": "Romantic",
+    "nationality": "Russian",
+    "provenance": "Grove Music Online",
+    "label_variants": {
+      "composer": {
+        "en": "Tchaikovsky",
+        "de": "Tschaikowsky",
+        "local_display": "Чайковский",
+        "native_display": "Чайковский"
+      },
+      "work": {
+        "en": "Nutcracker",
+        "de": "Nussknacker",
+        "local_display": "Щелкунчик",
+        "native_display": "Щелкунчик"
+      },
+      "instrument": {
+        "en": "Celesta",
+        "de": "Celesta",
+        "local_display": "Celesta"
+      }
+    },
+    "facts": {
+      "composer": [
+        "Russian composer of the late Romantic era.",
+        "Known for melodic lyricism and dramatic orchestration.",
+        "Wrote six numbered symphonies, three ballets, and ten operas."
+      ],
+      "work": [
+        "Two-act ballet premiered in Saint Petersburg in 1892.",
+        "Based on E.T.A. Hoffmann's story 'The Nutcracker and the Mouse King'.",
+        "The 'Dance of the Sugar Plum Fairy' introduced the celesta to the wider concert-going public."
+      ],
+      "instrument": [
+        "Struck-keyboard instrument invented by Auguste Mustel in Paris, 1886.",
+        "Metal bars are struck by hammers, giving a bell-like sustained tone.",
+        "First prominent orchestral use was Tchaikovsky's Nutcracker in 1892."
+      ]
+    }
+  },
+  {
+    "entity_id": "BRAHMS",
+    "entity_name": "Brahms",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Johannes Brahms",
+    "canonical_work": "Double Concerto",
+    "canonical_instrument": "Cello",
+    "era": "Romantic",
+    "nationality": "German",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "DEBUSSY",
+    "entity_name": "Debussy",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Claude Debussy",
+    "canonical_work": "Syrinx",
+    "canonical_instrument": "Flute",
+    "era": "Late Romantic / early 20th century",
+    "nationality": "French",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "STRAVINSKY",
+    "entity_name": "Stravinsky",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Igor Stravinsky",
+    "canonical_work": "Rite of Spring",
+    "canonical_instrument": "Bassoon",
+    "era": "20th century",
+    "nationality": "Russian–American",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "VIVALDI",
+    "entity_name": "Vivaldi",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Antonio Vivaldi",
+    "canonical_work": "Four Seasons",
+    "canonical_instrument": "Violin",
+    "era": "Baroque",
+    "nationality": "Italian",
+    "provenance": "Grove Music Online; Ryom catalogue",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "HANDEL",
+    "entity_name": "Handel",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "George Frideric Handel",
+    "canonical_work": "Messiah",
+    "canonical_instrument": "Trumpet",
+    "era": "Baroque",
+    "nationality": "German–English",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "HAYDN",
+    "entity_name": "Haydn",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Joseph Haydn",
+    "canonical_work": "Trumpet Concerto",
+    "canonical_instrument": "Trumpet",
+    "era": "Classical",
+    "nationality": "Austrian",
+    "provenance": "Grove Music Online; Hoboken catalogue",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "LISZT",
+    "entity_name": "Liszt",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Franz Liszt",
+    "canonical_work": "La Campanella",
+    "canonical_instrument": "Piano",
+    "era": "Romantic",
+    "nationality": "Hungarian",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "MAHLER",
+    "entity_name": "Mahler",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Gustav Mahler",
+    "canonical_work": "Symphony No. 5",
+    "canonical_instrument": "Trumpet",
+    "era": "Late Romantic",
+    "nationality": "Austro-Bohemian",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "DVORAK",
+    "entity_name": "Dvořák",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Antonín Dvořák",
+    "canonical_work": "Cello Concerto",
+    "canonical_instrument": "Cello",
+    "era": "Romantic",
+    "nationality": "Czech",
+    "provenance": "Grove Music Online; Burghauser catalogue",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "RACHMANINOFF",
+    "entity_name": "Rachmaninoff",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Sergei Rachmaninoff",
+    "canonical_work": "Piano Concerto No. 2",
+    "canonical_instrument": "Piano",
+    "era": "Late Romantic",
+    "nationality": "Russian–American",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "HILDEGARD",
+    "entity_name": "Hildegard von Bingen",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Hildegard von Bingen",
+    "canonical_work": "Ordo Virtutum",
+    "canonical_instrument": "Voice",
+    "era": "Medieval",
+    "nationality": "German (Benedictine abbess)",
+    "provenance": "Grove Music Online; Newman, Barbara, 'Sister of Wisdom' (1987)",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "GERSHWIN",
+    "entity_name": "Gershwin",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "George Gershwin",
+    "canonical_work": "Rhapsody in Blue",
+    "canonical_instrument": "Clarinet",
+    "era": "20th century",
+    "nationality": "American",
+    "provenance": "Grove Music Online",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "SHANKAR",
+    "entity_name": "Ravi Shankar",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "music_pack_v0.1_draft",
+    "full_name": "Ravi Shankar",
+    "canonical_work": "Raga Jog",
+    "canonical_instrument": "Sitar",
+    "era": "20th century",
+    "nationality": "Indian",
+    "provenance": "Grove Music Online; Shankar, Ravi, 'My Music, My Life' (1968)",
+    "label_variants": {
+      "composer": {
+        "en": "Ravi Shankar",
+        "de": "Ravi Shankar",
+        "local_display": "রবি শংকর",
+        "native_display": "রবি শংকর"
+      },
+      "work": {
+        "en": "Raga Jog",
+        "de": "Raga Jog",
+        "local_display": "राग जोग",
+        "native_display": "राग जोग"
+      },
+      "instrument": {
+        "en": "Sitar",
+        "de": "Sitar",
+        "local_display": "सितार",
+        "native_display": "सितार"
+      }
+    },
+    "facts": {
+      "composer": [
+        "Hindustani classical musician and composer; central figure in introducing Indian classical music to Western audiences.",
+        "Collaborated with George Harrison, Yehudi Menuhin, and Philip Glass.",
+        "Recipient of India's highest civilian honour, the Bharat Ratna, in 1999."
+      ],
+      "work": [
+        "Raga in the Hindustani classical tradition, associated with the late night.",
+        "Uses a hexatonic ascent and heptatonic descent with komal (flat) gandhar and nishad.",
+        "Recorded by Shankar multiple times; also performed by Nikhil Banerjee and Vilayat Khan."
+      ],
+      "instrument": [
+        "Long-necked plucked string instrument from the Indian subcontinent.",
+        "Typically has 18–21 strings, including sympathetic strings that resonate under the melody.",
+        "Refined from earlier long-necked lutes in the 18th century."
+      ]
+    }
+  }
+]

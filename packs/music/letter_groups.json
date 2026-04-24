@@ -1,0 +1,242 @@
+[
+  {
+    "letter_group_id": "B_01",
+    "initial_letter": "B",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Bach",                  "entity_id": "BACH" },
+      { "card_type": "work",       "label": "Brandenburg Concertos", "entity_id": "BACH" },
+      { "card_type": "instrument", "label": "Bassoon",               "entity_id": "STRAVINSKY" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "C_01",
+    "initial_letter": "C",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Chopin",            "entity_id": "CHOPIN" },
+      { "card_type": "work",       "label": "Clarinet Concerto", "entity_id": "MOZART" },
+      { "card_type": "instrument", "label": "Clarinet",          "entity_id": "MOZART" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "C_02",
+    "initial_letter": "C",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Clara Schumann", "entity_id": "CSCHUMANN" },
+      { "card_type": "work",       "label": "Cello Concerto", "entity_id": "DVORAK" },
+      { "card_type": "instrument", "label": "Cello",          "entity_id": "DVORAK" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "D_01",
+    "initial_letter": "D",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Debussy",          "entity_id": "DEBUSSY" },
+      { "card_type": "work",       "label": "Double Concerto",  "entity_id": "BRAHMS" },
+      { "card_type": "instrument", "label": "Double Bass",      "entity_id": "DOUBLEBASS" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "D_02",
+    "initial_letter": "D",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Dvořák",                 "entity_id": "DVORAK" },
+      { "card_type": "work",       "label": "Das Lied von der Erde",  "entity_id": "MAHLER" },
+      { "card_type": "instrument", "label": "Drums",                  "entity_id": "DRUMS" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "F_01",
+    "initial_letter": "F",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Fauré",        "entity_id": "FAURE" },
+      { "card_type": "work",       "label": "Four Seasons", "entity_id": "VIVALDI" },
+      { "card_type": "instrument", "label": "Flute",        "entity_id": "DEBUSSY" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "H_01",
+    "initial_letter": "H",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Handel",           "entity_id": "HANDEL" },
+      { "card_type": "work",       "label": "Hungarian Dances", "entity_id": "BRAHMS" },
+      { "card_type": "instrument", "label": "Harpsichord",      "entity_id": "BACH" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "H_02",
+    "initial_letter": "H",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Hildegard von Bingen", "entity_id": "HILDEGARD" },
+      { "card_type": "work",       "label": "Hallelujah Chorus",    "entity_id": "HANDEL" },
+      { "card_type": "instrument", "label": "Horn",                 "entity_id": "HORN" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "L_01",
+    "initial_letter": "L",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Liszt",         "entity_id": "LISZT" },
+      { "card_type": "work",       "label": "La Campanella", "entity_id": "LISZT" },
+      { "card_type": "instrument", "label": "Lute",          "entity_id": "LUTE" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "M_01",
+    "initial_letter": "M",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Mozart",   "entity_id": "MOZART" },
+      { "card_type": "work",       "label": "Messiah",  "entity_id": "HANDEL" },
+      { "card_type": "instrument", "label": "Mandolin", "entity_id": "MANDOLIN" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "M_02",
+    "initial_letter": "M",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Mahler",   "entity_id": "MAHLER" },
+      { "card_type": "work",       "label": "Messiah",  "entity_id": "HANDEL" },
+      { "card_type": "instrument", "label": "Marimba",  "entity_id": "MARIMBA" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "P_01",
+    "initial_letter": "P",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Puccini",                "entity_id": "PUCCINI" },
+      { "card_type": "work",       "label": "Piano Concerto No. 2",   "entity_id": "RACHMANINOFF" },
+      { "card_type": "instrument", "label": "Piano",                  "entity_id": "CHOPIN" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "P_02",
+    "initial_letter": "P",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Paganini",        "entity_id": "PAGANINI" },
+      { "card_type": "work",       "label": "Piano Concerto",  "entity_id": "CSCHUMANN" },
+      { "card_type": "instrument", "label": "Piano",           "entity_id": "LISZT" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "R_01",
+    "initial_letter": "R",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Rachmaninoff",     "entity_id": "RACHMANINOFF" },
+      { "card_type": "work",       "label": "Rhapsody in Blue", "entity_id": "GERSHWIN" },
+      { "card_type": "instrument", "label": "Recorder",         "entity_id": "RECORDER" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "R_02",
+    "initial_letter": "R",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Ravi Shankar",  "entity_id": "SHANKAR" },
+      { "card_type": "work",       "label": "Rite of Spring","entity_id": "STRAVINSKY" },
+      { "card_type": "instrument", "label": "Recorder",      "entity_id": "RECORDER" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "S_01",
+    "initial_letter": "S",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Schubert", "entity_id": "SCHUBERT" },
+      { "card_type": "work",       "label": "Syrinx",   "entity_id": "DEBUSSY" },
+      { "card_type": "instrument", "label": "Sitar",    "entity_id": "SHANKAR" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "S_02",
+    "initial_letter": "S",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Stravinsky",     "entity_id": "STRAVINSKY" },
+      { "card_type": "work",       "label": "Symphony No. 5", "entity_id": "MAHLER" },
+      { "card_type": "instrument", "label": "Saxophone",      "entity_id": "SAX" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "T_01",
+    "initial_letter": "T",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Tchaikovsky",   "entity_id": "TCHAIKOVSKY" },
+      { "card_type": "work",       "label": "Trout Quintet", "entity_id": "SCHUBERT" },
+      { "card_type": "instrument", "label": "Trumpet",       "entity_id": "HANDEL" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "T_02",
+    "initial_letter": "T",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Telemann",         "entity_id": "TELEMANN" },
+      { "card_type": "work",       "label": "Trumpet Concerto", "entity_id": "HAYDN" },
+      { "card_type": "instrument", "label": "Trumpet",          "entity_id": "MAHLER" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "V_01",
+    "initial_letter": "V",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      { "card_type": "composer",   "label": "Vivaldi",         "entity_id": "VIVALDI" },
+      { "card_type": "work",       "label": "Violin Concerto", "entity_id": "BEETHOVEN" },
+      { "card_type": "instrument", "label": "Violin",          "entity_id": "VIVALDI" }
+    ],
+    "endorsement_marker": "music_pack_v0.1_draft"
+  }
+]

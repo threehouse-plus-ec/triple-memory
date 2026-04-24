@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Composer — conductor's baton</title>
+  <rect x="6" y="34" width="10" height="8" rx="1.5" transform="rotate(-45 11 38)" fill="currentColor" stroke="none"/>
+  <line x1="14" y1="34" x2="40" y2="8"/>
+  <circle cx="40" cy="8" r="1.5" fill="currentColor" stroke="none"/>
+</svg>
