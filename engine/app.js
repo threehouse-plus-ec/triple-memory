@@ -45,6 +45,8 @@ const UI_STRINGS = {
         flips: 'Flips: {n}',
         perfectFlips: 'Perfect: {n}',
         avgFlips: 'Avg: ~{n}',
+        randomFlips: 'Random: ~{n}',
+        memoryQuality: 'Memory: {pct}%',
         quitToMenu: 'Quit to Menu',
         tutorialHeader: 'Tutorial - Step {n} of {total}',
         skipTutorial: 'Skip Tutorial',
@@ -52,7 +54,7 @@ const UI_STRINGS = {
         tripleMatched: 'Triple Matched!',
         dismissHint: '(Press Escape, Enter, or tap anywhere to dismiss)',
         gameComplete: 'Game Complete!',
-        gameCompleteHeader: 'Game Complete — {done}/{total} triples · Time {time} · Flips {flips} (perfect {perfect}, avg ~{avg})',
+        gameCompleteHeader: 'Game Complete — {done}/{total} triples · Time {time} · Flips {flips} · Memory {pct}% (perfect {perfect}, avg ~{avg}, random ~{random})',
         playAgain: 'New Game',
         tutorialComplete: 'Tutorial Complete!',
         readyToPlay: "You're ready to play!",
@@ -102,6 +104,8 @@ const UI_STRINGS = {
         flips: 'Aufdeckungen: {n}',
         perfectFlips: 'Perfekt: {n}',
         avgFlips: 'Ø: ~{n}',
+        randomFlips: 'Zufällig: ~{n}',
+        memoryQuality: 'Gedächtnis: {pct}%',
         quitToMenu: 'Zum Menü',
         tutorialHeader: 'Tutorial – Schritt {n} von {total}',
         skipTutorial: 'Tutorial überspringen',
@@ -109,7 +113,7 @@ const UI_STRINGS = {
         tripleMatched: 'Tripel gefunden!',
         dismissHint: '(Escape, Enter oder irgendwo tippen zum Schließen)',
         gameComplete: 'Spiel beendet!',
-        gameCompleteHeader: 'Spiel beendet — {done}/{total} Tripel · Zeit {time} · Aufdeckungen {flips} (perfekt {perfect}, Ø ~{avg})',
+        gameCompleteHeader: 'Spiel beendet — {done}/{total} Tripel · Zeit {time} · Aufdeckungen {flips} · Gedächtnis {pct}% (perfekt {perfect}, Ø ~{avg}, zufällig ~{random})',
         playAgain: 'Neues Spiel',
         tutorialComplete: 'Tutorial abgeschlossen!',
         readyToPlay: 'Du kannst jetzt loslegen!',
@@ -208,6 +212,37 @@ class TripleMemoryEngine {
         return this.boardSize * 2;
     }
 
+    randomFlips() {
+        // Expected flips for random-no-memory play (pick 3 face-down cards
+        // uniformly at random every attempt). With k triples remaining and p
+        // cards per triple, P(match|k) = k · p! / prod_{i=0..p-1}(pk-i),
+        // so expected attempts at stage k = 1/P. Total flips = p · Σ 1/P.
+        const p = this.pack.manifest.card_types.length;
+        const triples = this.boardSize / p;
+        let pFact = 1;
+        for (let i = 1; i <= p; i++) pFact *= i;
+        let totalAttempts = 0;
+        for (let k = 1; k <= triples; k++) {
+            let denom = 1;
+            for (let i = 0; i < p; i++) denom *= (p * k - i);
+            const pMatch = (k * pFact) / denom;
+            totalAttempts += 1 / pMatch;
+        }
+        return Math.round(totalAttempts * p);
+    }
+
+    memoryQuality(flips) {
+        // Figure of merit: (random - player) / (random - perfect), clamped to
+        // [0, 1]. 100% ≈ perfect-memory play, 0% ≈ indistinguishable from
+        // random. Returns an integer percentage.
+        const perfect = this.perfectFlips();
+        const random = this.randomFlips();
+        if (random <= perfect) return 100;
+        const raw = (random - flips) / (random - perfect);
+        const clamped = Math.max(0, Math.min(1, raw));
+        return Math.round(clamped * 100);
+    }
+
     renderScoreboard() {
         const totalTriples = this.boardSize / this.pack.manifest.card_types.length;
         return `
@@ -216,6 +251,7 @@ class TripleMemoryEngine {
             <span class="score-item">${this.t('flips', { n: this.flipCount })}</span>
             <span class="score-item score-item-ref">${this.t('perfectFlips', { n: this.perfectFlips() })}</span>
             <span class="score-item score-item-ref">${this.t('avgFlips', { n: this.averageFlips() })}</span>
+            <span class="score-item score-item-ref">${this.t('randomFlips', { n: this.randomFlips() })}</span>
         `;
     }
 
@@ -966,7 +1002,7 @@ class TripleMemoryEngine {
                         <header>
                             <div>
                                 ${this.gameComplete
-                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { done: this.score, total: this.boardSize / this.pack.manifest.card_types.length, time: this.formatTime(this.elapsedMs), flips: this.flipCount, perfect: this.perfectFlips(), avg: this.averageFlips() })}</h2>`
+                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { done: this.score, total: this.boardSize / this.pack.manifest.card_types.length, time: this.formatTime(this.elapsedMs), flips: this.flipCount, perfect: this.perfectFlips(), avg: this.averageFlips(), random: this.randomFlips(), pct: this.memoryQuality(this.flipCount) })}</h2>`
                                     : `<h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>`
                                 }
                                 ${!this.gameComplete && this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
