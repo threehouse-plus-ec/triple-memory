@@ -39,6 +39,14 @@ Many element symbols derive from the element's Latin or Greek name (*natrium*, *
 
 Only seven letters in the Latin alphabet begin a commonly-taught group name (A, H, L, M, N, P, T). Several letters have exactly one matching group (*Halogen* for H, *Lanthanide* for L, *Metalloid* for M, *Transition metal* for T, *Post-transition metal* for P). Consequently a letter group like `H_02` (*Helium · He · Halogen*) repeats the *Halogen* label from `H_01` (*Hydrogen · H · Halogen*). This is a structural consequence of the pack's shape, not a data duplication bug: each letter group is a distinct triple of cards drawn from three different card types.
 
+### 2.4 Off-roster letter-group cards
+
+Letter groups intentionally reference elements outside the v0.1 20-entity roster: for example `A_02` uses *Argon* (AR) as its element card, `A_04` uses *Arsenic* (AS), `H_03` uses *Hafnium* (HF), `T_01` uses *Titanium* (TI). Lanthanide and Actinide group cards are similarly off-roster. This gives the shared-letter mode a realistic distribution across the periodic table without forcing the roster to grow every time a letter needs a third matching card. The engine handles such references by synthesising a shared-letter card at runtime without entity metadata, so players see the card on the board and match it normally, but post-match overlays do not surface facts or trilingual labels for off-roster entries. Whenever an off-roster element is later promoted into `entities.json`, its existing letter-group references automatically acquire full metadata without any change to `letter_groups.json`.
+
+### 2.5 Spelling — "Sulfur" vs "Sulphur"
+
+The project's design standard is Oxford British English, which historically prefers "sulphur". This pack uses "Sulfur" throughout because the Royal Society of Chemistry adopted the IUPAC "sulfur" spelling for all chemistry contexts in 1992, and every other provenance source listed in §3 (IUPAC Periodic Table, RSC educational materials, modern school chemistry textbooks) uses the IUPAC form. The IUPAC spelling is treated as a chemistry-domain constant; other Oxford British English conventions (*aluminium*, *colourless*, *lustre*) are honoured.
+
 ---
 
 ## 3. Provenance source list
