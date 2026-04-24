@@ -10,6 +10,10 @@
     --success-color: var(--sea);
     --focus-color: var(--sea);
     --focus-outline: var(--focus-ring);
+    /* Board felt — sits behind cards during play to lift card/background contrast
+       well above the near-tie parchment/warm-white pairing. */
+    --board-felt: #2a4a5c;
+    --match-color: var(--sea);
 }
 
 body {
@@ -80,6 +84,48 @@ header h2,
     font-size: clamp(1.125rem, 1.45vmin, 1.25rem);
 }
 
+/* Legend — shows the mapping from icon to card type once,
+   so cards can drop the type label and just show icon + name. */
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: clamp(0.75rem, 2vmin, 2rem);
+    margin: 0 auto clamp(0.5rem, 1.5vmin, 1rem);
+    padding: clamp(0.5rem, 1.2vmin, 0.75rem) clamp(0.75rem, 2vmin, 1.25rem);
+    background: var(--card-bg);
+    border-radius: 999px;
+    box-shadow: 0 1px 4px color-mix(in srgb, var(--ink) 10%, transparent);
+    font-family: var(--font-mono);
+    font-size: clamp(0.95rem, 1.6vmin, 1.05rem);
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ink);
+}
+
+.legend-icon {
+    width: 1.4em;
+    height: 1.4em;
+    color: var(--sea);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.legend-icon svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .legend { font-size: 0.875rem; }
+}
+
 /* Board Grid */
 .board {
     display: grid;
@@ -90,6 +136,10 @@ header h2,
     width: fit-content;
     max-width: 100%;
     margin: 0 auto;
+    padding: clamp(0.75rem, 2vmin, 1.5rem);
+    background-color: var(--board-felt);
+    border-radius: 14px;
+    box-shadow: inset 0 1px 3px color-mix(in srgb, var(--ink) 25%, transparent);
     perspective: 1000px; /* Essential for 3D flip effect */
 }
 
@@ -102,7 +152,7 @@ header h2,
 .card {
     display: block;
     width: var(--card-width, 160px);
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 1 / 1;
     cursor: pointer;
     position: relative;
     background: transparent;
@@ -111,11 +161,20 @@ header h2,
     font: inherit;
     text-align: inherit;
     appearance: none;
+    transition: transform 0.25s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .card:focus-visible {
     outline: var(--focus-outline);
     border-radius: var(--card-radius, 8px);
+}
+
+/* Active-pick cue: cards revealed during the current attempt (but not yet
+   matched) lift forward. Tutorial step 2/3 uses .selected for the same cue. */
+.screen.playing .card.revealed:not(.matched),
+.screen.tutorial .card.selected {
+    transform: translateY(-6px) scale(1.04);
+    z-index: 2;
 }
 
 .card-inner {
@@ -166,19 +225,25 @@ header h2,
 .card-front {
     background-color: var(--card-bg);
     transform: rotateY(180deg); /* Start the front flipped 180deg so it aligns after rotation */
-    border: 2px solid var(--primary-color);
+    border: 3px solid var(--primary-color);
 }
 
 .card.matched .card-front {
-    border-color: var(--success-color);
-    background-color: var(--warm-white);
-    opacity: 0.8;
+    border-color: var(--match-color);
+    background-color: color-mix(in srgb, var(--match-color) 10%, var(--card-bg));
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--match-color) 35%, transparent);
+    opacity: 1;
+}
+
+.card.matched .card-icon,
+.card.matched .card-label {
+    color: var(--match-color);
 }
 
 .card.selected .card-front {
     border-color: var(--focus-color);
     background-color: var(--warm-white);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--sea) 18%, transparent);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--sea) 25%, transparent);
 }
 
 .card-icon {
@@ -219,8 +284,15 @@ header h2,
 
 /* Accessibility - Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
     .card-inner { transition: none; }
     .match-overlay { animation: none; }
+    .screen.playing .card.revealed:not(.matched),
+    .screen.tutorial .card.selected {
+        transform: none;
+        outline: 3px solid var(--focus-color);
+        outline-offset: 2px;
+    }
 }
 
 /* Small-viewport text relaxation: the §18 18px gameplay-text floor

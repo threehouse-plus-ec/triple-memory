@@ -1,5 +1,18 @@
 // Triple Memory - Core Game Engine
 
+// Distinct, AA-contrast border colours used to tint each matched triple in
+// turn. Cycled modulo length; 8 values cover the 24-card board (8 triples).
+const MATCH_COLORS = [
+    '#2c5f7c', // sea
+    '#c05834', // warm red-orange
+    '#5a8035', // forest green
+    '#8f4a9c', // purple
+    '#b8873e', // amber
+    '#1e7c89', // teal
+    '#c74a84', // rose
+    '#4a5a95'  // slate blue
+];
+
 const UI_STRINGS = {
     en: {
         loading: 'Loading assets...',
@@ -119,8 +132,8 @@ class TripleMemoryEngine {
         this.boardCards = [];
         this.revealedCards = [];
         this.score = 0;
+        this.matchGroupCounter = 0; // Cycles through MATCH_COLORS so each triple gets its own hue
         this.isChecking = false; // Lock interactions during flip animations
-        this.matchTimeout = null; // Timer for auto-dismissing the overlay
         
         this.isTutorial = false;
         this.tutorialStep = 0;
@@ -129,6 +142,22 @@ class TripleMemoryEngine {
 
     getAppRoot() {
         return document.getElementById('app') || document.body;
+    }
+
+    renderLegend() {
+        if (this.expertMode) return '';
+        if (!this.pack || !this.pack.manifest || !Array.isArray(this.pack.manifest.card_types)) return '';
+        const items = this.pack.manifest.card_types.map(typeDef => {
+            const label = this.getCardTypeLabel(typeDef);
+            const icon = (this.pack.icons && this.pack.icons[typeDef.type_id]) || '';
+            return `
+                <div class="legend-item">
+                    <span class="legend-icon" aria-hidden="true">${icon}</span>
+                    <span class="legend-label">${label}</span>
+                </div>
+            `;
+        }).join('');
+        return `<div class="legend" role="group" aria-label="${this.t('tableEntity')}">${items}</div>`;
     }
 
     t(key, params) {
@@ -340,7 +369,7 @@ class TripleMemoryEngine {
         const availableWidth = Math.max(240, Math.min(parentWidth, viewportWidth - 16));
         const availableHeight = Math.max(180, viewportHeight - boardTop - 12);
         const widthLimitedCard = (availableWidth - gap * (columns - 1)) / columns;
-        const heightLimitedCard = ((availableHeight - gap * (rows - 1)) / rows) * 0.75;
+        const heightLimitedCard = (availableHeight - gap * (rows - 1)) / rows;
         const cardWidth = Math.floor(this.clamp(Math.min(widthLimitedCard, heightLimitedCard), 54, 220));
 
         board.style.setProperty('--card-columns', columns);
@@ -537,11 +566,15 @@ class TripleMemoryEngine {
 
         if (isValid) {
             const matchedCards = [...this.revealedCards];
+            const matchColor = MATCH_COLORS[this.matchGroupCounter % MATCH_COLORS.length];
+            this.matchGroupCounter++;
             this.revealedCards.forEach(card => {
                 card.status = 'matched';
+                card.matchColor = matchColor;
                 const el = document.getElementById(`card-${card.boardIndex}`);
                 if (el) {
                     el.className = `card ${card.status}`;
+                    el.style.setProperty('--match-color', matchColor);
                     el.setAttribute('aria-label', this.getCardAriaLabel(card, card.boardIndex));
                     el.setAttribute('aria-disabled', 'true');
                     el.setAttribute('tabindex', '-1');
@@ -614,10 +647,6 @@ class TripleMemoryEngine {
 
         const previouslyFocused = document.activeElement;
         const onKeydown = (event) => {
-            if (this.matchTimeout) {
-                clearTimeout(this.matchTimeout);
-                this.matchTimeout = null;
-            }
             if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
                 event.preventDefault();
                 dismiss();
@@ -628,8 +657,6 @@ class TripleMemoryEngine {
             }
         };
         const dismiss = () => {
-            if (this.matchTimeout) clearTimeout(this.matchTimeout);
-            this.matchTimeout = null;
             document.removeEventListener('keydown', onKeydown);
             if (document.body.contains(overlay)) document.body.removeChild(overlay);
             if (previouslyFocused && document.body.contains(previouslyFocused) && typeof previouslyFocused.focus === 'function') {
@@ -643,7 +670,6 @@ class TripleMemoryEngine {
         document.body.appendChild(overlay);
         const dialog = overlay.querySelector('.match-overlay-content');
         if (dialog) dialog.focus();
-        this.matchTimeout = setTimeout(dismiss, 3500);
     }
 
     startTutorial() {
@@ -851,17 +877,17 @@ class TripleMemoryEngine {
                             <div class="score" id="score-display" aria-live="polite" aria-atomic="true">${this.t('score', { n: this.score })}</div>
                             <button onclick="game.state = 'MENU'; game.render()">${this.t('quitToMenu')}</button>
                         </header>
+                        ${this.renderLegend()}
                         <div class="board" id="board">
                             ${this.boardCards.map((card, index) => {
-                                const typeDef = this.getCardTypeDefinition(card.card_type);
                                 const cardLabel = this.getCardLabel(card);
+                                const matchStyle = card.matchColor ? ` style="--match-color: ${card.matchColor}"` : '';
                                 return `
-                                <button type="button" class="card ${card.status}" id="card-${index}" onclick="game.handleCardClick(${index})" aria-label="${this.getCardAriaLabel(card, index)}" tabindex="${card.status === 'matched' ? '-1' : '0'}" aria-disabled="${card.status === 'matched'}">
+                                <button type="button" class="card ${card.status}" id="card-${index}"${matchStyle} onclick="game.handleCardClick(${index})" aria-label="${this.getCardAriaLabel(card, index)}" tabindex="${card.status === 'matched' ? '-1' : '0'}" aria-disabled="${card.status === 'matched'}">
                                     <div class="card-inner" aria-hidden="true">
                                         <div class="card-front">
                                             ${!this.expertMode ? `
                                                 <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
-                                                <div class="card-type">${this.getCardTypeLabel(typeDef)}</div>
                                             ` : ''}
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
@@ -899,18 +925,18 @@ class TripleMemoryEngine {
                             <p class="tutorial-msg" aria-live="polite" aria-atomic="true">${this.tutorialMessage}</p>
                             ${actionBtn}
                         </div>
+                        ${this.renderLegend()}
                         <div class="board" id="board">
                             ${this.boardCards.map((card, index) => {
-                                const typeDef = this.getCardTypeDefinition(card.card_type);
                                 const cardLabel = this.getCardLabel(card);
                                 const clickHandler = this.tutorialStep === 1 ? '' : `onclick="game.handleTutorialClick(${index})"`;
                                 const selectedClass = card.selected ? 'selected' : '';
+                                const matchStyle = card.matchColor ? ` style="--match-color: ${card.matchColor}"` : '';
                                 return `
-                                <button type="button" class="card ${card.status} ${selectedClass}" id="card-${index}" ${clickHandler} aria-label="${this.getCardAriaLabel(card, index)}${card.selected ? this.t('selectedSuffix') : ''}" aria-pressed="${card.selected ? 'true' : 'false'}" tabindex="${this.tutorialStep === 1 ? '-1' : '0'}">
+                                <button type="button" class="card ${card.status} ${selectedClass}" id="card-${index}"${matchStyle} ${clickHandler} aria-label="${this.getCardAriaLabel(card, index)}${card.selected ? this.t('selectedSuffix') : ''}" aria-pressed="${card.selected ? 'true' : 'false'}" tabindex="${this.tutorialStep === 1 ? '-1' : '0'}">
                                     <div class="card-inner" aria-hidden="true">
                                         <div class="card-front">
                                             <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
-                                            <div class="card-type">${this.getCardTypeLabel(typeDef)}</div>
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
                                         <div class="card-back">
@@ -945,6 +971,7 @@ class TripleMemoryEngine {
     startGame(mode, isTutorial = false) {
         this.currentMode = mode;
         this.score = 0;
+        this.matchGroupCounter = 0;
         this.boardCards = [];
         this.revealedCards = [];
         this.isTutorial = isTutorial;

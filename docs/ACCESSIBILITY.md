@@ -79,7 +79,7 @@ Single-operator remediation applied directly against §1 findings, ahead of the 
 
 ### Known follow-ups after this pass
 
-- **Auto-dismiss and focus** *(resolved 2026-04-23):* any keydown while the overlay is open now cancels the 3.5s auto-dismiss timer, so keyboard users control the pace and dismiss explicitly with Escape/Enter/Space. Tab is trapped to re-focus the dialog (no internal focusable children, so trapping is unconditional). Mouse users still get the auto-dismiss they expect. See [engine/app.js showMatchOverlay](engine/app.js).
+- **Auto-dismiss and focus** *(resolved 2026-04-24):* the match overlay no longer auto-dismisses. It stays on screen until the user explicitly dismisses with Escape, Enter, Space, or a click anywhere. Focus moves into the dialog on mount, Tab is trapped back onto the dialog (no internal focusable children), and the previously focused card regains focus on dismiss. Removes the keyboard-interruption problem entirely.
 - **Cross-check still owed:** this remediation was applied by a single operator. The §1 cross-check tasks (independent contrast, SR smoke test, keyboard-only run) are still required and should now target the remediated build.
 
 ### Deliberate §18 concession — small viewports
