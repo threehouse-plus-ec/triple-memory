@@ -4,7 +4,7 @@
 **Date:** 2026-04-22
 **Status:** Draft — split from v0.3 monolithic blueprint
 **Predecessor:** Blueprint v0.3 (2026-04-22, monolithic)
-**Companion documents:** Geography Pack Blueprint v0.4 (formal pack blueprint); Chemistry Pack v0.1_draft (decoupling-validation pack, no separate blueprint — see `packs/chemistry/README.md` and `packs/chemistry/CURATION_STATEMENT.md`)
+**Companion documents:** Geography Pack Blueprint v0.4 (formal pack blueprint); Chemistry Pack v0.1_draft (decoupling-validation pack, no separate blueprint — see `packs/chemistry/README.md` and `packs/chemistry/CURATION_STATEMENT.md`); Music Pack v0.1_draft (native-script and off-roster stress-test pack, no separate blueprint — see `packs/music/README.md` and `packs/music/CURATION_STATEMENT.md`)
 **Language:** English (Oxford British standard)
 **Scope:** Topic-agnostic engine for a triple-matching memory game
 **Endorsement Marker:** Internal — engine v0.4
@@ -478,14 +478,14 @@ The engine is not secretly geography-shaped. Two packs now ship with the prototy
 
 - **Geography Pack** (v0.4 core; v0.5_draft additive content) — Capital · Country · River. Example triple: *Vienna · Austria · Danube*. See `packs/geography/` and `docs/GEOGRAPHY_PACK_BLUEPRINT.md`.
 - **Chemistry Pack** (v0.1_draft) — Element · Symbol · Group. Example triple: *Sodium · Na · Alkali metal*. Added specifically to validate engine/pack decoupling: it deliberately mirrors the geography pack's shape (same four JSON files, same board sizes, same manifest schema) so any remaining geography-specific assumptions surface as concrete failures. The exercise confirmed that the engine validator and runtime accept manifest-defined `card_type` values and both `entity_id` (engine-level) and `country_id` (legacy alias) on letter-group cards; several small decoupling fixes landed alongside the pack. See `packs/chemistry/`.
+- **Music Pack** (v0.1_draft) — Composer · Work · Instrument. Example triple: *Bach · Brandenburg Concertos · Harpsichord*. Stresses two paths the first two packs did not: (a) non-Latin `native_display` rendering in the post-match overlay (Cyrillic for Tchaikovsky; Bengali and Devanagari for Ravi Shankar), and (b) off-roster shared-letter cards (12 off-roster entity_ids across composers and instruments, vs. 13 for chemistry and ~26 for geography), confirming that the synthesis path in `buildSharedLetterCard` scales. See `packs/music/`.
 
 **Future sketches** (not implemented; noted to keep the engine honest):
 
-- **Music Pack** — Composer · Work · Instrument. Example triple: *J.S. Bach · Brandenburg Concerto · Harpsichord*.
 - **Literature Pack** — Author · Work · Character. Example triple: *Dickens · David Copperfield · Uriah Heep*.
 - **History Pack** — Figure · Event · Era. Example triple: *Marie Curie · Discovery of Radium · Early 20th C.*
 
-Each implemented or future pack implements the same §10 Pack Interface, provides three card-type icons, and ships its own Curation Statement. None of the two shipped packs required changes to engine logic beyond the decoupling fixes noted above.
+Each implemented or future pack implements the same §10 Pack Interface, provides three card-type icons, and ships its own Curation Statement. None of the three shipped packs required changes to engine logic beyond the decoupling fixes noted above.
 
 ---
 

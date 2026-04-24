@@ -1,0 +1,64 @@
+{
+  "pack_id": "music",
+  "pack_name": "Music — Composers, Works, Instruments",
+  "pack_version": "0.1",
+  "endorsement_marker": "music_pack_v0.1_draft",
+  "card_types": [
+    {
+      "type_id": "composer",
+      "display_name": "Composer",
+      "display_names": { "en": "Composer", "de": "Komponist" },
+      "icon": "icons/composer.svg",
+      "aria_label_template": "Composer: {label}",
+      "aria_label_templates": {
+        "en": "Composer: {label}",
+        "de": "Komponist: {label}"
+      },
+      "tutorial_phrase": { "en": "one composer", "de": "ein Komponist" }
+    },
+    {
+      "type_id": "work",
+      "display_name": "Work",
+      "display_names": { "en": "Work", "de": "Werk" },
+      "icon": "icons/work.svg",
+      "aria_label_template": "Work: {label}",
+      "aria_label_templates": {
+        "en": "Work: {label}",
+        "de": "Werk: {label}"
+      },
+      "tutorial_phrase": { "en": "one work", "de": "ein Werk" }
+    },
+    {
+      "type_id": "instrument",
+      "display_name": "Instrument",
+      "display_names": { "en": "Instrument", "de": "Instrument" },
+      "icon": "icons/instrument.svg",
+      "aria_label_template": "Instrument: {label}",
+      "aria_label_templates": {
+        "en": "Instrument: {label}",
+        "de": "Instrument: {label}"
+      },
+      "tutorial_phrase": { "en": "one instrument", "de": "ein Instrument" }
+    }
+  ],
+  "shared_entity_field": "entity_id",
+  "supported_modes": [
+    "shared_entity",
+    "shared_letter"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true
+  }
+}

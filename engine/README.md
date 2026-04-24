@@ -11,7 +11,7 @@
 
 ## Current constraints
 
-- Two content packs ship with the prototype: Geography in `packs/geography/` and Chemistry in `packs/chemistry/`. The active pack is chosen from the main menu or via the `?pack=` URL parameter (e.g. `engine/?pack=chemistry`); the app shell does not reload when switching.
+- Three content packs ship with the prototype: Geography in `packs/geography/`, Chemistry in `packs/chemistry/`, and Music in `packs/music/`. The active pack is chosen from the main menu or via the `?pack=` URL parameter (e.g. `engine/?pack=chemistry`, `engine/?pack=music`); the app shell does not reload when switching.
 - Local JSON loading via a browser-served environment.
 - Validation performed by `validator.js` at load time. The validator is pack-agnostic: `card_type` values are validated against the active pack's `manifest.card_types`, and letter-group cards accept either `entity_id` (engine-level) or the legacy `country_id` alias used by the geography pack.
 
