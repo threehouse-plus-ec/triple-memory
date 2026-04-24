@@ -47,6 +47,8 @@ const UI_STRINGS = {
         tripleMatched: 'Triple Matched!',
         dismissHint: '(Press Escape, Enter, or tap anywhere to dismiss)',
         gameComplete: 'Game Complete!',
+        gameCompleteHeader: 'Game Complete — Final score: {n}',
+        playAgain: 'New Game',
         tutorialComplete: 'Tutorial Complete!',
         readyToPlay: "You're ready to play!",
         finalScore: 'Final Score: {n}',
@@ -97,6 +99,8 @@ const UI_STRINGS = {
         tripleMatched: 'Tripel gefunden!',
         dismissHint: '(Escape, Enter oder irgendwo tippen zum Schließen)',
         gameComplete: 'Spiel beendet!',
+        gameCompleteHeader: 'Spiel beendet — Endstand: {n}',
+        playAgain: 'Neues Spiel',
         tutorialComplete: 'Tutorial abgeschlossen!',
         readyToPlay: 'Du kannst jetzt loslegen!',
         finalScore: 'Endstand: {n}',
@@ -133,6 +137,7 @@ class TripleMemoryEngine {
         this.revealedCards = [];
         this.score = 0;
         this.matchGroupCounter = 0; // Cycles through MATCH_COLORS so each triple gets its own hue
+        this.gameComplete = false; // When true, keeps the finished board visible instead of switching to END
         this.isChecking = false; // Lock interactions during flip animations
         
         this.isTutorial = false;
@@ -609,8 +614,15 @@ class TripleMemoryEngine {
     }
 
     completeRound() {
-        if (this.boardCards.every(card => card.status === 'matched')) {
+        if (!this.boardCards.every(card => card.status === 'matched')) return;
+        if (this.isTutorial) {
             this.state = 'END';
+            this.render();
+        } else {
+            // Keep the finished board visible so the player can review every
+            // matched triple; swap the header into completion mode instead of
+            // transitioning to the blank END screen.
+            this.gameComplete = true;
             this.render();
         }
     }
@@ -866,16 +878,25 @@ class TripleMemoryEngine {
                 
             case 'PLAYING':
                 appRoot.innerHTML = `
-                    <div class="screen playing">
+                    <div class="screen playing ${this.gameComplete ? 'complete' : ''}">
                         <header>
                             <div>
-                                <h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>
-                                ${this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
+                                ${this.gameComplete
+                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { n: this.score })}</h2>`
+                                    : `<h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>`
+                                }
+                                ${!this.gameComplete && this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
                                     <p class="mode-note">${this.t('modeNoteEnglishLabels')}</p>
                                 ` : ''}
                             </div>
                             <div class="score" id="score-display" aria-live="polite" aria-atomic="true">${this.t('score', { n: this.score })}</div>
-                            <button onclick="game.state = 'MENU'; game.render()">${this.t('quitToMenu')}</button>
+                            ${this.gameComplete
+                                ? `<div class="complete-actions">
+                                       <button onclick="game.startGame('${this.currentMode}')">${this.t('playAgain')}</button>
+                                       <button onclick="game.state = 'MENU'; game.render()">${this.t('returnToMenu')}</button>
+                                   </div>`
+                                : `<button onclick="game.state = 'MENU'; game.render()">${this.t('quitToMenu')}</button>`
+                            }
                         </header>
                         ${this.renderLegend()}
                         <div class="board" id="board">
@@ -972,6 +993,7 @@ class TripleMemoryEngine {
         this.currentMode = mode;
         this.score = 0;
         this.matchGroupCounter = 0;
+        this.gameComplete = false;
         this.boardCards = [];
         this.revealedCards = [];
         this.isTutorial = isTutorial;
