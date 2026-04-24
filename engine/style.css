@@ -22,8 +22,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     display: flex;
-    justify-content: center;
-    align-items: stretch;
+    flex-direction: column;
     min-height: 100vh;
     background-image:
         linear-gradient(var(--grid) 1px, transparent 1px),
@@ -33,10 +32,107 @@ body {
 
 #app {
     width: 100%;
-    min-height: 100vh;
+    flex: 1 1 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* CD §12A.6 — skip link is the first focusable element on the page. */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 0.75rem 1.5rem;
+    background: var(--ink);
+    color: var(--parchment);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-decoration: none;
+    z-index: 1000;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* CD §10 Site header — Level 1 emblem (32px) + B-full wordmark, sticky.
+   Visible on every game page so identity and provenance remain attached to the product. */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 1rem;
+    background: color-mix(in srgb, var(--warm-white) 90%, transparent);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid var(--grid);
+}
+.site-lockup {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem; /* CD L2: header gap 0.5rem */
+    text-decoration: none;
+    color: var(--ink);
+}
+.site-emblem {
+    width: 32px;
+    height: 32px;
+    display: block;
+}
+.site-wordmark {
+    height: 32px;
+    width: auto;
+    display: block;
+}
+.site-product {
+    margin-left: auto;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--sea);
+    letter-spacing: 0.02em;
+}
+.site-lockup:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* CD §10 Colophon footer — Level 1 emblem + identity + metadata, always in --ink (CF1/CF3). */
+.site-colophon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    background: var(--warm-white);
+    border-top: 1px solid var(--grid);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--ink);
+}
+.site-colophon a {
+    color: var(--sea);
+    text-decoration: underline;
+}
+.site-colophon a:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+}
+.colophon-emblem {
+    width: 16px;
+    height: 16px;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .site-header { padding: 0.4rem 0.75rem; gap: 0.6rem; }
+    .site-wordmark { height: 26px; }
+    .site-emblem { width: 26px; height: 26px; }
+    .site-product { font-size: 0.75rem; }
+    .site-colophon { font-size: 0.75rem; padding: 0.5rem 0.75rem; }
 }
 
 .screen {
@@ -50,7 +146,8 @@ body {
 .screen.playing,
 .screen.tutorial {
     max-width: none;
-    min-height: 100svh;
+    min-height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

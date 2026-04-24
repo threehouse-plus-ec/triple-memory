@@ -913,7 +913,7 @@ class TripleMemoryEngine {
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
                                         <div class="card-back">
-                                            <img class="card-back-emblem" src="../assets/cd/emblem-64.svg" alt="">
+                                            <img class="card-back-emblem" src="../assets/cd/emblem-32.svg" alt="">
                                         </div>
                                     </div>
                                 </button>
@@ -961,7 +961,7 @@ class TripleMemoryEngine {
                                             <div class="card-label">${cardLabel}</div>
                                         </div>
                                         <div class="card-back">
-                                            <img class="card-back-emblem" src="../assets/cd/emblem-64.svg" alt="">
+                                            <img class="card-back-emblem" src="../assets/cd/emblem-32.svg" alt="">
                                         </div>
                                     </div>
                                 </button>
