@@ -60,7 +60,7 @@ The following sources were consulted by our research and verification teams duri
 
 If you believe an entry in this pack is wrong, misleading, or culturally inappropriate, please reach out. Corrections are reviewed and, where accepted, recorded in this document with an updated `endorsement_marker`.
 
-**Contact:** Please open an issue in the project repository at `github.com/triple-memory/triple-memory/issues` or email our curation team at `curation@triple-memory.local`.
+**Contact:** Please open an issue in the project repository at `https://github.com/threehouse-plus-ec/triple-memory/issues`.
 
 ---
 

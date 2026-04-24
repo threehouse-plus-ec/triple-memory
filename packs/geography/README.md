@@ -1,33 +1,34 @@
 # Geography Pack — Triple Memory
 
-**Status:** Draft MVP data, icons, and Curation Statement are present. The pack is currently being validated and playtested against `docs/GEOGRAPHY_PACK_BLUEPRINT.md`.
+**Status:** v0.4 core (20 UN-member entities) is cross-checked and endorsed; v0.5_draft additive content (5 contested-recognition entities, expanded translations and facts, optional `native_display`) is present in the data and awaiting TC-31 / TC-32 / TC-35 two-person cross-check. The pack is validated and playtested against `docs/GEOGRAPHY_PACK_BLUEPRINT.md`.
 
-**Pack version:** 0.4
-**Endorsement Marker:** `geography_pack_v0.4`
+**Pack version:** 0.4 (endorsed) + v0.5_draft additive content
+**Endorsement Marker:** `geography_pack_v0.4` (original 20 entities); `geography_pack_v0.5_draft` (additive metadata and 5 new contested entities)
 
 ## Current contents (per Pack Blueprint §16)
 
 - `manifest.json` — pack declaration (TC-52).
-- `entities.json` — 20 UN-member country entries (TC-16).
-- `cards.json` — 60 cards derived from entities (TC-17).
-- `letter_groups.json` — 20 curated letter triples (TC-24).
+- `entities.json` — 25 country entries (TC-16): 20 `un_member`, 1 `un_observer` (Palestine), 4 `limited_recognition` (Taiwan, Kosovo, Western Sahara, Northern Cyprus). The 5 non-`un_member` entries carry `is_active: false` and the `geography_pack_v0.5_draft` marker.
+- `cards.json` — 75 cards derived from entities (TC-17).
+- `letter_groups.json` — 20 curated letter triples (TC-24). Some letter-group cards reference `country_id` values (e.g. `GBR`, `RUS`, `CAN`, `LTU`) that are not represented as entities in this pack; the engine synthesises those as shared-letter cards without entity metadata.
 - `icons/` — three SVG icons (TC-50):
   - `capital.svg`
   - `country.svg`
   - `river.svg`
 - `CURATION_STATEMENT.md` — canonical-choice rationale, provenance, and dispute channel.
 
-## Scope at MVP
+## Scope
 
-- UN member states only (Pack Blueprint §7).
-- 20 entity entries, 20 letter groups.
-- Full trilingual labels (EN / DE / local_display) on a pilot subset of 5–8 entries only.
-- 1–3 structured facts on a pilot subset of 3–5 entries only.
-- Three custom monochrome icons, accessibility-compliant.
+- **v0.4 endorsed core:** 20 UN-member states (Pack Blueprint §7), 20 letter groups, three custom monochrome accessibility-compliant icons.
+- **v0.5_draft additive content (single-operator, pending cross-check):**
+  - Full trilingual labels (EN / DE / `local_display`) on all 25 entities.
+  - 1–3 structured facts on all 25 entities.
+  - Optional `native_display` field for non-Latin-script local forms (surfaced in the post-match overlay only; card faces and `initial_letter` logic remain Latin-only).
+  - 5 contested-recognition entities flagged `is_active: false` — surfaced in Teacher View only; shared-entity board generation is unchanged until cross-check lands.
 
 ## Dispute channel
 
-Please open an issue at `github.com/triple-memory/triple-memory/issues` or email `curation@triple-memory.local`. Pack-specific disputes are reviewed and, where accepted, recorded in `CURATION_STATEMENT.md` with an updated `endorsement_marker`.
+Please open an issue at `https://github.com/threehouse-plus-ec/triple-memory/issues`. Pack-specific disputes are reviewed and, where accepted, recorded in `CURATION_STATEMENT.md` with an updated `endorsement_marker`.
 
 ## Licence
 

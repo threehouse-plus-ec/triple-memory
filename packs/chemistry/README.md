@@ -31,9 +31,9 @@ Each entity is a chemical element. Its three cards are:
 - 20 elements, 20 letter groups.
 - DE label_variants supplied for a 5-entry pilot (H, He, C, O, Fe) where the German form differs meaningfully. Others carry empty `label_variants: {}`.
 - Facts supplied for the same 5-entry pilot (three per card type per entity). Others carry empty `facts: {}`.
-- Lanthanide and Actinide groups referenced in letter_groups only; no v0.1 entity belongs to those groups.
+- Letter groups deliberately reference elements and groups that are **not** represented in the v0.1 entity roster. Examples: `Argon` (AR) in `A_02`, `Actinium` (AC) in `A_03`, `Arsenic` (AS) in `A_04`, `Americium` (AM) in `A_05`, `Hafnium` (HF) in `H_03`, `Lanthanum` (LA) in `L_02`, `Manganese` (MN), `Nickel` (NI), `Niobium` (NB), `Phosphorus` (P), `Platinum` (PT), `Titanium` (TI), `Tantalum` (TA). The Lanthanide and Actinide group labels are similarly off-roster — no v0.1 entity belongs to those groups. The engine handles this intentionally: shared-letter cards whose `entity_id` is not found in `entities.json` are synthesised without entity metadata ([`engine/app.js:463`](../../engine/app.js#L463)), so they display correctly during play but do not surface facts or trilingual labels in the post-match overlay. See the Curation Statement §2.4 for rationale.
 
-All content is **draft** and has not been through the TASK_CARDS v1.0 §2 two-person cross-check protocol. Entities and letter-group cards carry `endorsement_marker: "chemistry_pack_v0.1_draft"` so they are grep-able for a future verification pass.
+All content is **draft** and has not been through the TASK_CARDS v1.0 §2 two-person cross-check protocol. Entities and letter-group cards carry `endorsement_marker: "chemistry_pack_v0.1_draft"` so they are grep-able for a future verification pass. A single-operator self-audit has been recorded in [`docs/chemistry_pack_self_check.md`](../../docs/chemistry_pack_self_check.md); it lists the engine §10 compliance status and the outstanding work required before the `_draft` suffix can be dropped.
 
 ## Launch
 
