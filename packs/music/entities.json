@@ -201,13 +201,13 @@
       "composer": {
         "en": "Tchaikovsky",
         "de": "Tschaikowsky",
-        "local_display": "Чайковский",
+        "local_display": "Tchaikovsky",
         "native_display": "Чайковский"
       },
       "work": {
         "en": "Nutcracker",
         "de": "Nussknacker",
-        "local_display": "Щелкунчик",
+        "local_display": "Nutcracker",
         "native_display": "Щелкунчик"
       },
       "instrument": {
@@ -430,19 +430,19 @@
       "composer": {
         "en": "Ravi Shankar",
         "de": "Ravi Shankar",
-        "local_display": "রবি শংকর",
+        "local_display": "Ravi Shankar",
         "native_display": "রবি শংকর"
       },
       "work": {
         "en": "Raga Jog",
         "de": "Raga Jog",
-        "local_display": "राग जोग",
+        "local_display": "Raga Jog",
         "native_display": "राग जोग"
       },
       "instrument": {
         "en": "Sitar",
         "de": "Sitar",
-        "local_display": "सितार",
+        "local_display": "Sitar",
         "native_display": "सितार"
       }
     },
