@@ -13,7 +13,7 @@ A triple-matching memory game engine with a geography content pack as the first 
 
 Triple Memory is a memory-style card game where a successful match is a **triple** — three cards of three distinct types, linked by either a shared-entity relation or a shared-letter relation. The engine is topic-agnostic; each content pack supplies its own domain.
 
-The first pack is **Geography**: Capital · Country · River (e.g., Vienna · Austria · Danube). A second pack, **Chemistry** (Element · Symbol · Group, e.g., Sodium · Na · Alkali metal), was added as a decoupling reality check for the engine. A third pack, **Music** (Composer · Work · Instrument, e.g., Bach · Brandenburg Concertos · Harpsichord), stresses native-script rendering (Cyrillic, Bengali, Devanagari) and exercises off-roster shared-letter references more heavily than the earlier packs. Future packs (Literature, History, …) would implement the same engine interface with their own card types.
+The first pack is **Geography**: Capital · Country · River (e.g., Vienna · Austria · Danube). A second pack, **Chemistry** (Element · Symbol · Group, e.g., Sodium · Na · Alkali metal), was added as a decoupling reality check for the engine. A third pack, **Music** (Composer · Work · Instrument, e.g., Bach · Brandenburg Concertos · Harpsichord), stresses non-Latin `native_display` rendering (Cyrillic, Bengali, Devanagari) — a path the earlier packs do not exercise. Future packs (Literature, History, …) would implement the same engine interface with their own card types.
 
 ---
 

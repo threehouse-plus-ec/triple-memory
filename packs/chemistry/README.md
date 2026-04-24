@@ -37,7 +37,7 @@ All content is **draft** and has not been through the TASK_CARDS v1.0 §2 two-pe
 
 ## Launch
 
-`engine/?pack=chemistry` — the engine's pack selector in the menu switches between geography and chemistry without reload of the app shell.
+`engine/?pack=chemistry` — the engine's pack selector in the menu switches between all shipped packs (currently geography, chemistry, and music) without reload of the app shell.
 
 ## Dispute channel
 

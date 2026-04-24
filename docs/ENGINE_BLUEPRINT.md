@@ -52,7 +52,7 @@ Principal items **moved out** of this document into the Geography Pack Blueprint
 
 The engine implements the rules, the UI, the tutorial, the accessibility baseline, and the difficulty framework once. Each **pack** supplies its own domain: a set of three card types, the icons for them, the entities, the labels, optional language variants, and optional facts.
 
-The first pack is Geography (Capital · Country · River). Future packs might be Music (Composer · Work · Instrument), Chemistry (Element · Compound · Group), Literature (Author · Work · Character), or History (Figure · Era · Event). The engine does not know which pack is active at development time; it reads the pack manifest at runtime.
+Three packs now ship with the engine: Geography (Capital · Country · River), Chemistry (Element · Symbol · Group), and Music (Composer · Work · Instrument). Future packs might include Literature (Author · Work · Character) or History (Figure · Era · Event). The engine does not know which pack is active at development time; it reads the pack manifest at runtime. See §25 for per-pack detail.
 
 ---
 
@@ -472,7 +472,7 @@ triple-memory/
 
 ## 25. Example Packs
 
-The engine is not secretly geography-shaped. Two packs now ship with the prototype, and further pack sketches remain open for future work.
+The engine is not secretly geography-shaped. Three packs now ship with the prototype, and further pack sketches remain open for future work.
 
 **Implemented:**
 

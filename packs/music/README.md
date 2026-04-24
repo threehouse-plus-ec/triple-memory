@@ -7,7 +7,7 @@
 
 ## Purpose
 
-The Chemistry Pack was added to validate engine/pack decoupling. The Music Pack follows the same shape but stresses a different edge: non-Latin `native_display` scripts (Cyrillic for Tchaikovsky; Bengali and Devanagari for Ravi Shankar's labels), surfaced in the post-match overlay. It also exercises the off-roster-reference pattern more heavily than geography or chemistry — a natural consequence of the Western classical canon having crowded letter distributions at some letters (B, C, S) and sparse distributions at others (F, N, O, P instrument cards).
+The Chemistry Pack was added to validate engine/pack decoupling. The Music Pack follows the same shape but stresses a different edge: non-Latin `native_display` scripts (Cyrillic for Tchaikovsky; Bengali and Devanagari for Ravi Shankar's labels), surfaced in the post-match overlay. Off-roster shared-letter references (12 distinct off-roster `entity_id` values) are used at roughly the same intensity as in the chemistry pack (13 off-roster) rather than more heavily — a natural consequence of the Western classical canon having crowded letter distributions at some letters (B, C, S) and sparse distributions at others (F, N, O, P instrument cards).
 
 ## Triple
 
@@ -22,7 +22,7 @@ Each entity is a composer. Its three cards are:
 - `manifest.json` — pack declaration, 3 card types, en + de locales, board sizes 12 / 18 / 24.
 - `entities.json` — 20 composers spanning Medieval (Hildegard), Baroque, Classical, Romantic, and 20th-century periods; includes two non-Western-European entries (Ravi Shankar; Gershwin).
 - `cards.json` — 60 cards (3 per composer).
-- `letter_groups.json` — 20 curated triples across 11 letters (B, C, D, F, H, L, M, P, R, S, T, V). Twelve distinct off-roster `entity_id` values appear in letter groups: composers *Fauré*, *Paganini*, *Puccini*, *Telemann*, and instruments *Double Bass*, *Drums*, *Horn*, *Lute*, *Mandolin*, *Marimba*, *Recorder*, *Saxophone*. The engine synthesises these shared-letter cards at runtime without entity metadata ([`engine/app.js:463`](../../engine/app.js#L463)), so they play correctly but do not surface facts or trilingual labels in the post-match overlay. See Curation Statement §2.3.
+- `letter_groups.json` — 20 curated triples across 12 letters (B, C, D, F, H, L, M, P, R, S, T, V). Twelve distinct off-roster `entity_id` values appear in letter groups: composers *Fauré*, *Paganini*, *Puccini*, *Telemann*, and instruments *Double Bass*, *Drums*, *Horn*, *Lute*, *Mandolin*, *Marimba*, *Recorder*, *Saxophone*. The engine synthesises these shared-letter cards at runtime without entity metadata ([`engine/app.js:463`](../../engine/app.js#L463)), so they play correctly but do not surface facts or trilingual labels in the post-match overlay. See Curation Statement §2.3.
 - `icons/composer.svg`, `icons/work.svg`, `icons/instrument.svg` — three monochrome `currentColor` SVGs.
 - `CURATION_STATEMENT.md` — choices, provenance, dispute channel.
 
