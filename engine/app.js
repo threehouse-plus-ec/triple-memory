@@ -1,5 +1,14 @@
 // Triple Memory - Core Game Engine
 
+// Perfect-memory optimal play — Monte Carlo mean (20000 trials each).
+// Derivation and re-runnable script: scripts/simulate_triples.js.
+// Values are mean flips; replace when the sim is re-run on changed rules.
+const AVG_PERFECT_MEMORY_FLIPS = {
+    12: 30, // 4 triples
+    18: 51, // 6 triples
+    24: 73  // 8 triples
+};
+
 // Distinct, AA-contrast border colours used to tint each matched triple in
 // turn. Cycled modulo length; 8 values cover the 24-card board (8 triples).
 const MATCH_COLORS = [
@@ -205,11 +214,16 @@ class TripleMemoryEngine {
     }
 
     averageFlips() {
-        // Heuristic for perfect-memory, optimal play: each card is typically
-        // revealed twice (once for information gathering, once in the matching
-        // attempt). So ≈ 2 × boardSize. Presented with a "~" prefix in the UI
-        // to signal that this is a rough statistical estimate, not a proof.
-        return this.boardSize * 2;
+        // Empirical mean for perfect-memory optimal play, from
+        // scripts/simulate_triples.js (Monte Carlo, 20k trials per config).
+        // Fallback for non-standard board sizes: linear fit mean ≈ 11N - 14
+        // where N is the triple count, which interpolates the three data
+        // points {N=4: 30, N=6: 51, N=8: 73} within ~1 flip.
+        if (AVG_PERFECT_MEMORY_FLIPS[this.boardSize] !== undefined) {
+            return AVG_PERFECT_MEMORY_FLIPS[this.boardSize];
+        }
+        const N = this.boardSize / this.pack.manifest.card_types.length;
+        return Math.max(this.boardSize, Math.round(11 * N - 14));
     }
 
     randomFlips() {
@@ -232,15 +246,19 @@ class TripleMemoryEngine {
     }
 
     memoryQuality(flips) {
-        // Figure of merit: (random - player) / (random - perfect), clamped to
-        // [0, 1]. 100% ≈ perfect-memory play, 0% ≈ indistinguishable from
-        // random. Returns an integer percentage.
+        // Log-scaled figure of merit:
+        //   MQ = 1 - (log(flips) - log(perfect)) / (log(random) - log(perfect))
+        // Linear FoM is dominated by the huge random baseline, so even
+        // mediocre play scores >90%. A log scale spreads the interesting
+        // range — perfect-memory optimal play scores ~72-76%, 2× that ~55%,
+        // clearly random ~0%. Clamped to [0, 100].
         const perfect = this.perfectFlips();
         const random = this.randomFlips();
+        const safeFlips = Math.max(flips, perfect);
         if (random <= perfect) return 100;
-        const raw = (random - flips) / (random - perfect);
-        const clamped = Math.max(0, Math.min(1, raw));
-        return Math.round(clamped * 100);
+        const logRange = Math.log(random) - Math.log(perfect);
+        const raw = 1 - (Math.log(safeFlips) - Math.log(perfect)) / logRange;
+        return Math.round(Math.max(0, Math.min(1, raw)) * 100);
     }
 
     renderScoreboard() {
