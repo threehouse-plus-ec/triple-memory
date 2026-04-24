@@ -1,5 +1,12 @@
 // Triple Memory - Core Game Engine
 
+// Packs available to the engine. Add new entries here as they ship.
+// The first entry is the default if no ?pack=<id> query param is supplied.
+const AVAILABLE_PACKS = [
+    { id: 'geography',  display: { en: 'Geography', de: 'Geografie' } },
+    { id: 'chemistry',  display: { en: 'Chemistry', de: 'Chemie' } }
+];
+
 // Perfect-memory optimal play — Monte Carlo mean (20000 trials each).
 // Derivation and re-runnable script: scripts/simulate_triples.js.
 // Values are mean flips; replace when the sim is re-run on changed rules.
@@ -26,6 +33,7 @@ const UI_STRINGS = {
     en: {
         loading: 'Loading assets...',
         activePack: 'Active Pack: {name}',
+        pack: 'Pack:',
         boardSize: 'Board Size:',
         boardOption: '{cards} Cards ({triples} Triples)',
         language: 'Language:',
@@ -89,6 +97,7 @@ const UI_STRINGS = {
     de: {
         loading: 'Lade Ressourcen...',
         activePack: 'Aktives Paket: {name}',
+        pack: 'Paket:',
         boardSize: 'Spielfeldgröße:',
         boardOption: '{cards} Karten ({triples} Tripel)',
         language: 'Sprache:',
@@ -384,16 +393,15 @@ class TripleMemoryEngine {
     }
 
     getCardTypeRequirement(typeDef) {
-        const localizedRequirements = {
-            de: {
-                capital: 'eine Hauptstadt',
-                country: 'ein Land',
-                river: 'ein Fluss'
-            }
-        };
-        const requirement = localizedRequirements[this.currentLocale] &&
-            localizedRequirements[this.currentLocale][typeDef.type_id];
-        return requirement || `one ${this.getCardTypeLabel(typeDef)}`;
+        // Packs may supply a grammatical "one X" phrase per locale via
+        // typeDef.tutorial_phrase (e.g. { en: "one country", de: "ein Land" }).
+        // Falls back to "one {display-name}" if no pack phrase is declared.
+        const phrases = typeDef && typeDef.tutorial_phrase;
+        if (phrases && typeof phrases === 'object') {
+            if (phrases[this.currentLocale]) return phrases[this.currentLocale];
+            if (phrases.en) return phrases.en;
+        }
+        return `one ${this.getCardTypeLabel(typeDef)}`;
     }
 
     getRequiredTypePhrase() {
@@ -453,15 +461,18 @@ class TripleMemoryEngine {
     }
 
     buildSharedLetterCard(group, groupCard, index) {
+        // Accept either the engine-level "entity_id" key or the legacy
+        // geography-specific "country_id" on letter_group cards.
+        const groupEntityId = groupCard.entity_id !== undefined ? groupCard.entity_id : groupCard.country_id;
         const canonicalCard = this.pack.cards.find(card =>
-            card.entity_id === groupCard.country_id &&
+            card.entity_id === groupEntityId &&
             card.card_type === groupCard.card_type &&
             card.label === groupCard.label
         );
 
         return {
             card_id: canonicalCard ? canonicalCard.card_id : `${group.letter_group_id}_${groupCard.card_type}_${index}`,
-            entity_id: groupCard.country_id,
+            entity_id: groupEntityId,
             card_type: groupCard.card_type,
             label: groupCard.label,
             label_script: canonicalCard ? canonicalCard.label_script : 'latin',
@@ -574,9 +585,21 @@ class TripleMemoryEngine {
 
     async init() {
         this.render();
-        await this.loadPack('geography'); // Default to geography pack for MVP
+        const params = new URLSearchParams(window.location.search);
+        const requested = params.get('pack');
+        const known = new Set(AVAILABLE_PACKS.map(p => p.id));
+        const packId = (requested && known.has(requested)) ? requested : AVAILABLE_PACKS[0].id;
+        this.packId = packId;
+        await this.loadPack(packId);
         this.state = 'MENU';
         this.render();
+    }
+
+    switchPack(packId) {
+        if (!AVAILABLE_PACKS.some(p => p.id === packId)) return;
+        const url = new URL(window.location.href);
+        url.searchParams.set('pack', packId);
+        window.location.assign(url.toString());
     }
 
     async loadPack(packId) {
@@ -989,6 +1012,17 @@ class TripleMemoryEngine {
                     <div class="screen menu">
                         <h1>Triple Memory</h1>
                         <p class="subtitle">${this.t('activePack', { name: this.pack.manifest.pack_name })}</p>
+
+                        ${AVAILABLE_PACKS.length > 1 ? `
+                        <div class="menu-settings">
+                            <label for="pack-select">${this.t('pack')}</label>
+                            <select id="pack-select" onchange="game.switchPack(this.value)">
+                                ${AVAILABLE_PACKS.map(p => `
+                                    <option value="${p.id}" ${this.packId === p.id ? 'selected' : ''}>${(p.display && (p.display[this.currentLocale] || p.display.en)) || p.id}</option>
+                                `).join('')}
+                            </select>
+                        </div>
+                        ` : ''}
 
                         <div class="menu-settings">
                             <label for="board-size">${this.t('boardSize')}</label>

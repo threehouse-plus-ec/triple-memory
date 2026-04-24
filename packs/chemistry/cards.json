@@ -1,0 +1,602 @@
+[
+  {
+    "card_id": "H_element",
+    "entity_id": "H",
+    "card_type": "element",
+    "label": "Hydrogen",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "H_symbol",
+    "entity_id": "H",
+    "card_type": "symbol",
+    "label": "H",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "H_group",
+    "entity_id": "H",
+    "card_type": "group",
+    "label": "Nonmetal",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "HE_element",
+    "entity_id": "HE",
+    "card_type": "element",
+    "label": "Helium",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "HE_symbol",
+    "entity_id": "HE",
+    "card_type": "symbol",
+    "label": "He",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "HE_group",
+    "entity_id": "HE",
+    "card_type": "group",
+    "label": "Noble gas",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "LI_element",
+    "entity_id": "LI",
+    "card_type": "element",
+    "label": "Lithium",
+    "label_script": "latin",
+    "initial_letter": "L",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "LI_symbol",
+    "entity_id": "LI",
+    "card_type": "symbol",
+    "label": "Li",
+    "label_script": "latin",
+    "initial_letter": "L",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "LI_group",
+    "entity_id": "LI",
+    "card_type": "group",
+    "label": "Alkali metal",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "C_element",
+    "entity_id": "C",
+    "card_type": "element",
+    "label": "Carbon",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "C_symbol",
+    "entity_id": "C",
+    "card_type": "symbol",
+    "label": "C",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "C_group",
+    "entity_id": "C",
+    "card_type": "group",
+    "label": "Nonmetal",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "N_element",
+    "entity_id": "N",
+    "card_type": "element",
+    "label": "Nitrogen",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "N_symbol",
+    "entity_id": "N",
+    "card_type": "symbol",
+    "label": "N",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "N_group",
+    "entity_id": "N",
+    "card_type": "group",
+    "label": "Nonmetal",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "O_element",
+    "entity_id": "O",
+    "card_type": "element",
+    "label": "Oxygen",
+    "label_script": "latin",
+    "initial_letter": "O",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "O_symbol",
+    "entity_id": "O",
+    "card_type": "symbol",
+    "label": "O",
+    "label_script": "latin",
+    "initial_letter": "O",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "O_group",
+    "entity_id": "O",
+    "card_type": "group",
+    "label": "Nonmetal",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NE_element",
+    "entity_id": "NE",
+    "card_type": "element",
+    "label": "Neon",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NE_symbol",
+    "entity_id": "NE",
+    "card_type": "symbol",
+    "label": "Ne",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NE_group",
+    "entity_id": "NE",
+    "card_type": "group",
+    "label": "Noble gas",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "NA_element",
+    "entity_id": "NA",
+    "card_type": "element",
+    "label": "Sodium",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "NA_symbol",
+    "entity_id": "NA",
+    "card_type": "symbol",
+    "label": "Na",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "NA_group",
+    "entity_id": "NA",
+    "card_type": "group",
+    "label": "Alkali metal",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "MG_element",
+    "entity_id": "MG",
+    "card_type": "element",
+    "label": "Magnesium",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "MG_symbol",
+    "entity_id": "MG",
+    "card_type": "symbol",
+    "label": "Mg",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "MG_group",
+    "entity_id": "MG",
+    "card_type": "group",
+    "label": "Alkaline earth metal",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AL_element",
+    "entity_id": "AL",
+    "card_type": "element",
+    "label": "Aluminium",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AL_symbol",
+    "entity_id": "AL",
+    "card_type": "symbol",
+    "label": "Al",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AL_group",
+    "entity_id": "AL",
+    "card_type": "group",
+    "label": "Post-transition metal",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "SI_element",
+    "entity_id": "SI",
+    "card_type": "element",
+    "label": "Silicon",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "SI_symbol",
+    "entity_id": "SI",
+    "card_type": "symbol",
+    "label": "Si",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "SI_group",
+    "entity_id": "SI",
+    "card_type": "group",
+    "label": "Metalloid",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "S_element",
+    "entity_id": "S",
+    "card_type": "element",
+    "label": "Sulfur",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "S_symbol",
+    "entity_id": "S",
+    "card_type": "symbol",
+    "label": "S",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "S_group",
+    "entity_id": "S",
+    "card_type": "group",
+    "label": "Nonmetal",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "CL_element",
+    "entity_id": "CL",
+    "card_type": "element",
+    "label": "Chlorine",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CL_symbol",
+    "entity_id": "CL",
+    "card_type": "symbol",
+    "label": "Cl",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CL_group",
+    "entity_id": "CL",
+    "card_type": "group",
+    "label": "Halogen",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "K_element",
+    "entity_id": "K",
+    "card_type": "element",
+    "label": "Potassium",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "K_symbol",
+    "entity_id": "K",
+    "card_type": "symbol",
+    "label": "K",
+    "label_script": "latin",
+    "initial_letter": "K",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "K_group",
+    "entity_id": "K",
+    "card_type": "group",
+    "label": "Alkali metal",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CA_element",
+    "entity_id": "CA",
+    "card_type": "element",
+    "label": "Calcium",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CA_symbol",
+    "entity_id": "CA",
+    "card_type": "symbol",
+    "label": "Ca",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CA_group",
+    "entity_id": "CA",
+    "card_type": "group",
+    "label": "Alkaline earth metal",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "FE_element",
+    "entity_id": "FE",
+    "card_type": "element",
+    "label": "Iron",
+    "label_script": "latin",
+    "initial_letter": "I",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "FE_symbol",
+    "entity_id": "FE",
+    "card_type": "symbol",
+    "label": "Fe",
+    "label_script": "latin",
+    "initial_letter": "F",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "FE_group",
+    "entity_id": "FE",
+    "card_type": "group",
+    "label": "Transition metal",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "CU_element",
+    "entity_id": "CU",
+    "card_type": "element",
+    "label": "Copper",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CU_symbol",
+    "entity_id": "CU",
+    "card_type": "symbol",
+    "label": "Cu",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "CU_group",
+    "entity_id": "CU",
+    "card_type": "group",
+    "label": "Transition metal",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AG_element",
+    "entity_id": "AG",
+    "card_type": "element",
+    "label": "Silver",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AG_symbol",
+    "entity_id": "AG",
+    "card_type": "symbol",
+    "label": "Ag",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AG_group",
+    "entity_id": "AG",
+    "card_type": "group",
+    "label": "Transition metal",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AU_element",
+    "entity_id": "AU",
+    "card_type": "element",
+    "label": "Gold",
+    "label_script": "latin",
+    "initial_letter": "G",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "AU_symbol",
+    "entity_id": "AU",
+    "card_type": "symbol",
+    "label": "Au",
+    "label_script": "latin",
+    "initial_letter": "A",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity", "shared_letter"]
+  },
+  {
+    "card_id": "AU_group",
+    "entity_id": "AU",
+    "card_type": "group",
+    "label": "Transition metal",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "HG_element",
+    "entity_id": "HG",
+    "card_type": "element",
+    "label": "Mercury",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "HG_symbol",
+    "entity_id": "HG",
+    "card_type": "symbol",
+    "label": "Hg",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  },
+  {
+    "card_id": "HG_group",
+    "entity_id": "HG",
+    "card_type": "group",
+    "label": "Transition metal",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": ["shared_entity"]
+  }
+]

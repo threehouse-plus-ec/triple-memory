@@ -1,0 +1,422 @@
+[
+  {
+    "entity_id": "H",
+    "entity_name": "Hydrogen",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "H",
+    "group_name": "Nonmetal",
+    "atomic_number": 1,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {
+      "element": {
+        "en": "Hydrogen",
+        "de": "Wasserstoff",
+        "local_display": "Hydrogen"
+      },
+      "symbol": {
+        "en": "H",
+        "de": "H",
+        "local_display": "H"
+      },
+      "group": {
+        "en": "Nonmetal",
+        "de": "Nichtmetall",
+        "local_display": "Nonmetal"
+      }
+    },
+    "facts": {
+      "element": [
+        "Most abundant element in the universe.",
+        "Lightest element; atomic number 1.",
+        "Colourless, odourless gas at standard temperature and pressure."
+      ],
+      "symbol": [
+        "Symbol H from the Latin name hydrogenium.",
+        "Commonly written with subscript 2 (H2) for the diatomic molecule.",
+        "Used in water, acids, and most organic compounds."
+      ],
+      "group": [
+        "Nonmetals lack metallic lustre, conductivity, and malleability.",
+        "Tend to gain or share electrons in chemical reactions.",
+        "Form the basis of organic and biological chemistry."
+      ]
+    }
+  },
+  {
+    "entity_id": "HE",
+    "entity_name": "Helium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "He",
+    "group_name": "Noble gas",
+    "atomic_number": 2,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {
+      "element": {
+        "en": "Helium",
+        "de": "Helium",
+        "local_display": "Helium"
+      },
+      "symbol": {
+        "en": "He",
+        "de": "He",
+        "local_display": "He"
+      },
+      "group": {
+        "en": "Noble gas",
+        "de": "Edelgas",
+        "local_display": "Noble gas"
+      }
+    },
+    "facts": {
+      "element": [
+        "Second lightest element; atomic number 2.",
+        "Noble gas; chemically inert under normal conditions.",
+        "Produced in the Sun by hydrogen fusion."
+      ],
+      "symbol": [
+        "Symbol He from its English name helium.",
+        "Discovered spectroscopically in sunlight in 1868.",
+        "Liquefies at 4.2 K at atmospheric pressure."
+      ],
+      "group": [
+        "Noble gases have filled outer electron shells.",
+        "Form very few stable chemical compounds.",
+        "Group 18 of the modern periodic table."
+      ]
+    }
+  },
+  {
+    "entity_id": "LI",
+    "entity_name": "Lithium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Li",
+    "group_name": "Alkali metal",
+    "atomic_number": 3,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "C",
+    "entity_name": "Carbon",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "C",
+    "group_name": "Nonmetal",
+    "atomic_number": 6,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {
+      "element": {
+        "en": "Carbon",
+        "de": "Kohlenstoff",
+        "local_display": "Carbon"
+      },
+      "symbol": {
+        "en": "C",
+        "de": "C",
+        "local_display": "C"
+      },
+      "group": {
+        "en": "Nonmetal",
+        "de": "Nichtmetall",
+        "local_display": "Nonmetal"
+      }
+    },
+    "facts": {
+      "element": [
+        "Backbone of all known organic chemistry.",
+        "Exists in forms including diamond, graphite, and graphene.",
+        "Atomic number 6; four valence electrons."
+      ],
+      "symbol": [
+        "Symbol C from the Latin name carbonium.",
+        "Used in formulas for CO2, CH4, and countless organic species.",
+        "Central to the carbon-dating technique."
+      ],
+      "group": [
+        "Nonmetals lack metallic lustre, conductivity, and malleability.",
+        "Tend to gain or share electrons in chemical reactions.",
+        "Form the basis of organic and biological chemistry."
+      ]
+    }
+  },
+  {
+    "entity_id": "N",
+    "entity_name": "Nitrogen",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "N",
+    "group_name": "Nonmetal",
+    "atomic_number": 7,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "O",
+    "entity_name": "Oxygen",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "O",
+    "group_name": "Nonmetal",
+    "atomic_number": 8,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {
+      "element": {
+        "en": "Oxygen",
+        "de": "Sauerstoff",
+        "local_display": "Oxygen"
+      },
+      "symbol": {
+        "en": "O",
+        "de": "O",
+        "local_display": "O"
+      },
+      "group": {
+        "en": "Nonmetal",
+        "de": "Nichtmetall",
+        "local_display": "Nonmetal"
+      }
+    },
+    "facts": {
+      "element": [
+        "Most abundant element in the Earth's crust by mass.",
+        "Essential for cellular respiration in most life.",
+        "Atomic number 8; two lone pairs as a free atom."
+      ],
+      "symbol": [
+        "Symbol O from the Greek oxys (sharp) + genes (producer).",
+        "Written as O2 for the diatomic molecule we breathe.",
+        "Appears in water, carbon dioxide, and most acids."
+      ],
+      "group": [
+        "Nonmetals lack metallic lustre, conductivity, and malleability.",
+        "Tend to gain or share electrons in chemical reactions.",
+        "Form the basis of organic and biological chemistry."
+      ]
+    }
+  },
+  {
+    "entity_id": "NE",
+    "entity_name": "Neon",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Ne",
+    "group_name": "Noble gas",
+    "atomic_number": 10,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "NA",
+    "entity_name": "Sodium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Na",
+    "group_name": "Alkali metal",
+    "atomic_number": 11,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "MG",
+    "entity_name": "Magnesium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Mg",
+    "group_name": "Alkaline earth metal",
+    "atomic_number": 12,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "AL",
+    "entity_name": "Aluminium",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Al",
+    "group_name": "Post-transition metal",
+    "atomic_number": 13,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "SI",
+    "entity_name": "Silicon",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Si",
+    "group_name": "Metalloid",
+    "atomic_number": 14,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "S",
+    "entity_name": "Sulfur",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "S",
+    "group_name": "Nonmetal",
+    "atomic_number": 16,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "CL",
+    "entity_name": "Chlorine",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Cl",
+    "group_name": "Halogen",
+    "atomic_number": 17,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "K",
+    "entity_name": "Potassium",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "K",
+    "group_name": "Alkali metal",
+    "atomic_number": 19,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "CA",
+    "entity_name": "Calcium",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Ca",
+    "group_name": "Alkaline earth metal",
+    "atomic_number": 20,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "FE",
+    "entity_name": "Iron",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Fe",
+    "group_name": "Transition metal",
+    "atomic_number": 26,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {
+      "element": {
+        "en": "Iron",
+        "de": "Eisen",
+        "local_display": "Iron"
+      },
+      "symbol": {
+        "en": "Fe",
+        "de": "Fe",
+        "local_display": "Fe"
+      },
+      "group": {
+        "en": "Transition metal",
+        "de": "Übergangsmetall",
+        "local_display": "Transition metal"
+      }
+    },
+    "facts": {
+      "element": [
+        "Most common element on Earth by mass.",
+        "Principal constituent of steel and much industrial infrastructure.",
+        "Carries oxygen in haemoglobin in blood."
+      ],
+      "symbol": [
+        "Symbol Fe from the Latin name ferrum.",
+        "Atomic number 26; common oxidation states +2 and +3.",
+        "Magnetic below its Curie point (~770 °C)."
+      ],
+      "group": [
+        "Transition metals have partially filled d-orbitals.",
+        "Form coloured compounds and often act as catalysts.",
+        "Occupy groups 3–12 of the modern periodic table."
+      ]
+    }
+  },
+  {
+    "entity_id": "CU",
+    "entity_name": "Copper",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Cu",
+    "group_name": "Transition metal",
+    "atomic_number": 29,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "AG",
+    "entity_name": "Silver",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Ag",
+    "group_name": "Transition metal",
+    "atomic_number": 47,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "AU",
+    "entity_name": "Gold",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Au",
+    "group_name": "Transition metal",
+    "atomic_number": 79,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  },
+  {
+    "entity_id": "HG",
+    "entity_name": "Mercury",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "chemistry_pack_v0.1_draft",
+    "element_symbol": "Hg",
+    "group_name": "Transition metal",
+    "atomic_number": 80,
+    "provenance": "IUPAC Periodic Table, 2021",
+    "label_variants": {},
+    "facts": {}
+  }
+]

@@ -8,10 +8,16 @@ class PackValidator {
     validate(pack) {
         this.errors = [];
         this.validateManifest(pack.manifest);
+        // Pull the valid card_type ids from the manifest so packs that aren't
+        // geography (e.g. chemistry with element/symbol/group) validate without
+        // tripping a hardcoded enum.
+        const manifestTypes = Array.isArray(pack.manifest && pack.manifest.card_types)
+            ? pack.manifest.card_types.map(t => t.type_id).filter(Boolean)
+            : [];
         this.validateEntities(pack.entities);
-        this.validateCards(pack.cards, pack.letterGroups);
-        this.validateLetterGroups(pack.letterGroups);
-        
+        this.validateCards(pack.cards, pack.letterGroups, manifestTypes);
+        this.validateLetterGroups(pack.letterGroups, manifestTypes);
+
         if (this.errors.length > 0) {
             const error = new Error("Schema validation failed. The pack data is invalid.");
             error.validationErrors = this.errors;
@@ -58,24 +64,40 @@ class PackValidator {
 
     validateEntities(e) {
         if (!Array.isArray(e)) { this.errors.push("entities.json must be an array."); return; }
+        // Engine-level required fields only. Pack-specific fields (e.g. the
+        // geography pack's country_id / capital_name / river_name / recognition
+        // metadata) belong to a pack-specific validation layer; the geography
+        // enum checks below are opt-in and no-op when the field is absent.
+        const engineRequired = ["entity_id", "entity_name", "difficulty", "is_active", "endorsement_marker"];
         e.forEach((ent, i) => {
             const ctx = `entities[${ent.entity_id || i}]`;
-            this.checkRequired(ent, ["entity_id", "entity_name", "difficulty", "is_active", "endorsement_marker", "country_id", "capital_name", "alternative_capitals", "river_name", "shared_river_flag", "shared_river_countries", "selection_reason", "capital_selection_reason", "provenance", "recognition_status", "region"], ctx);
-            if (ent.difficulty < 1 || ent.difficulty > 4) this.errors.push(`[${ctx}] 'difficulty' must be between 1 and 4.`);
+            this.checkRequired(ent, engineRequired, ctx);
+            if (ent.difficulty != null && (ent.difficulty < 1 || ent.difficulty > 4)) {
+                this.errors.push(`[${ctx}] 'difficulty' must be between 1 and 4.`);
+            }
+            // Geography-specific enums — only triggered if the field is present.
             this.checkEnum(ent.selection_reason, ["longest_in_country", "largest_basin", "capital_region", "major_historic", "iconic", "cross_border_reference", "none"], `${ctx}.selection_reason`);
             this.checkEnum(ent.capital_selection_reason, ["sole_official", "executive", "legislative", "judicial", "historic", "de_facto", "contested_documented"], `${ctx}.capital_selection_reason`);
             this.checkEnum(ent.recognition_status, ["un_member", "un_observer", "widely_recognised", "limited_recognition", "dependency"], `${ctx}.recognition_status`);
         });
     }
 
-    validateCards(c, letterGroups = []) {
+    // Letter-group cards historically used "country_id" (geography-specific).
+    // Packs authored against the generic engine interface should use the
+    // engine-level "entity_id" instead. Accept either so existing data
+    // (packs/geography) validates unchanged.
+    groupCardEntityId(gc) {
+        return gc.entity_id !== undefined ? gc.entity_id : gc.country_id;
+    }
+
+    validateCards(c, letterGroups = [], validCardTypes = []) {
         if (!Array.isArray(c)) { this.errors.push("cards.json must be an array."); return; }
         const sharedLetterCardKeys = new Set();
         if (Array.isArray(letterGroups)) {
             letterGroups.forEach(group => {
                 if (!Array.isArray(group.cards)) return;
                 group.cards.forEach(groupCard => {
-                    sharedLetterCardKeys.add(`${groupCard.country_id}::${groupCard.card_type}::${groupCard.label}`);
+                    sharedLetterCardKeys.add(`${this.groupCardEntityId(groupCard)}::${groupCard.card_type}::${groupCard.label}`);
                 });
             });
         }
@@ -84,7 +106,7 @@ class PackValidator {
             const ctx = `cards[${card.card_id || i}]`;
             this.checkRequired(card, ["card_id", "entity_id", "card_type", "label", "label_script", "initial_letter", "romanisation_source", "mode_tags"], ctx);
             if (card.initial_letter && card.initial_letter.length > 1) this.errors.push(`[${ctx}] 'initial_letter' must be max 1 character.`);
-            this.checkEnum(card.card_type, ["capital", "country", "river"], `${ctx}.card_type`);
+            if (validCardTypes.length > 0) this.checkEnum(card.card_type, validCardTypes, `${ctx}.card_type`);
             if (card.label && card.initial_letter && this.normaliseInitial(card.label) !== card.initial_letter.toUpperCase()) {
                 this.errors.push(`[${ctx}] 'initial_letter' must match the displayed label.`);
             }
@@ -99,7 +121,7 @@ class PackValidator {
         });
     }
 
-    validateLetterGroups(lg) {
+    validateLetterGroups(lg, validCardTypes = []) {
         if (!Array.isArray(lg)) { this.errors.push("letter_groups.json must be an array."); return; }
         lg.forEach((g, i) => {
             const ctx = `letter_groups[${g.letter_group_id || i}]`;
@@ -111,10 +133,15 @@ class PackValidator {
                     this.errors.push(`[${ctx}] 'cards' must contain one item per card type.`);
                 }
                 g.cards.forEach((gc, ci) => {
-                    this.checkRequired(gc, ["card_type", "label", "country_id"], `${ctx}.cards[${ci}]`);
-                    this.checkEnum(gc.card_type, ["capital", "country", "river"], `${ctx}.cards[${ci}].card_type`);
+                    // entity_id (engine-level) or country_id (geography legacy) — either accepted.
+                    const gcCtx = `${ctx}.cards[${ci}]`;
+                    this.checkRequired(gc, ["card_type", "label"], gcCtx);
+                    if (this.groupCardEntityId(gc) === undefined) {
+                        this.errors.push(`[${gcCtx}] Missing required field: 'entity_id' (or legacy 'country_id')`);
+                    }
+                    if (validCardTypes.length > 0) this.checkEnum(gc.card_type, validCardTypes, `${gcCtx}.card_type`);
                     if (gc.label && g.initial_letter && this.normaliseInitial(gc.label) !== g.initial_letter.toUpperCase()) {
-                        this.errors.push(`[${ctx}.cards[${ci}]] 'label' must match the group's initial letter.`);
+                        this.errors.push(`[${gcCtx}] 'label' must match the group's initial letter.`);
                     }
                 });
             }

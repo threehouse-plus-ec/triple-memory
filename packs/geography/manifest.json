@@ -16,6 +16,10 @@
       "aria_label_templates": {
         "en": "Capital: {label}",
         "de": "Hauptstadt: {label}"
+      },
+      "tutorial_phrase": {
+        "en": "one capital",
+        "de": "eine Hauptstadt"
       }
     },
     {
@@ -30,6 +34,10 @@
       "aria_label_templates": {
         "en": "Country: {label}",
         "de": "Land: {label}"
+      },
+      "tutorial_phrase": {
+        "en": "one country",
+        "de": "ein Land"
       }
     },
     {
@@ -44,6 +52,10 @@
       "aria_label_templates": {
         "en": "River: {label}",
         "de": "Fluss: {label}"
+      },
+      "tutorial_phrase": {
+        "en": "one river",
+        "de": "ein Fluss"
       }
     }
   ],

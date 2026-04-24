@@ -1,0 +1,482 @@
+[
+  {
+    "letter_group_id": "A_01",
+    "initial_letter": "A",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Aluminium",
+        "entity_id": "AL"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Al",
+        "entity_id": "AL"
+      },
+      {
+        "card_type": "group",
+        "label": "Alkali metal",
+        "entity_id": "LI"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "A_02",
+    "initial_letter": "A",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Argon",
+        "entity_id": "AR"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ag",
+        "entity_id": "AG"
+      },
+      {
+        "card_type": "group",
+        "label": "Alkaline earth metal",
+        "entity_id": "MG"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "A_03",
+    "initial_letter": "A",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Actinium",
+        "entity_id": "AC"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Au",
+        "entity_id": "AU"
+      },
+      {
+        "card_type": "group",
+        "label": "Actinide",
+        "entity_id": "AC"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "A_04",
+    "initial_letter": "A",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Arsenic",
+        "entity_id": "AS"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ar",
+        "entity_id": "AR"
+      },
+      {
+        "card_type": "group",
+        "label": "Alkali metal",
+        "entity_id": "NA"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "A_05",
+    "initial_letter": "A",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Americium",
+        "entity_id": "AM"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Am",
+        "entity_id": "AM"
+      },
+      {
+        "card_type": "group",
+        "label": "Alkaline earth metal",
+        "entity_id": "CA"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "H_01",
+    "initial_letter": "H",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Hydrogen",
+        "entity_id": "H"
+      },
+      {
+        "card_type": "symbol",
+        "label": "H",
+        "entity_id": "H"
+      },
+      {
+        "card_type": "group",
+        "label": "Halogen",
+        "entity_id": "CL"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "H_02",
+    "initial_letter": "H",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Helium",
+        "entity_id": "HE"
+      },
+      {
+        "card_type": "symbol",
+        "label": "He",
+        "entity_id": "HE"
+      },
+      {
+        "card_type": "group",
+        "label": "Halogen",
+        "entity_id": "CL"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "H_03",
+    "initial_letter": "H",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Hafnium",
+        "entity_id": "HF"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Hf",
+        "entity_id": "HF"
+      },
+      {
+        "card_type": "group",
+        "label": "Halogen",
+        "entity_id": "CL"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "L_01",
+    "initial_letter": "L",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Lithium",
+        "entity_id": "LI"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Li",
+        "entity_id": "LI"
+      },
+      {
+        "card_type": "group",
+        "label": "Lanthanide",
+        "entity_id": "LA"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "L_02",
+    "initial_letter": "L",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Lanthanum",
+        "entity_id": "LA"
+      },
+      {
+        "card_type": "symbol",
+        "label": "La",
+        "entity_id": "LA"
+      },
+      {
+        "card_type": "group",
+        "label": "Lanthanide",
+        "entity_id": "LA"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "M_01",
+    "initial_letter": "M",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Magnesium",
+        "entity_id": "MG"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Mg",
+        "entity_id": "MG"
+      },
+      {
+        "card_type": "group",
+        "label": "Metalloid",
+        "entity_id": "SI"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "M_02",
+    "initial_letter": "M",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Manganese",
+        "entity_id": "MN"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Mn",
+        "entity_id": "MN"
+      },
+      {
+        "card_type": "group",
+        "label": "Metalloid",
+        "entity_id": "SI"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "N_01",
+    "initial_letter": "N",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Nitrogen",
+        "entity_id": "N"
+      },
+      {
+        "card_type": "symbol",
+        "label": "N",
+        "entity_id": "N"
+      },
+      {
+        "card_type": "group",
+        "label": "Nonmetal",
+        "entity_id": "O"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "N_02",
+    "initial_letter": "N",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Neon",
+        "entity_id": "NE"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ne",
+        "entity_id": "NE"
+      },
+      {
+        "card_type": "group",
+        "label": "Noble gas",
+        "entity_id": "HE"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "N_03",
+    "initial_letter": "N",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Nickel",
+        "entity_id": "NI"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ni",
+        "entity_id": "NI"
+      },
+      {
+        "card_type": "group",
+        "label": "Nonmetal",
+        "entity_id": "S"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "N_04",
+    "initial_letter": "N",
+    "difficulty": 3,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Niobium",
+        "entity_id": "NB"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Nb",
+        "entity_id": "NB"
+      },
+      {
+        "card_type": "group",
+        "label": "Noble gas",
+        "entity_id": "NE"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "P_01",
+    "initial_letter": "P",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Phosphorus",
+        "entity_id": "P"
+      },
+      {
+        "card_type": "symbol",
+        "label": "P",
+        "entity_id": "P"
+      },
+      {
+        "card_type": "group",
+        "label": "Post-transition metal",
+        "entity_id": "AL"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "P_02",
+    "initial_letter": "P",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Platinum",
+        "entity_id": "PT"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Pt",
+        "entity_id": "PT"
+      },
+      {
+        "card_type": "group",
+        "label": "Post-transition metal",
+        "entity_id": "AL"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "T_01",
+    "initial_letter": "T",
+    "difficulty": 1,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Titanium",
+        "entity_id": "TI"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ti",
+        "entity_id": "TI"
+      },
+      {
+        "card_type": "group",
+        "label": "Transition metal",
+        "entity_id": "FE"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  },
+  {
+    "letter_group_id": "T_02",
+    "initial_letter": "T",
+    "difficulty": 2,
+    "is_active": true,
+    "cards": [
+      {
+        "card_type": "element",
+        "label": "Tantalum",
+        "entity_id": "TA"
+      },
+      {
+        "card_type": "symbol",
+        "label": "Ta",
+        "entity_id": "TA"
+      },
+      {
+        "card_type": "group",
+        "label": "Transition metal",
+        "entity_id": "CU"
+      }
+    ],
+    "endorsement_marker": "chemistry_pack_v0.1_draft"
+  }
+]

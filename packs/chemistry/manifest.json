@@ -1,0 +1,64 @@
+{
+  "pack_id": "chemistry",
+  "pack_name": "Chemistry — Elements, Symbols, Groups",
+  "pack_version": "0.1",
+  "endorsement_marker": "chemistry_pack_v0.1_draft",
+  "card_types": [
+    {
+      "type_id": "element",
+      "display_name": "Element",
+      "display_names": { "en": "Element", "de": "Element" },
+      "icon": "icons/element.svg",
+      "aria_label_template": "Element: {label}",
+      "aria_label_templates": {
+        "en": "Element: {label}",
+        "de": "Element: {label}"
+      },
+      "tutorial_phrase": { "en": "one element", "de": "ein Element" }
+    },
+    {
+      "type_id": "symbol",
+      "display_name": "Symbol",
+      "display_names": { "en": "Symbol", "de": "Symbol" },
+      "icon": "icons/symbol.svg",
+      "aria_label_template": "Symbol: {label}",
+      "aria_label_templates": {
+        "en": "Symbol: {label}",
+        "de": "Symbol: {label}"
+      },
+      "tutorial_phrase": { "en": "one symbol", "de": "ein Symbol" }
+    },
+    {
+      "type_id": "group",
+      "display_name": "Group",
+      "display_names": { "en": "Group", "de": "Gruppe" },
+      "icon": "icons/group.svg",
+      "aria_label_template": "Group: {label}",
+      "aria_label_templates": {
+        "en": "Group: {label}",
+        "de": "Gruppe: {label}"
+      },
+      "tutorial_phrase": { "en": "one group", "de": "eine Gruppe" }
+    }
+  ],
+  "shared_entity_field": "entity_id",
+  "supported_modes": [
+    "shared_entity",
+    "shared_letter"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true
+  }
+}
