@@ -686,7 +686,45 @@ class TripleMemoryEngine {
             }
 
             const shuffledEntities = this.shuffleArray(activeEntities);
-            const selectedEntities = shuffledEntities.slice(0, triplesCount);
+            const selectedEntities = [];
+            const usedLabelsByType = new Map(); // card_type -> Set<label>
+
+            const recordEntityLabels = (entity) => {
+                this.getEntityCards(entity.entity_id).forEach(card => {
+                    if (!usedLabelsByType.has(card.card_type)) {
+                        usedLabelsByType.set(card.card_type, new Set());
+                    }
+                    usedLabelsByType.get(card.card_type).add(card.label);
+                });
+            };
+            const entityCollidesOnAnyType = (entity) => {
+                return this.getEntityCards(entity.entity_id).some(card => {
+                    const used = usedLabelsByType.get(card.card_type);
+                    return used && used.has(card.label);
+                });
+            };
+
+            // First pass: prefer entities whose labels are all distinct from
+            // those already picked, so duplicate visible labels (e.g. two
+            // "Transition metal" cards) don't appear on the same board.
+            for (const entity of shuffledEntities) {
+                if (selectedEntities.length >= triplesCount) break;
+                if (entityCollidesOnAnyType(entity)) continue;
+                selectedEntities.push(entity);
+                recordEntityLabels(entity);
+            }
+
+            // Second pass: fill remaining slots with forced collisions if the
+            // unique-label pool was too small for the requested board size.
+            if (selectedEntities.length < triplesCount) {
+                for (const entity of shuffledEntities) {
+                    if (selectedEntities.length >= triplesCount) break;
+                    if (selectedEntities.includes(entity)) continue;
+                    selectedEntities.push(entity);
+                    console.log(`§9.2 Board Generator: Forced label collision logged for entity '${entity.entity_id}'.`);
+                    recordEntityLabels(entity);
+                }
+            }
 
             selectedEntities.forEach(entity => {
                 const entityCards = this.getEntityCards(entity.entity_id);
