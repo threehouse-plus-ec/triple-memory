@@ -109,4 +109,16 @@ Current geography-pack dispute channel: `packs/geography/CURATION_STATEMENT.md`.
 
 ## Licence
 
-*To be determined.* Default expectation: open licence suitable for educational use.
+This repository follows the T(h)reehouse +EC Corporate Design blueprint §0.3
+split-licence architecture:
+
+- **Code** (`engine/`, `index.html`) and **design assets** (`assets/cd/`,
+  `packs/geography/icons/`) — MIT. See [`LICENCE`](LICENCE).
+- **Framework documents and content** (`docs/`, `packs/geography/*.json`,
+  `packs/geography/CURATION_STATEMENT.md`) — CC BY-SA 4.0. See
+  [`LICENCE-CONTENT`](LICENCE-CONTENT).
+- **Fonts** (IBM Plex Mono, Crimson Pro, loaded from Google Fonts) — SIL OFL
+  1.1 (governed upstream, not redistributed here).
+
+Each folder carries its own licence note in its README or `LICENCE.md`.
+Downstream consumers should check the specific layer they are using.

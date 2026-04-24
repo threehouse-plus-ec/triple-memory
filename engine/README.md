@@ -21,3 +21,8 @@
 - React optional.
 - No backend; local JSON loading only.
 - In-browser state management.
+
+## Licence
+
+All source files in this folder are released under the **MIT Licence**.
+See the root [`LICENCE`](../LICENCE).

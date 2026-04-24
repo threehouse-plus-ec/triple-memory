@@ -28,3 +28,12 @@
 ## Dispute channel
 
 Please open an issue at `github.com/triple-memory/triple-memory/issues` or email `curation@triple-memory.local`. Pack-specific disputes are reviewed and, where accepted, recorded in `CURATION_STATEMENT.md` with an updated `endorsement_marker`.
+
+## Licence
+
+This folder carries two licences per the repository's split architecture:
+
+- **JSON datasets** (`manifest.json`, `entities.json`, `cards.json`,
+  `letter_groups.json`) and **`CURATION_STATEMENT.md`** — CC BY-SA 4.0.
+  See [`../../LICENCE-CONTENT`](../../LICENCE-CONTENT).
+- **SVG icons** in `icons/` — MIT. See [`../../LICENCE`](../../LICENCE).

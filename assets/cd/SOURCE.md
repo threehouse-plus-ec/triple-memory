@@ -6,6 +6,8 @@ Copied from `https://github.com/threehouse-plus-ec/cd-rules` (Model B distribute
 - `tokens.css`, the emblems, and the wordmarks are MIT-licensed design assets per the CD blueprint §0.3.
 - The source repository remains authoritative; these are local copies for static deployment.
 
+**Licence:** MIT. See the root [`LICENCE`](../../LICENCE).
+
 ## Inventory
 
 | File | CD Level | Used in this repo |

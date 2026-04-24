@@ -1,0 +1,52 @@
+# Content Licence — CC BY-SA 4.0
+
+Applies to: all files in [`docs/`](docs/), all `*.json` datasets and
+`CURATION_STATEMENT.md` in [`packs/geography/`](packs/geography/), and
+any prose or tabular framework document elsewhere in this repository
+that is not source code or a design asset.
+
+These materials are licensed under the
+**Creative Commons Attribution-ShareAlike 4.0 International License**
+(SPDX: `CC-BY-SA-4.0`).
+
+Canonical text: <https://creativecommons.org/licenses/by-sa/4.0/legalcode>
+Short summary:  <https://creativecommons.org/licenses/by-sa/4.0/>
+
+## Summary
+
+You are free to:
+
+- **Share** — copy and redistribute the material in any medium or format.
+- **Adapt** — remix, transform, and build upon the material for any
+  purpose, even commercially.
+
+Under the following terms:
+
+- **Attribution.** You must give appropriate credit, provide a link to the
+  licence, and indicate if changes were made.
+- **ShareAlike.** If you remix, transform, or build upon the material,
+  you must distribute your contributions under the same licence as the
+  original.
+- **No additional restrictions.** You may not apply legal terms or
+  technological measures that legally restrict others from doing anything
+  the licence permits.
+
+## Attribution
+
+When using these materials, please cite:
+
+> Triple Memory — Geography Pack (v0.4). T(h)reehouse +EC contributors,
+> 2026. Licensed under CC BY-SA 4.0.
+> <https://github.com/threehouse-plus-ec/triple-memory>
+
+## Why CC BY-SA 4.0
+
+Per the T(h)reehouse +EC Corporate Design blueprint §0.3, framework and
+data layers carry CC BY-SA 4.0: freely reusable, attribution required,
+derivatives must stay open. This permits integration into educational
+workflows without legal consultation while protecting the openness of
+the curated dataset and its stated provenance.
+
+For the code, the `assets/cd/*` design assets, and the
+`packs/geography/icons/` SVG icons, see the root [`LICENCE`](LICENCE)
+(MIT).
