@@ -99,7 +99,23 @@
     "group_name": "Alkali metal",
     "atomic_number": 3,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Lithium",
+        "de": "Lithium",
+        "local_display": "Lithium"
+      },
+      "symbol": {
+        "en": "Li",
+        "de": "Li",
+        "local_display": "Li"
+      },
+      "group": {
+        "en": "Alkali metal",
+        "de": "Alkalimetall",
+        "local_display": "Alkali metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -157,7 +173,23 @@
     "group_name": "Nonmetal",
     "atomic_number": 7,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Nitrogen",
+        "de": "Stickstoff",
+        "local_display": "Nitrogen"
+      },
+      "symbol": {
+        "en": "N",
+        "de": "N",
+        "local_display": "N"
+      },
+      "group": {
+        "en": "Nonmetal",
+        "de": "Nichtmetall",
+        "local_display": "Nonmetal"
+      }
+    },
     "facts": {}
   },
   {
@@ -215,7 +247,23 @@
     "group_name": "Noble gas",
     "atomic_number": 10,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Neon",
+        "de": "Neon",
+        "local_display": "Neon"
+      },
+      "symbol": {
+        "en": "Ne",
+        "de": "Ne",
+        "local_display": "Ne"
+      },
+      "group": {
+        "en": "Noble gas",
+        "de": "Edelgas",
+        "local_display": "Noble gas"
+      }
+    },
     "facts": {}
   },
   {
@@ -228,7 +276,23 @@
     "group_name": "Alkali metal",
     "atomic_number": 11,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Sodium",
+        "de": "Natrium",
+        "local_display": "Sodium"
+      },
+      "symbol": {
+        "en": "Na",
+        "de": "Na",
+        "local_display": "Na"
+      },
+      "group": {
+        "en": "Alkali metal",
+        "de": "Alkalimetall",
+        "local_display": "Alkali metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -241,7 +305,23 @@
     "group_name": "Alkaline earth metal",
     "atomic_number": 12,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Magnesium",
+        "de": "Magnesium",
+        "local_display": "Magnesium"
+      },
+      "symbol": {
+        "en": "Mg",
+        "de": "Mg",
+        "local_display": "Mg"
+      },
+      "group": {
+        "en": "Alkaline earth metal",
+        "de": "Erdalkalimetall",
+        "local_display": "Alkaline earth metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -254,7 +334,23 @@
     "group_name": "Post-transition metal",
     "atomic_number": 13,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Aluminium",
+        "de": "Aluminium",
+        "local_display": "Aluminium"
+      },
+      "symbol": {
+        "en": "Al",
+        "de": "Al",
+        "local_display": "Al"
+      },
+      "group": {
+        "en": "Post-transition metal",
+        "de": "Hauptgruppenmetall",
+        "local_display": "Post-transition metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -267,7 +363,23 @@
     "group_name": "Metalloid",
     "atomic_number": 14,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Silicon",
+        "de": "Silizium",
+        "local_display": "Silicon"
+      },
+      "symbol": {
+        "en": "Si",
+        "de": "Si",
+        "local_display": "Si"
+      },
+      "group": {
+        "en": "Metalloid",
+        "de": "Halbmetall",
+        "local_display": "Metalloid"
+      }
+    },
     "facts": {}
   },
   {
@@ -280,7 +392,23 @@
     "group_name": "Nonmetal",
     "atomic_number": 16,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Sulfur",
+        "de": "Schwefel",
+        "local_display": "Sulfur"
+      },
+      "symbol": {
+        "en": "S",
+        "de": "S",
+        "local_display": "S"
+      },
+      "group": {
+        "en": "Nonmetal",
+        "de": "Nichtmetall",
+        "local_display": "Nonmetal"
+      }
+    },
     "facts": {}
   },
   {
@@ -293,7 +421,23 @@
     "group_name": "Halogen",
     "atomic_number": 17,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Chlorine",
+        "de": "Chlor",
+        "local_display": "Chlorine"
+      },
+      "symbol": {
+        "en": "Cl",
+        "de": "Cl",
+        "local_display": "Cl"
+      },
+      "group": {
+        "en": "Halogen",
+        "de": "Halogen",
+        "local_display": "Halogen"
+      }
+    },
     "facts": {}
   },
   {
@@ -306,7 +450,23 @@
     "group_name": "Alkali metal",
     "atomic_number": 19,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Potassium",
+        "de": "Kalium",
+        "local_display": "Potassium"
+      },
+      "symbol": {
+        "en": "K",
+        "de": "K",
+        "local_display": "K"
+      },
+      "group": {
+        "en": "Alkali metal",
+        "de": "Alkalimetall",
+        "local_display": "Alkali metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -319,7 +479,23 @@
     "group_name": "Alkaline earth metal",
     "atomic_number": 20,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Calcium",
+        "de": "Calcium",
+        "local_display": "Calcium"
+      },
+      "symbol": {
+        "en": "Ca",
+        "de": "Ca",
+        "local_display": "Ca"
+      },
+      "group": {
+        "en": "Alkaline earth metal",
+        "de": "Erdalkalimetall",
+        "local_display": "Alkaline earth metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -377,7 +553,23 @@
     "group_name": "Transition metal",
     "atomic_number": 29,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Copper",
+        "de": "Kupfer",
+        "local_display": "Copper"
+      },
+      "symbol": {
+        "en": "Cu",
+        "de": "Cu",
+        "local_display": "Cu"
+      },
+      "group": {
+        "en": "Transition metal",
+        "de": "Übergangsmetall",
+        "local_display": "Transition metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -390,7 +582,23 @@
     "group_name": "Transition metal",
     "atomic_number": 47,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Silver",
+        "de": "Silber",
+        "local_display": "Silver"
+      },
+      "symbol": {
+        "en": "Ag",
+        "de": "Ag",
+        "local_display": "Ag"
+      },
+      "group": {
+        "en": "Transition metal",
+        "de": "Übergangsmetall",
+        "local_display": "Transition metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -403,7 +611,23 @@
     "group_name": "Transition metal",
     "atomic_number": 79,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Gold",
+        "de": "Gold",
+        "local_display": "Gold"
+      },
+      "symbol": {
+        "en": "Au",
+        "de": "Au",
+        "local_display": "Au"
+      },
+      "group": {
+        "en": "Transition metal",
+        "de": "Übergangsmetall",
+        "local_display": "Transition metal"
+      }
+    },
     "facts": {}
   },
   {
@@ -416,7 +640,23 @@
     "group_name": "Transition metal",
     "atomic_number": 80,
     "provenance": "IUPAC Periodic Table, 2021",
-    "label_variants": {},
+    "label_variants": {
+      "element": {
+        "en": "Mercury",
+        "de": "Quecksilber",
+        "local_display": "Mercury"
+      },
+      "symbol": {
+        "en": "Hg",
+        "de": "Hg",
+        "local_display": "Hg"
+      },
+      "group": {
+        "en": "Transition metal",
+        "de": "Übergangsmetall",
+        "local_display": "Transition metal"
+      }
+    },
     "facts": {}
   }
 ]

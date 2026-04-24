@@ -152,7 +152,23 @@
     "era": "Classical to Romantic",
     "nationality": "Austrian",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Schubert",
+        "de": "Schubert",
+        "local_display": "Schubert"
+      },
+      "work": {
+        "en": "Trout Quintet",
+        "de": "Forellenquintett",
+        "local_display": "Forellenquintett"
+      },
+      "instrument": {
+        "en": "Piano",
+        "de": "Klavier",
+        "local_display": "Klavier"
+      }
+    },
     "facts": {}
   },
   {
@@ -167,7 +183,23 @@
     "era": "Romantic",
     "nationality": "Polish",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Chopin",
+        "de": "Chopin",
+        "local_display": "Chopin"
+      },
+      "work": {
+        "en": "Nocturnes",
+        "de": "Nocturnes",
+        "local_display": "Nokturny"
+      },
+      "instrument": {
+        "en": "Piano",
+        "de": "Klavier",
+        "local_display": "Piano"
+      }
+    },
     "facts": {}
   },
   {
@@ -182,7 +214,23 @@
     "era": "Romantic",
     "nationality": "German",
     "provenance": "Grove Music Online; Reich, Nancy B., 'Clara Schumann: The Artist and the Woman' (1985)",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Clara Schumann",
+        "de": "Clara Schumann",
+        "local_display": "Clara Schumann"
+      },
+      "work": {
+        "en": "Piano Concerto",
+        "de": "Klavierkonzert",
+        "local_display": "Klavierkonzert"
+      },
+      "instrument": {
+        "en": "Piano",
+        "de": "Klavier",
+        "local_display": "Klavier"
+      }
+    },
     "facts": {}
   },
   {
@@ -246,7 +294,23 @@
     "era": "Romantic",
     "nationality": "German",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Brahms",
+        "de": "Brahms",
+        "local_display": "Brahms"
+      },
+      "work": {
+        "en": "Double Concerto",
+        "de": "Doppelkonzert",
+        "local_display": "Doppelkonzert"
+      },
+      "instrument": {
+        "en": "Cello",
+        "de": "Violoncello",
+        "local_display": "Violoncello"
+      }
+    },
     "facts": {}
   },
   {
@@ -261,7 +325,23 @@
     "era": "Late Romantic / early 20th century",
     "nationality": "French",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Debussy",
+        "de": "Debussy",
+        "local_display": "Debussy"
+      },
+      "work": {
+        "en": "Syrinx",
+        "de": "Syrinx",
+        "local_display": "Syrinx"
+      },
+      "instrument": {
+        "en": "Flute",
+        "de": "Flöte",
+        "local_display": "Flûte"
+      }
+    },
     "facts": {}
   },
   {
@@ -276,7 +356,25 @@
     "era": "20th century",
     "nationality": "Russian–American",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Stravinsky",
+        "de": "Strawinsky",
+        "local_display": "Stravinsky",
+        "native_display": "Стравинский"
+      },
+      "work": {
+        "en": "Rite of Spring",
+        "de": "Le Sacre du printemps",
+        "local_display": "Le Sacre du printemps",
+        "native_display": "Весна священная"
+      },
+      "instrument": {
+        "en": "Bassoon",
+        "de": "Fagott",
+        "local_display": "Bassoon"
+      }
+    },
     "facts": {}
   },
   {
@@ -291,7 +389,23 @@
     "era": "Baroque",
     "nationality": "Italian",
     "provenance": "Grove Music Online; Ryom catalogue",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Vivaldi",
+        "de": "Vivaldi",
+        "local_display": "Vivaldi"
+      },
+      "work": {
+        "en": "Four Seasons",
+        "de": "Die vier Jahreszeiten",
+        "local_display": "Le quattro stagioni"
+      },
+      "instrument": {
+        "en": "Violin",
+        "de": "Violine",
+        "local_display": "Violino"
+      }
+    },
     "facts": {}
   },
   {
@@ -306,7 +420,23 @@
     "era": "Baroque",
     "nationality": "German–English",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Handel",
+        "de": "Händel",
+        "local_display": "Händel"
+      },
+      "work": {
+        "en": "Messiah",
+        "de": "Der Messias",
+        "local_display": "Messiah"
+      },
+      "instrument": {
+        "en": "Trumpet",
+        "de": "Trompete",
+        "local_display": "Trompete"
+      }
+    },
     "facts": {}
   },
   {
@@ -321,7 +451,23 @@
     "era": "Classical",
     "nationality": "Austrian",
     "provenance": "Grove Music Online; Hoboken catalogue",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Haydn",
+        "de": "Haydn",
+        "local_display": "Haydn"
+      },
+      "work": {
+        "en": "Trumpet Concerto",
+        "de": "Trompetenkonzert",
+        "local_display": "Trompetenkonzert"
+      },
+      "instrument": {
+        "en": "Trumpet",
+        "de": "Trompete",
+        "local_display": "Trompete"
+      }
+    },
     "facts": {}
   },
   {
@@ -336,7 +482,23 @@
     "era": "Romantic",
     "nationality": "Hungarian",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Liszt",
+        "de": "Liszt",
+        "local_display": "Liszt"
+      },
+      "work": {
+        "en": "La Campanella",
+        "de": "La Campanella",
+        "local_display": "La Campanella"
+      },
+      "instrument": {
+        "en": "Piano",
+        "de": "Klavier",
+        "local_display": "Zongora"
+      }
+    },
     "facts": {}
   },
   {
@@ -351,7 +513,23 @@
     "era": "Late Romantic",
     "nationality": "Austro-Bohemian",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Mahler",
+        "de": "Mahler",
+        "local_display": "Mahler"
+      },
+      "work": {
+        "en": "Symphony No. 5",
+        "de": "Sinfonie Nr. 5",
+        "local_display": "Sinfonie Nr. 5"
+      },
+      "instrument": {
+        "en": "Trumpet",
+        "de": "Trompete",
+        "local_display": "Trompete"
+      }
+    },
     "facts": {}
   },
   {
@@ -366,7 +544,23 @@
     "era": "Romantic",
     "nationality": "Czech",
     "provenance": "Grove Music Online; Burghauser catalogue",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Dvořák",
+        "de": "Dvořák",
+        "local_display": "Dvořák"
+      },
+      "work": {
+        "en": "Cello Concerto",
+        "de": "Cellokonzert",
+        "local_display": "Koncert pro violoncello"
+      },
+      "instrument": {
+        "en": "Cello",
+        "de": "Violoncello",
+        "local_display": "Violoncello"
+      }
+    },
     "facts": {}
   },
   {
@@ -381,7 +575,24 @@
     "era": "Late Romantic",
     "nationality": "Russian–American",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Rachmaninoff",
+        "de": "Rachmaninow",
+        "local_display": "Rachmaninoff",
+        "native_display": "Рахманинов"
+      },
+      "work": {
+        "en": "Piano Concerto No. 2",
+        "de": "Klavierkonzert Nr. 2",
+        "local_display": "Piano Concerto No. 2"
+      },
+      "instrument": {
+        "en": "Piano",
+        "de": "Klavier",
+        "local_display": "Piano"
+      }
+    },
     "facts": {}
   },
   {
@@ -396,7 +607,23 @@
     "era": "Medieval",
     "nationality": "German (Benedictine abbess)",
     "provenance": "Grove Music Online; Newman, Barbara, 'Sister of Wisdom' (1987)",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Hildegard von Bingen",
+        "de": "Hildegard von Bingen",
+        "local_display": "Hildegard von Bingen"
+      },
+      "work": {
+        "en": "Ordo Virtutum",
+        "de": "Ordo Virtutum",
+        "local_display": "Ordo Virtutum"
+      },
+      "instrument": {
+        "en": "Voice",
+        "de": "Gesang",
+        "local_display": "Gesang"
+      }
+    },
     "facts": {}
   },
   {
@@ -411,7 +638,23 @@
     "era": "20th century",
     "nationality": "American",
     "provenance": "Grove Music Online",
-    "label_variants": {},
+    "label_variants": {
+      "composer": {
+        "en": "Gershwin",
+        "de": "Gershwin",
+        "local_display": "Gershwin"
+      },
+      "work": {
+        "en": "Rhapsody in Blue",
+        "de": "Rhapsody in Blue",
+        "local_display": "Rhapsody in Blue"
+      },
+      "instrument": {
+        "en": "Clarinet",
+        "de": "Klarinette",
+        "local_display": "Clarinet"
+      }
+    },
     "facts": {}
   },
   {
