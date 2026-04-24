@@ -279,6 +279,14 @@ header h2,
 .scoring-info-content strong {
     color: var(--ink);
 }
+.scoring-info-caveat {
+    background: color-mix(in srgb, var(--signal) 8%, transparent);
+    border-left: 3px solid var(--signal);
+    padding: 0.75rem 1rem;
+    margin: 1rem 0 0.5rem;
+    border-radius: 0 6px 6px 0;
+}
+
 .scoring-info-actions {
     display: flex;
     justify-content: flex-end;
