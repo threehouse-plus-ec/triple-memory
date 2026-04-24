@@ -43,6 +43,8 @@ const UI_STRINGS = {
         matches: 'Matches: {done}/{total}',
         time: 'Time: {time}',
         flips: 'Flips: {n}',
+        perfectFlips: 'Perfect: {n}',
+        avgFlips: 'Avg: ~{n}',
         quitToMenu: 'Quit to Menu',
         tutorialHeader: 'Tutorial - Step {n} of {total}',
         skipTutorial: 'Skip Tutorial',
@@ -50,7 +52,7 @@ const UI_STRINGS = {
         tripleMatched: 'Triple Matched!',
         dismissHint: '(Press Escape, Enter, or tap anywhere to dismiss)',
         gameComplete: 'Game Complete!',
-        gameCompleteHeader: 'Game Complete — {done}/{total} triples · Time {time} · Flips {flips}',
+        gameCompleteHeader: 'Game Complete — {done}/{total} triples · Time {time} · Flips {flips} (perfect {perfect}, avg ~{avg})',
         playAgain: 'New Game',
         tutorialComplete: 'Tutorial Complete!',
         readyToPlay: "You're ready to play!",
@@ -98,6 +100,8 @@ const UI_STRINGS = {
         matches: 'Treffer: {done}/{total}',
         time: 'Zeit: {time}',
         flips: 'Aufdeckungen: {n}',
+        perfectFlips: 'Perfekt: {n}',
+        avgFlips: 'Ø: ~{n}',
         quitToMenu: 'Zum Menü',
         tutorialHeader: 'Tutorial – Schritt {n} von {total}',
         skipTutorial: 'Tutorial überspringen',
@@ -105,7 +109,7 @@ const UI_STRINGS = {
         tripleMatched: 'Tripel gefunden!',
         dismissHint: '(Escape, Enter oder irgendwo tippen zum Schließen)',
         gameComplete: 'Spiel beendet!',
-        gameCompleteHeader: 'Spiel beendet — {done}/{total} Tripel · Zeit {time} · Aufdeckungen {flips}',
+        gameCompleteHeader: 'Spiel beendet — {done}/{total} Tripel · Zeit {time} · Aufdeckungen {flips} (perfekt {perfect}, Ø ~{avg})',
         playAgain: 'Neues Spiel',
         tutorialComplete: 'Tutorial abgeschlossen!',
         readyToPlay: 'Du kannst jetzt loslegen!',
@@ -190,12 +194,28 @@ class TripleMemoryEngine {
         }
     }
 
+    perfectFlips() {
+        // Minimum: every card revealed exactly once, in its triple's matching
+        // attempt. = cardsPerTriple × triples = boardSize.
+        return this.boardSize;
+    }
+
+    averageFlips() {
+        // Heuristic for perfect-memory, optimal play: each card is typically
+        // revealed twice (once for information gathering, once in the matching
+        // attempt). So ≈ 2 × boardSize. Presented with a "~" prefix in the UI
+        // to signal that this is a rough statistical estimate, not a proof.
+        return this.boardSize * 2;
+    }
+
     renderScoreboard() {
         const totalTriples = this.boardSize / this.pack.manifest.card_types.length;
         return `
             <span class="score-item">${this.t('matches', { done: this.score, total: totalTriples })}</span>
             <span class="score-item">${this.t('time', { time: this.formatTime(this.elapsedMs) })}</span>
             <span class="score-item">${this.t('flips', { n: this.flipCount })}</span>
+            <span class="score-item score-item-ref">${this.t('perfectFlips', { n: this.perfectFlips() })}</span>
+            <span class="score-item score-item-ref">${this.t('avgFlips', { n: this.averageFlips() })}</span>
         `;
     }
 
@@ -946,7 +966,7 @@ class TripleMemoryEngine {
                         <header>
                             <div>
                                 ${this.gameComplete
-                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { done: this.score, total: this.boardSize / this.pack.manifest.card_types.length, time: this.formatTime(this.elapsedMs), flips: this.flipCount })}</h2>`
+                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { done: this.score, total: this.boardSize / this.pack.manifest.card_types.length, time: this.formatTime(this.elapsedMs), flips: this.flipCount, perfect: this.perfectFlips(), avg: this.averageFlips() })}</h2>`
                                     : `<h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>`
                                 }
                                 ${!this.gameComplete && this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
