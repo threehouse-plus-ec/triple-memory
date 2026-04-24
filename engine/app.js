@@ -56,6 +56,10 @@ const UI_STRINGS = {
         avgFlips: 'Avg: ~{n}',
         randomFlips: 'Random: ~{n}',
         memoryQuality: 'Memory: {pct}%',
+        scoringInfoLabel: 'About scoring',
+        scoringInfoTitle: 'How scoring works',
+        scoringInfoBody: '<p>Alongside your live flip count, the scoreboard shows three reference points:</p><ul><li><strong>Perfect</strong> — the absolute minimum: every card flipped exactly once, in the attempt that matches its triple. Requires flawless memory and some luck.</li><li><strong>Avg (~)</strong> — what perfect-memory optimal play typically needs when cards must be learned before they can be matched. From a Monte Carlo simulation (20 000 trials).</li><li><strong>Random (~)</strong> — expected flips for a player with no memory at all, picking three cards uniformly at random every attempt. Derived analytically.</li></ul><p><strong>Memory quality</strong> maps your flips onto a logarithmic scale between perfect (100%) and random (0%). A normal perfect-memory game lands around 75%; 50% sits halfway between random picking and optimal play on the log scale.</p>',
+        closeInfo: 'Close',
         quitToMenu: 'Quit to Menu',
         tutorialHeader: 'Tutorial - Step {n} of {total}',
         skipTutorial: 'Skip Tutorial',
@@ -115,6 +119,10 @@ const UI_STRINGS = {
         avgFlips: 'Ø: ~{n}',
         randomFlips: 'Zufällig: ~{n}',
         memoryQuality: 'Gedächtnis: {pct}%',
+        scoringInfoLabel: 'Über die Bewertung',
+        scoringInfoTitle: 'So funktioniert die Bewertung',
+        scoringInfoBody: '<p>Neben deiner laufenden Aufdeckungs­zahl zeigt die Anzeige drei Referenzwerte:</p><ul><li><strong>Perfekt</strong> — das absolute Minimum: Jede Karte genau einmal aufgedeckt, im Zug, der ihr Tripel vervollständigt. Braucht perfektes Gedächtnis und etwas Glück.</li><li><strong>Ø (~)</strong> — was optimales Spiel mit perfektem Gedächtnis typischerweise benötigt, wenn Karten erst kennengelernt werden müssen, bevor sie passen. Aus einer Monte-Carlo-Simulation (20 000 Durchgänge).</li><li><strong>Zufällig (~)</strong> — erwartete Aufdeckungen für eine Spielerin ohne Gedächtnis, die pro Zug drei Karten rein zufällig zieht. Analytisch hergeleitet.</li></ul><p><strong>Gedächtnis-Qualität</strong> überträgt deine Aufdeckungen auf eine logarithmische Skala zwischen Perfekt (100 %) und Zufall (0 %). Ein normales Spiel mit perfektem Gedächtnis liegt bei etwa 75 %; 50 % entspricht dem logarithmischen Mittelwert zwischen Zufall und optimalem Spiel.</p>',
+        closeInfo: 'Schließen',
         quitToMenu: 'Zum Menü',
         tutorialHeader: 'Tutorial – Schritt {n} von {total}',
         skipTutorial: 'Tutorial überspringen',
@@ -270,7 +278,52 @@ class TripleMemoryEngine {
             <span class="score-item score-item-ref">${this.t('perfectFlips', { n: this.perfectFlips() })}</span>
             <span class="score-item score-item-ref">${this.t('avgFlips', { n: this.averageFlips() })}</span>
             <span class="score-item score-item-ref">${this.t('randomFlips', { n: this.randomFlips() })}</span>
+            <button type="button" class="score-info-button" onclick="game.showScoringInfo()" aria-label="${this.t('scoringInfoLabel')}" title="${this.t('scoringInfoLabel')}">?</button>
         `;
+    }
+
+    showScoringInfo() {
+        const overlay = document.createElement('div');
+        overlay.className = 'scoring-info-overlay';
+        overlay.innerHTML = `
+            <div class="scoring-info-content" role="dialog" aria-modal="true" aria-labelledby="scoring-info-title" tabindex="-1">
+                <h2 id="scoring-info-title">${this.t('scoringInfoTitle')}</h2>
+                ${this.t('scoringInfoBody')}
+                <div class="scoring-info-actions">
+                    <button type="button" class="scoring-info-close">${this.t('closeInfo')}</button>
+                </div>
+            </div>
+        `;
+
+        const previouslyFocused = document.activeElement;
+        const onKeydown = (event) => {
+            if (event.key === 'Escape' || event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                dismiss();
+            } else if (event.key === 'Tab') {
+                event.preventDefault();
+                const dialog = overlay.querySelector('.scoring-info-content');
+                if (dialog) dialog.focus();
+            }
+        };
+        const dismiss = () => {
+            document.removeEventListener('keydown', onKeydown);
+            if (document.body.contains(overlay)) document.body.removeChild(overlay);
+            if (previouslyFocused && document.body.contains(previouslyFocused) && typeof previouslyFocused.focus === 'function') {
+                previouslyFocused.focus();
+            }
+        };
+
+        overlay.onclick = (event) => {
+            // Click outside the content panel dismisses; clicks inside don't
+            // (except the close button, handled below).
+            if (event.target === overlay) dismiss();
+        };
+        overlay.querySelector('.scoring-info-close').onclick = dismiss;
+        document.addEventListener('keydown', onKeydown);
+        document.body.appendChild(overlay);
+        const dialog = overlay.querySelector('.scoring-info-content');
+        if (dialog) dialog.focus();
     }
 
     updateScoreboard() {
