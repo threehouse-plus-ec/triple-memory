@@ -40,6 +40,9 @@ const UI_STRINGS = {
         modeNoteEnglishLabels: 'Using English labels for letter matching.',
         languageNoteLetter: 'Shared Letter Mode keeps English labels because its letter groups are curated by English initials.',
         score: 'Score: {n}',
+        matches: 'Matches: {done}/{total}',
+        time: 'Time: {time}',
+        flips: 'Flips: {n}',
         quitToMenu: 'Quit to Menu',
         tutorialHeader: 'Tutorial - Step {n} of {total}',
         skipTutorial: 'Skip Tutorial',
@@ -47,7 +50,7 @@ const UI_STRINGS = {
         tripleMatched: 'Triple Matched!',
         dismissHint: '(Press Escape, Enter, or tap anywhere to dismiss)',
         gameComplete: 'Game Complete!',
-        gameCompleteHeader: 'Game Complete — Final score: {n}',
+        gameCompleteHeader: 'Game Complete — {done}/{total} triples · Time {time} · Flips {flips}',
         playAgain: 'New Game',
         tutorialComplete: 'Tutorial Complete!',
         readyToPlay: "You're ready to play!",
@@ -92,6 +95,9 @@ const UI_STRINGS = {
         modeNoteEnglishLabels: 'Für das Buchstaben-Matching werden englische Bezeichnungen verwendet.',
         languageNoteLetter: 'Der Modus Gemeinsamer Buchstabe verwendet englische Bezeichnungen, da die Buchstabengruppen nach englischen Anfangsbuchstaben kuratiert sind.',
         score: 'Punkte: {n}',
+        matches: 'Treffer: {done}/{total}',
+        time: 'Zeit: {time}',
+        flips: 'Aufdeckungen: {n}',
         quitToMenu: 'Zum Menü',
         tutorialHeader: 'Tutorial – Schritt {n} von {total}',
         skipTutorial: 'Tutorial überspringen',
@@ -99,7 +105,7 @@ const UI_STRINGS = {
         tripleMatched: 'Tripel gefunden!',
         dismissHint: '(Escape, Enter oder irgendwo tippen zum Schließen)',
         gameComplete: 'Spiel beendet!',
-        gameCompleteHeader: 'Spiel beendet — Endstand: {n}',
+        gameCompleteHeader: 'Spiel beendet — {done}/{total} Tripel · Zeit {time} · Aufdeckungen {flips}',
         playAgain: 'Neues Spiel',
         tutorialComplete: 'Tutorial abgeschlossen!',
         readyToPlay: 'Du kannst jetzt loslegen!',
@@ -138,6 +144,10 @@ class TripleMemoryEngine {
         this.score = 0;
         this.matchGroupCounter = 0; // Cycles through MATCH_COLORS so each triple gets its own hue
         this.gameComplete = false; // When true, keeps the finished board visible instead of switching to END
+        this.flipCount = 0; // Number of individual card reveals in the current round
+        this.startTime = null; // ms timestamp when the current round started
+        this.elapsedMs = 0; // Elapsed time in the current round (frozen on completion)
+        this.timerHandle = null; // setInterval handle for the live timer
         this.isChecking = false; // Lock interactions during flip animations
         
         this.isTutorial = false;
@@ -147,6 +157,51 @@ class TripleMemoryEngine {
 
     getAppRoot() {
         return document.getElementById('app') || document.body;
+    }
+
+    formatTime(ms) {
+        const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+        const mm = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+        const ss = String(totalSeconds % 60).padStart(2, '0');
+        return `${mm}:${ss}`;
+    }
+
+    startTimer() {
+        if (this.timerHandle) clearInterval(this.timerHandle);
+        this.startTime = Date.now();
+        this.elapsedMs = 0;
+        this.timerHandle = setInterval(() => {
+            if (this.state !== 'PLAYING' || this.gameComplete) {
+                this.stopTimer();
+                return;
+            }
+            this.elapsedMs = Date.now() - this.startTime;
+            this.updateScoreboard();
+        }, 1000);
+    }
+
+    stopTimer() {
+        if (this.timerHandle) {
+            clearInterval(this.timerHandle);
+            this.timerHandle = null;
+        }
+        if (this.startTime != null) {
+            this.elapsedMs = Date.now() - this.startTime;
+        }
+    }
+
+    renderScoreboard() {
+        const totalTriples = this.boardSize / this.pack.manifest.card_types.length;
+        return `
+            <span class="score-item">${this.t('matches', { done: this.score, total: totalTriples })}</span>
+            <span class="score-item">${this.t('time', { time: this.formatTime(this.elapsedMs) })}</span>
+            <span class="score-item">${this.t('flips', { n: this.flipCount })}</span>
+        `;
+    }
+
+    updateScoreboard() {
+        const el = document.getElementById('score-display');
+        if (el) el.innerHTML = this.renderScoreboard();
     }
 
     renderLegend() {
@@ -419,7 +474,13 @@ class TripleMemoryEngine {
             }
 
             this.pack = { manifest, entities, cards, letterGroups, icons };
-            this.currentLocale = manifest.primary_locale || 'en';
+            // Prefer the browser's language when the pack supports it; fall
+            // back to the pack's declared primary_locale otherwise. Compares
+            // the primary subtag only (e.g. "de-CH" → "de").
+            const supported = Array.isArray(manifest.supported_locales) ? manifest.supported_locales : [];
+            const primary = manifest.primary_locale || 'en';
+            const browserLang = (navigator.language || navigator.userLanguage || '').toLowerCase().split('-')[0];
+            this.currentLocale = supported.includes(browserLang) ? browserLang : primary;
             document.documentElement.lang = this.currentLocale;
             console.log(`Successfully loaded pack: ${this.pack.manifest.pack_name}`);
         } catch (error) {
@@ -535,12 +596,14 @@ class TripleMemoryEngine {
     handleCardClick(index) {
         // Ignore clicks if we are currently checking a triple, or if the card is already flipped
         if (this.isChecking) return;
-        
+
         const card = this.boardCards[index];
         if (card.status !== 'hidden') return;
 
         card.status = 'revealed';
+        this.flipCount++;
         this.revealedCards.push(card);
+        this.updateScoreboard();
 
         const cardEl = document.getElementById(`card-${index}`);
         if (cardEl) {
@@ -615,6 +678,7 @@ class TripleMemoryEngine {
 
     completeRound() {
         if (!this.boardCards.every(card => card.status === 'matched')) return;
+        this.stopTimer();
         if (this.isTutorial) {
             this.state = 'END';
             this.render();
@@ -882,14 +946,14 @@ class TripleMemoryEngine {
                         <header>
                             <div>
                                 ${this.gameComplete
-                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { n: this.score })}</h2>`
+                                    ? `<h2 class="complete-banner">${this.t('gameCompleteHeader', { done: this.score, total: this.boardSize / this.pack.manifest.card_types.length, time: this.formatTime(this.elapsedMs), flips: this.flipCount })}</h2>`
                                     : `<h2>${this.t('modePrefix', { mode: this.currentMode === 'shared_entity' ? this.t('modeSharedEntity') : this.t('modeSharedLetter') })}</h2>`
                                 }
                                 ${!this.gameComplete && this.currentMode === 'shared_letter' && this.currentLocale !== this.pack.manifest.primary_locale ? `
                                     <p class="mode-note">${this.t('modeNoteEnglishLabels')}</p>
                                 ` : ''}
                             </div>
-                            <div class="score" id="score-display" aria-live="polite" aria-atomic="true">${this.t('score', { n: this.score })}</div>
+                            <div class="score" id="score-display" aria-live="polite" aria-atomic="true">${this.renderScoreboard()}</div>
                             ${this.gameComplete
                                 ? `<div class="complete-actions">
                                        <button onclick="game.startGame('${this.currentMode}')">${this.t('playAgain')}</button>
@@ -994,10 +1058,13 @@ class TripleMemoryEngine {
         this.score = 0;
         this.matchGroupCounter = 0;
         this.gameComplete = false;
+        this.flipCount = 0;
+        this.elapsedMs = 0;
         this.boardCards = [];
         this.revealedCards = [];
         this.isTutorial = isTutorial;
         this.state = 'PLAYING';
+        this.startTimer();
 
         try {
             this.generateBoard(mode);
