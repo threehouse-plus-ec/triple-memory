@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Square pyramid</title>
+  <polygon points="18,72 82,72 70,52 30,52"/>
+  <line x1="50" y1="14" x2="18" y2="72"/>
+  <line x1="50" y1="14" x2="82" y2="72"/>
+  <line x1="50" y1="14" x2="30" y2="52"/>
+  <line x1="50" y1="14" x2="70" y2="52"/>
+</svg>

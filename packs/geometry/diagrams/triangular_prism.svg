@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Triangular prism</title>
+  <polygon points="18,82 62,82 40,42"/>
+  <polyline points="40,42 78,28 78,68 62,82"/>
+  <line x1="18" y1="82" x2="36" y2="68" stroke-dasharray="3,3" stroke-width="2"/>
+  <line x1="78" y1="28" x2="36" y2="28" stroke-dasharray="3,3" stroke-width="2"/>
+  <line x1="36" y1="28" x2="36" y2="68" stroke-dasharray="3,3" stroke-width="2"/>
+</svg>

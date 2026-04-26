@@ -1,0 +1,746 @@
+[
+  {
+    "entity_id": "g_square",
+    "entity_name": "Square",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Square",
+        "de": "Quadrat",
+        "local_display": "Square"
+      },
+      "diagram": {
+        "en": "Square",
+        "de": "Quadrat",
+        "local_display": "Square"
+      },
+      "properties": {
+        "en": "4 sides · 4 right angles · all sides equal",
+        "de": "4 Seiten · 4 rechte Winkel · alle Seiten gleich",
+        "local_display": "4 sides · 4 right angles · all sides equal"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_rectangle",
+    "entity_name": "Rectangle",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Rectangle",
+        "de": "Rechteck",
+        "local_display": "Rectangle"
+      },
+      "diagram": {
+        "en": "Rectangle",
+        "de": "Rechteck",
+        "local_display": "Rectangle"
+      },
+      "properties": {
+        "en": "4 sides · 4 right angles · 2 pairs of equal sides",
+        "de": "4 Seiten · 4 rechte Winkel · 2 Paare gleicher Seiten",
+        "local_display": "4 sides · 4 right angles · 2 pairs of equal sides"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_circle",
+    "entity_name": "Circle",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Circle",
+        "de": "Kreis",
+        "local_display": "Circle"
+      },
+      "diagram": {
+        "en": "Circle",
+        "de": "Kreis",
+        "local_display": "Circle"
+      },
+      "properties": {
+        "en": "curved boundary · constant radius · infinite symmetries",
+        "de": "gekrümmte Linie · konstanter Radius · unendliche Symmetrien",
+        "local_display": "curved boundary · constant radius · infinite symmetries"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_equilateral_triangle",
+    "entity_name": "Equilateral triangle",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Equilateral triangle",
+        "de": "Gleichseitiges Dreieck",
+        "local_display": "Equilateral triangle"
+      },
+      "diagram": {
+        "en": "Equilateral triangle",
+        "de": "Gleichseitiges Dreieck",
+        "local_display": "Equilateral triangle"
+      },
+      "properties": {
+        "en": "3 sides · all sides equal · all angles 60°",
+        "de": "3 Seiten · alle Seiten gleich · alle Winkel 60°",
+        "local_display": "3 sides · all sides equal · all angles 60°"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_right_triangle",
+    "entity_name": "Right triangle",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Right triangle",
+        "de": "Rechtwinkliges Dreieck",
+        "local_display": "Right triangle"
+      },
+      "diagram": {
+        "en": "Right triangle",
+        "de": "Rechtwinkliges Dreieck",
+        "local_display": "Right triangle"
+      },
+      "properties": {
+        "en": "3 sides · 1 right angle · other angles vary",
+        "de": "3 Seiten · 1 rechter Winkel · andere Winkel variabel",
+        "local_display": "3 sides · 1 right angle · other angles vary"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_isosceles_triangle",
+    "entity_name": "Isosceles triangle",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Isosceles triangle",
+        "de": "Gleichschenkliges Dreieck",
+        "local_display": "Isosceles triangle"
+      },
+      "diagram": {
+        "en": "Isosceles triangle",
+        "de": "Gleichschenkliges Dreieck",
+        "local_display": "Isosceles triangle"
+      },
+      "properties": {
+        "en": "3 sides · 2 sides equal · 2 angles equal",
+        "de": "3 Seiten · 2 Seiten gleich · 2 Winkel gleich",
+        "local_display": "3 sides · 2 sides equal · 2 angles equal"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_rhombus",
+    "entity_name": "Rhombus",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Rhombus",
+        "de": "Raute",
+        "local_display": "Rhombus"
+      },
+      "diagram": {
+        "en": "Rhombus",
+        "de": "Raute",
+        "local_display": "Rhombus"
+      },
+      "properties": {
+        "en": "4 sides · all sides equal · opposite angles equal",
+        "de": "4 Seiten · alle Seiten gleich · gegenüberliegende Winkel gleich",
+        "local_display": "4 sides · all sides equal · opposite angles equal"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_parallelogram",
+    "entity_name": "Parallelogram",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Parallelogram",
+        "de": "Parallelogramm",
+        "local_display": "Parallelogram"
+      },
+      "diagram": {
+        "en": "Parallelogram",
+        "de": "Parallelogramm",
+        "local_display": "Parallelogram"
+      },
+      "properties": {
+        "en": "4 sides · 2 pairs of parallel sides · opposite angles equal",
+        "de": "4 Seiten · 2 Paare paralleler Seiten · gegenüberliegende Winkel gleich",
+        "local_display": "4 sides · 2 pairs of parallel sides · opposite angles equal"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_trapezium",
+    "entity_name": "Trapezium",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Trapezium",
+        "de": "Trapez",
+        "local_display": "Trapezium"
+      },
+      "diagram": {
+        "en": "Trapezium",
+        "de": "Trapez",
+        "local_display": "Trapezium"
+      },
+      "properties": {
+        "en": "4 sides · 1 pair of parallel sides · variable angles",
+        "de": "4 Seiten · 1 Paar paralleler Seiten · variable Winkel",
+        "local_display": "4 sides · 1 pair of parallel sides · variable angles"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_kite",
+    "entity_name": "Kite",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Kite",
+        "de": "Drachen",
+        "local_display": "Kite"
+      },
+      "diagram": {
+        "en": "Kite",
+        "de": "Drachen",
+        "local_display": "Kite"
+      },
+      "properties": {
+        "en": "4 sides · 2 pairs of adjacent equal sides · 1 axis of symmetry",
+        "de": "4 Seiten · 2 Paare benachbarter gleicher Seiten · 1 Symmetrieachse",
+        "local_display": "4 sides · 2 pairs of adjacent equal sides · 1 axis of symmetry"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_scalene_triangle",
+    "entity_name": "Scalene triangle",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Scalene triangle",
+        "de": "Unregelmäßiges Dreieck",
+        "local_display": "Scalene triangle"
+      },
+      "diagram": {
+        "en": "Scalene triangle",
+        "de": "Unregelmäßiges Dreieck",
+        "local_display": "Scalene triangle"
+      },
+      "properties": {
+        "en": "3 sides · all sides different · all angles different",
+        "de": "3 Seiten · alle Seiten verschieden · alle Winkel verschieden",
+        "local_display": "3 sides · all sides different · all angles different"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_ellipse",
+    "entity_name": "Ellipse",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Ellipse",
+        "de": "Ellipse",
+        "local_display": "Ellipse"
+      },
+      "diagram": {
+        "en": "Ellipse",
+        "de": "Ellipse",
+        "local_display": "Ellipse"
+      },
+      "properties": {
+        "en": "curved boundary · 2 foci · 2 axes of symmetry",
+        "de": "gekrümmte Linie · 2 Brennpunkte · 2 Symmetrieachsen",
+        "local_display": "curved boundary · 2 foci · 2 axes of symmetry"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_semicircle",
+    "entity_name": "Semicircle",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Semicircle",
+        "de": "Halbkreis",
+        "local_display": "Semicircle"
+      },
+      "diagram": {
+        "en": "Semicircle",
+        "de": "Halbkreis",
+        "local_display": "Semicircle"
+      },
+      "properties": {
+        "en": "half a circle · 1 straight edge · 1 axis of symmetry",
+        "de": "halber Kreis · 1 gerade Kante · 1 Symmetrieachse",
+        "local_display": "half a circle · 1 straight edge · 1 axis of symmetry"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_regular_pentagon",
+    "entity_name": "Regular pentagon",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Regular pentagon",
+        "de": "Regelmäßiges Fünfeck",
+        "local_display": "Regular pentagon"
+      },
+      "diagram": {
+        "en": "Regular pentagon",
+        "de": "Regelmäßiges Fünfeck",
+        "local_display": "Regular pentagon"
+      },
+      "properties": {
+        "en": "5 sides · all sides equal · all angles 108°",
+        "de": "5 Seiten · alle Seiten gleich · alle Winkel 108°",
+        "local_display": "5 sides · all sides equal · all angles 108°"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_regular_hexagon",
+    "entity_name": "Regular hexagon",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Regular hexagon",
+        "de": "Regelmäßiges Sechseck",
+        "local_display": "Regular hexagon"
+      },
+      "diagram": {
+        "en": "Regular hexagon",
+        "de": "Regelmäßiges Sechseck",
+        "local_display": "Regular hexagon"
+      },
+      "properties": {
+        "en": "6 sides · all sides equal · all angles 120°",
+        "de": "6 Seiten · alle Seiten gleich · alle Winkel 120°",
+        "local_display": "6 sides · all sides equal · all angles 120°"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_regular_octagon",
+    "entity_name": "Regular octagon",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "2D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Regular octagon",
+        "de": "Regelmäßiges Achteck",
+        "local_display": "Regular octagon"
+      },
+      "diagram": {
+        "en": "Regular octagon",
+        "de": "Regelmäßiges Achteck",
+        "local_display": "Regular octagon"
+      },
+      "properties": {
+        "en": "8 sides · all sides equal · all angles 135°",
+        "de": "8 Seiten · alle Seiten gleich · alle Winkel 135°",
+        "local_display": "8 sides · all sides equal · all angles 135°"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_cube",
+    "entity_name": "Cube",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Cube",
+        "de": "Würfel",
+        "local_display": "Cube"
+      },
+      "diagram": {
+        "en": "Cube",
+        "de": "Würfel",
+        "local_display": "Cube"
+      },
+      "properties": {
+        "en": "6 square faces · 8 vertices · 12 edges",
+        "de": "6 quadratische Flächen · 8 Ecken · 12 Kanten",
+        "local_display": "6 square faces · 8 vertices · 12 edges"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_cuboid",
+    "entity_name": "Cuboid",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Cuboid",
+        "de": "Quader",
+        "local_display": "Cuboid"
+      },
+      "diagram": {
+        "en": "Cuboid",
+        "de": "Quader",
+        "local_display": "Cuboid"
+      },
+      "properties": {
+        "en": "6 rectangular faces · 8 vertices · 12 edges",
+        "de": "6 rechteckige Flächen · 8 Ecken · 12 Kanten",
+        "local_display": "6 rectangular faces · 8 vertices · 12 edges"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_sphere",
+    "entity_name": "Sphere",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Sphere",
+        "de": "Kugel",
+        "local_display": "Sphere"
+      },
+      "diagram": {
+        "en": "Sphere",
+        "de": "Kugel",
+        "local_display": "Sphere"
+      },
+      "properties": {
+        "en": "0 flat faces · 1 curved surface · 0 edges",
+        "de": "0 ebene Flächen · 1 gekrümmte Oberfläche · 0 Kanten",
+        "local_display": "0 flat faces · 1 curved surface · 0 edges"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_cylinder",
+    "entity_name": "Cylinder",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Cylinder",
+        "de": "Zylinder",
+        "local_display": "Cylinder"
+      },
+      "diagram": {
+        "en": "Cylinder",
+        "de": "Zylinder",
+        "local_display": "Cylinder"
+      },
+      "properties": {
+        "en": "2 circular faces · 1 curved face · 0 vertices",
+        "de": "2 Kreisflächen · 1 gekrümmte Fläche · 0 Ecken",
+        "local_display": "2 circular faces · 1 curved face · 0 vertices"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_cone",
+    "entity_name": "Cone",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Cone",
+        "de": "Kegel",
+        "local_display": "Cone"
+      },
+      "diagram": {
+        "en": "Cone",
+        "de": "Kegel",
+        "local_display": "Cone"
+      },
+      "properties": {
+        "en": "1 circular face · 1 curved face · 1 vertex",
+        "de": "1 Kreisfläche · 1 gekrümmte Fläche · 1 Spitze",
+        "local_display": "1 circular face · 1 curved face · 1 vertex"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_square_pyramid",
+    "entity_name": "Square pyramid",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Square pyramid",
+        "de": "Quadratische Pyramide",
+        "local_display": "Square pyramid"
+      },
+      "diagram": {
+        "en": "Square pyramid",
+        "de": "Quadratische Pyramide",
+        "local_display": "Square pyramid"
+      },
+      "properties": {
+        "en": "1 square base · 4 triangular faces · 5 vertices",
+        "de": "1 quadratische Grundfläche · 4 Dreiecksflächen · 5 Ecken",
+        "local_display": "1 square base · 4 triangular faces · 5 vertices"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_triangular_prism",
+    "entity_name": "Triangular prism",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Triangular prism",
+        "de": "Dreiecksprisma",
+        "local_display": "Triangular prism"
+      },
+      "diagram": {
+        "en": "Triangular prism",
+        "de": "Dreiecksprisma",
+        "local_display": "Triangular prism"
+      },
+      "properties": {
+        "en": "2 triangular faces · 3 rectangular faces · 6 vertices",
+        "de": "2 Dreiecksflächen · 3 Rechteckflächen · 6 Ecken",
+        "local_display": "2 triangular faces · 3 rectangular faces · 6 vertices"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  },
+  {
+    "entity_id": "g_tetrahedron",
+    "entity_name": "Tetrahedron",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "geometry_pack_v0.1_draft",
+    "dimension": "3D",
+    "provenance": "Standard school geometry; properties verified against common textbook conventions.",
+    "label_variants": {
+      "name": {
+        "en": "Tetrahedron",
+        "de": "Tetraeder",
+        "local_display": "Tetrahedron"
+      },
+      "diagram": {
+        "en": "Tetrahedron",
+        "de": "Tetraeder",
+        "local_display": "Tetrahedron"
+      },
+      "properties": {
+        "en": "4 triangular faces · 4 vertices · 6 edges",
+        "de": "4 Dreiecksflächen · 4 Ecken · 6 Kanten",
+        "local_display": "4 triangular faces · 4 vertices · 6 edges"
+      }
+    },
+    "facts": {
+      "name": [],
+      "diagram": [],
+      "properties": []
+    }
+  }
+]

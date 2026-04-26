@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Tetrahedron</title>
+  <polygon points="18,82 82,82 50,28"/>
+  <line x1="50" y1="28" x2="55" y2="64"/>
+  <line x1="18" y1="82" x2="55" y2="64"/>
+  <line x1="82" y1="82" x2="55" y2="64"/>
+</svg>

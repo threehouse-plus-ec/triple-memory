@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Cube</title>
+  <polygon points="18,38 60,38 60,82 18,82"/>
+  <polyline points="18,38 38,18 80,18 60,38"/>
+  <polyline points="60,38 80,18 80,62 60,82"/>
+</svg>
