@@ -98,6 +98,8 @@ const UI_STRINGS = {
         errorLoading: 'Error Loading Pack Data',
         errorHint: 'Check the console for details. (Note: The Fetch API requires a local web server).',
         schemaViolations: 'Schema Violations:',
+        enterFullscreen: 'Fullscreen',
+        exitFullscreen: 'Exit fullscreen',
         viewStatistics: 'Statistics',
         statisticsHeader: 'Your Statistics',
         statisticsEmpty: 'No games recorded yet. Play a round and come back.',
@@ -181,6 +183,8 @@ const UI_STRINGS = {
         errorLoading: 'Fehler beim Laden der Paketdaten',
         errorHint: 'Details in der Konsole. (Hinweis: Die Fetch API benötigt einen lokalen Webserver.)',
         schemaViolations: 'Schemaverstöße:',
+        enterFullscreen: 'Vollbild',
+        exitFullscreen: 'Vollbild verlassen',
         viewStatistics: 'Statistik',
         statisticsHeader: 'Deine Statistik',
         statisticsEmpty: 'Noch keine Spiele aufgezeichnet. Spiel eine Runde und komm wieder.',
@@ -323,13 +327,14 @@ class TripleMemoryEngine {
 
     renderScoreboard() {
         const totalTriples = this.boardSize / this.pack.manifest.card_types.length;
+        // Reference metrics (perfect / avg / random) are surfaced in the
+        // gameCompleteHeader banner once the round ends; showing them in the
+        // live scoreboard during play is noisy on small viewports and tempts
+        // players to chase the benchmarks instead of building memory.
         return `
             <span class="score-item">${this.t('matches', { done: this.score, total: totalTriples })}</span>
             <span class="score-item">${this.t('time', { time: this.formatTime(this.elapsedMs) })}</span>
             <span class="score-item">${this.t('flips', { n: this.flipCount })}</span>
-            <span class="score-item score-item-ref">${this.t('perfectFlips', { n: this.perfectFlips() })}</span>
-            <span class="score-item score-item-ref">${this.t('avgFlips', { n: this.averageFlips() })}</span>
-            <span class="score-item score-item-ref">${this.t('randomFlips', { n: this.randomFlips() })}</span>
             <button type="button" class="score-info-button" onclick="game.showScoringInfo()" aria-label="${this.t('scoringInfoLabel')}" title="${this.t('scoringInfoLabel')}">?</button>
         `;
     }
@@ -661,6 +666,20 @@ class TripleMemoryEngine {
         await this.loadPack(packId);
         this.state = 'MENU';
         this.render();
+
+        // Re-render when the fullscreen state changes so the menu's
+        // Fullscreen/Exit-fullscreen toggle label stays in sync.
+        document.addEventListener('fullscreenchange', () => {
+            if (this.state === 'MENU') this.render();
+        });
+    }
+
+    toggleFullscreen() {
+        if (document.fullscreenElement) {
+            document.exitFullscreen().catch(() => {});
+        } else if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen().catch(() => {});
+        }
     }
 
     switchPack(packId) {
@@ -1392,6 +1411,7 @@ class TripleMemoryEngine {
                                 <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">${this.t('playSharedLetter')}</button>
                             ` : ''}
                             <button class="menu-secondary" onclick="game.showStatistics()">${this.t('viewStatistics')}</button>
+                            <button class="menu-secondary" onclick="game.toggleFullscreen()">${document.fullscreenElement ? this.t('exitFullscreen') : this.t('enterFullscreen')}</button>
                         </div>
 
                         <p class="menu-footer">
