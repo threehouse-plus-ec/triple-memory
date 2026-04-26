@@ -84,6 +84,7 @@ const UI_STRINGS = {
         finalScore: 'Final Score: {n}',
         returnToMenu: 'Return to Menu',
         hiddenCard: 'Hidden card, position {n}',
+        diagramCard: 'Diagram card, position {n} — visual recognition required',
         matchedSuffix: ', matched',
         selectedSuffix: ', selected',
         localName: 'Local name: {name}',
@@ -166,6 +167,7 @@ const UI_STRINGS = {
         finalScore: 'Endstand: {n}',
         returnToMenu: 'Zurück zum Menü',
         hiddenCard: 'Verdeckte Karte, Position {n}',
+        diagramCard: 'Diagrammkarte, Position {n} — visuelle Erkennung erforderlich',
         matchedSuffix: ', gefunden',
         selectedSuffix: ', ausgewählt',
         localName: 'Lokaler Name: {name}',
@@ -528,16 +530,41 @@ class TripleMemoryEngine {
             return this.t('hiddenCard', { n: index + 1 });
         }
 
+        const hasDiagram = this.cardHasResolvedDiagram(card);
         const typeDef = this.getCardTypeDefinition(card.card_type);
-        const visibleLabel = typeDef
-            ? this.getCardTypeAriaLabel(typeDef, this.getCardLabel(card))
-            : this.getCardLabel(card);
+
+        // Diagram cards must not leak the entity to screen readers while
+        // unmatched: a sighted player sees the shape and has to recognise it,
+        // so the non-visual aria-label has to stay generic. Once matched, the
+        // resolved label is safe to surface (the round is over for that
+        // triple).
+        let visibleLabel;
+        if (hasDiagram && card.status !== 'matched') {
+            visibleLabel = this.t('diagramCard', { n: index + 1 });
+        } else {
+            visibleLabel = typeDef
+                ? this.getCardTypeAriaLabel(typeDef, this.getCardLabel(card))
+                : this.getCardLabel(card);
+        }
 
         if (card.status === 'matched') {
             return `${visibleLabel}${this.t('matchedSuffix')}`;
         }
 
         return visibleLabel;
+    }
+
+    cardHasResolvedDiagram(card) {
+        return !!(card && typeof card.diagram === 'string'
+            && this.pack && this.pack.diagrams
+            && this.pack.diagrams[card.diagram]);
+    }
+
+    renderCardBody(card, cardLabel) {
+        if (this.cardHasResolvedDiagram(card)) {
+            return `<div class="card-diagram" aria-hidden="true">${this.pack.diagrams[card.diagram]}</div>`;
+        }
+        return `<div class="card-label">${cardLabel}</div>`;
     }
 
     getCardSupplements(card) {
@@ -662,7 +689,25 @@ class TripleMemoryEngine {
                 icons[type.type_id] = svgText;
             }
 
-            this.pack = { manifest, entities, cards, letterGroups, icons };
+            // Optional in-card diagrams: collect every distinct diagram path
+            // referenced by the cards and inline-fetch each once. Cards whose
+            // 'diagram' field resolves to a successful fetch will render the
+            // SVG in the card body in place of the text label.
+            const diagrams = {};
+            const diagramPaths = Array.from(new Set(
+                cards.map(c => c.diagram).filter(p => typeof p === 'string' && p.length > 0)
+            ));
+            await Promise.all(diagramPaths.map(async (relPath) => {
+                try {
+                    const res = await fetch(`${basePath}/${relPath}`);
+                    if (res.ok) diagrams[relPath] = await res.text();
+                } catch (_) {
+                    // Tolerate missing diagrams: the card simply renders its
+                    // text label as before.
+                }
+            }));
+
+            this.pack = { manifest, entities, cards, letterGroups, icons, diagrams };
             // Prefer the browser's language when the pack supports it; fall
             // back to the pack's declared primary_locale otherwise. Compares
             // the primary subtag only (e.g. "de-CH" → "de").
@@ -1388,7 +1433,7 @@ class TripleMemoryEngine {
                                             ${!this.expertMode ? `
                                                 <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
                                             ` : ''}
-                                            <div class="card-label">${cardLabel}</div>
+                                            ${this.renderCardBody(card, cardLabel)}
                                         </div>
                                         <div class="card-back">
                                             <img class="card-back-emblem" src="../assets/cd/emblem-32.svg" alt="">
@@ -1436,7 +1481,7 @@ class TripleMemoryEngine {
                                     <div class="card-inner" aria-hidden="true">
                                         <div class="card-front">
                                             <div class="card-icon" aria-hidden="true">${this.pack.icons[card.card_type]}</div>
-                                            <div class="card-label">${cardLabel}</div>
+                                            ${this.renderCardBody(card, cardLabel)}
                                         </div>
                                         <div class="card-back">
                                             <img class="card-back-emblem" src="../assets/cd/emblem-32.svg" alt="">
