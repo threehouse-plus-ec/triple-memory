@@ -1,0 +1,722 @@
+[
+  {
+    "card_id": "seq_naturals_rule",
+    "entity_id": "seq_naturals",
+    "card_type": "rule",
+    "label": "Natural numbers",
+    "label_script": "latin",
+    "initial_letter": "N",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_naturals_first_terms",
+    "entity_id": "seq_naturals",
+    "card_type": "first_terms",
+    "label": "1, 2, 3",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_naturals_later_term",
+    "entity_id": "seq_naturals",
+    "card_type": "later_term",
+    "label": "10th term: 10",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_evens_rule",
+    "entity_id": "seq_evens",
+    "card_type": "rule",
+    "label": "Even numbers",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_evens_first_terms",
+    "entity_id": "seq_evens",
+    "card_type": "first_terms",
+    "label": "2, 4, 6",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_evens_later_term",
+    "entity_id": "seq_evens",
+    "card_type": "later_term",
+    "label": "10th term: 20",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_odds_rule",
+    "entity_id": "seq_odds",
+    "card_type": "rule",
+    "label": "Odd numbers",
+    "label_script": "latin",
+    "initial_letter": "O",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_odds_first_terms",
+    "entity_id": "seq_odds",
+    "card_type": "first_terms",
+    "label": "1, 3, 5",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_odds_later_term",
+    "entity_id": "seq_odds",
+    "card_type": "later_term",
+    "label": "10th term: 19",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_3_rule",
+    "entity_id": "seq_multiples_of_3",
+    "card_type": "rule",
+    "label": "Multiples of 3",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_3_first_terms",
+    "entity_id": "seq_multiples_of_3",
+    "card_type": "first_terms",
+    "label": "3, 6, 9",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_3_later_term",
+    "entity_id": "seq_multiples_of_3",
+    "card_type": "later_term",
+    "label": "10th term: 30",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_5_rule",
+    "entity_id": "seq_multiples_of_5",
+    "card_type": "rule",
+    "label": "Multiples of 5",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_5_first_terms",
+    "entity_id": "seq_multiples_of_5",
+    "card_type": "first_terms",
+    "label": "5, 10, 15",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_5_later_term",
+    "entity_id": "seq_multiples_of_5",
+    "card_type": "later_term",
+    "label": "10th term: 50",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_squares_rule",
+    "entity_id": "seq_squares",
+    "card_type": "rule",
+    "label": "Square numbers (n²)",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_squares_first_terms",
+    "entity_id": "seq_squares",
+    "card_type": "first_terms",
+    "label": "1, 4, 9",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_squares_later_term",
+    "entity_id": "seq_squares",
+    "card_type": "later_term",
+    "label": "10th term: 100",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_cubes_rule",
+    "entity_id": "seq_cubes",
+    "card_type": "rule",
+    "label": "Cube numbers (n³)",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_cubes_first_terms",
+    "entity_id": "seq_cubes",
+    "card_type": "first_terms",
+    "label": "1, 8, 27",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_cubes_later_term",
+    "entity_id": "seq_cubes",
+    "card_type": "later_term",
+    "label": "10th term: 1000",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_triangular_rule",
+    "entity_id": "seq_triangular",
+    "card_type": "rule",
+    "label": "Triangular numbers",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_triangular_first_terms",
+    "entity_id": "seq_triangular",
+    "card_type": "first_terms",
+    "label": "1, 3, 6",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_triangular_later_term",
+    "entity_id": "seq_triangular",
+    "card_type": "later_term",
+    "label": "10th term: 55",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_2_rule",
+    "entity_id": "seq_powers_of_2",
+    "card_type": "rule",
+    "label": "Powers of 2 (2ⁿ)",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_2_first_terms",
+    "entity_id": "seq_powers_of_2",
+    "card_type": "first_terms",
+    "label": "2, 4, 8",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_2_later_term",
+    "entity_id": "seq_powers_of_2",
+    "card_type": "later_term",
+    "label": "10th term: 1024",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_7_rule",
+    "entity_id": "seq_multiples_of_7",
+    "card_type": "rule",
+    "label": "Multiples of 7",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_7_first_terms",
+    "entity_id": "seq_multiples_of_7",
+    "card_type": "first_terms",
+    "label": "7, 14, 21",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_7_later_term",
+    "entity_id": "seq_multiples_of_7",
+    "card_type": "later_term",
+    "label": "10th term: 70",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_11_rule",
+    "entity_id": "seq_multiples_of_11",
+    "card_type": "rule",
+    "label": "Multiples of 11",
+    "label_script": "latin",
+    "initial_letter": "M",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_11_first_terms",
+    "entity_id": "seq_multiples_of_11",
+    "card_type": "first_terms",
+    "label": "11, 22, 33",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_multiples_of_11_later_term",
+    "entity_id": "seq_multiples_of_11",
+    "card_type": "later_term",
+    "label": "10th term: 110",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_primes_rule",
+    "entity_id": "seq_primes",
+    "card_type": "rule",
+    "label": "Prime numbers",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_primes_first_terms",
+    "entity_id": "seq_primes",
+    "card_type": "first_terms",
+    "label": "2, 3, 5",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_primes_later_term",
+    "entity_id": "seq_primes",
+    "card_type": "later_term",
+    "label": "10th term: 29",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_composites_rule",
+    "entity_id": "seq_composites",
+    "card_type": "rule",
+    "label": "Composite numbers",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_composites_first_terms",
+    "entity_id": "seq_composites",
+    "card_type": "first_terms",
+    "label": "4, 6, 8",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_composites_later_term",
+    "entity_id": "seq_composites",
+    "card_type": "later_term",
+    "label": "10th term: 18",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_pentagonal_rule",
+    "entity_id": "seq_pentagonal",
+    "card_type": "rule",
+    "label": "Pentagonal numbers",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_pentagonal_first_terms",
+    "entity_id": "seq_pentagonal",
+    "card_type": "first_terms",
+    "label": "1, 5, 12",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_pentagonal_later_term",
+    "entity_id": "seq_pentagonal",
+    "card_type": "later_term",
+    "label": "10th term: 145",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_hexagonal_rule",
+    "entity_id": "seq_hexagonal",
+    "card_type": "rule",
+    "label": "Hexagonal numbers",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_hexagonal_first_terms",
+    "entity_id": "seq_hexagonal",
+    "card_type": "first_terms",
+    "label": "1, 6, 15",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_hexagonal_later_term",
+    "entity_id": "seq_hexagonal",
+    "card_type": "later_term",
+    "label": "10th term: 190",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_tetrahedral_rule",
+    "entity_id": "seq_tetrahedral",
+    "card_type": "rule",
+    "label": "Tetrahedral numbers",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_tetrahedral_first_terms",
+    "entity_id": "seq_tetrahedral",
+    "card_type": "first_terms",
+    "label": "1, 4, 10",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_tetrahedral_later_term",
+    "entity_id": "seq_tetrahedral",
+    "card_type": "later_term",
+    "label": "10th term: 220",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_3_rule",
+    "entity_id": "seq_powers_of_3",
+    "card_type": "rule",
+    "label": "Powers of 3 (3ⁿ)",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_3_first_terms",
+    "entity_id": "seq_powers_of_3",
+    "card_type": "first_terms",
+    "label": "3, 9, 27",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_powers_of_3_later_term",
+    "entity_id": "seq_powers_of_3",
+    "card_type": "later_term",
+    "label": "8th term: 6561",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_factorials_rule",
+    "entity_id": "seq_factorials",
+    "card_type": "rule",
+    "label": "Factorials (n!)",
+    "label_script": "latin",
+    "initial_letter": "F",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_factorials_first_terms",
+    "entity_id": "seq_factorials",
+    "card_type": "first_terms",
+    "label": "1, 2, 6",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_factorials_later_term",
+    "entity_id": "seq_factorials",
+    "card_type": "later_term",
+    "label": "6th term: 720",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_fibonacci_rule",
+    "entity_id": "seq_fibonacci",
+    "card_type": "rule",
+    "label": "Fibonacci numbers",
+    "label_script": "latin",
+    "initial_letter": "F",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_fibonacci_first_terms",
+    "entity_id": "seq_fibonacci",
+    "card_type": "first_terms",
+    "label": "1, 1, 2",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_fibonacci_later_term",
+    "entity_id": "seq_fibonacci",
+    "card_type": "later_term",
+    "label": "12th term: 144",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_square_pyramidal_rule",
+    "entity_id": "seq_square_pyramidal",
+    "card_type": "rule",
+    "label": "Square pyramidal numbers",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_square_pyramidal_first_terms",
+    "entity_id": "seq_square_pyramidal",
+    "card_type": "first_terms",
+    "label": "1, 5, 14",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "seq_square_pyramidal_later_term",
+    "entity_id": "seq_square_pyramidal",
+    "card_type": "later_term",
+    "label": "10th term: 385",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  }
+]
