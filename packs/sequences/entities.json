@@ -1,0 +1,602 @@
+[
+  {
+    "entity_id": "seq_naturals",
+    "entity_name": "Natural numbers",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Natural numbers",
+        "de": "Natürliche Zahlen",
+        "local_display": "Natural numbers"
+      },
+      "first_terms": {
+        "en": "1, 2, 3",
+        "de": "1, 2, 3",
+        "local_display": "1, 2, 3"
+      },
+      "later_term": {
+        "en": "10th term: 10",
+        "de": "10. Glied: 10",
+        "local_display": "10th term: 10"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_evens",
+    "entity_name": "Even numbers",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Even numbers",
+        "de": "Gerade Zahlen",
+        "local_display": "Even numbers"
+      },
+      "first_terms": {
+        "en": "2, 4, 6",
+        "de": "2, 4, 6",
+        "local_display": "2, 4, 6"
+      },
+      "later_term": {
+        "en": "10th term: 20",
+        "de": "10. Glied: 20",
+        "local_display": "10th term: 20"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_odds",
+    "entity_name": "Odd numbers",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Odd numbers",
+        "de": "Ungerade Zahlen",
+        "local_display": "Odd numbers"
+      },
+      "first_terms": {
+        "en": "1, 3, 5",
+        "de": "1, 3, 5",
+        "local_display": "1, 3, 5"
+      },
+      "later_term": {
+        "en": "10th term: 19",
+        "de": "10. Glied: 19",
+        "local_display": "10th term: 19"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_multiples_of_3",
+    "entity_name": "Multiples of 3",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Multiples of 3",
+        "de": "Vielfache von 3",
+        "local_display": "Multiples of 3"
+      },
+      "first_terms": {
+        "en": "3, 6, 9",
+        "de": "3, 6, 9",
+        "local_display": "3, 6, 9"
+      },
+      "later_term": {
+        "en": "10th term: 30",
+        "de": "10. Glied: 30",
+        "local_display": "10th term: 30"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_multiples_of_5",
+    "entity_name": "Multiples of 5",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Multiples of 5",
+        "de": "Vielfache von 5",
+        "local_display": "Multiples of 5"
+      },
+      "first_terms": {
+        "en": "5, 10, 15",
+        "de": "5, 10, 15",
+        "local_display": "5, 10, 15"
+      },
+      "later_term": {
+        "en": "10th term: 50",
+        "de": "10. Glied: 50",
+        "local_display": "10th term: 50"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_squares",
+    "entity_name": "Square numbers (n²)",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Square numbers (n²)",
+        "de": "Quadratzahlen (n²)",
+        "local_display": "Square numbers (n²)"
+      },
+      "first_terms": {
+        "en": "1, 4, 9",
+        "de": "1, 4, 9",
+        "local_display": "1, 4, 9"
+      },
+      "later_term": {
+        "en": "10th term: 100",
+        "de": "10. Glied: 100",
+        "local_display": "10th term: 100"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_cubes",
+    "entity_name": "Cube numbers (n³)",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Cube numbers (n³)",
+        "de": "Kubikzahlen (n³)",
+        "local_display": "Cube numbers (n³)"
+      },
+      "first_terms": {
+        "en": "1, 8, 27",
+        "de": "1, 8, 27",
+        "local_display": "1, 8, 27"
+      },
+      "later_term": {
+        "en": "10th term: 1000",
+        "de": "10. Glied: 1000",
+        "local_display": "10th term: 1000"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_triangular",
+    "entity_name": "Triangular numbers",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Triangular numbers",
+        "de": "Dreieckszahlen",
+        "local_display": "Triangular numbers"
+      },
+      "first_terms": {
+        "en": "1, 3, 6",
+        "de": "1, 3, 6",
+        "local_display": "1, 3, 6"
+      },
+      "later_term": {
+        "en": "10th term: 55",
+        "de": "10. Glied: 55",
+        "local_display": "10th term: 55"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_powers_of_2",
+    "entity_name": "Powers of 2 (2ⁿ)",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Powers of 2 (2ⁿ)",
+        "de": "Zweierpotenzen (2ⁿ)",
+        "local_display": "Powers of 2 (2ⁿ)"
+      },
+      "first_terms": {
+        "en": "2, 4, 8",
+        "de": "2, 4, 8",
+        "local_display": "2, 4, 8"
+      },
+      "later_term": {
+        "en": "10th term: 1024",
+        "de": "10. Glied: 1024",
+        "local_display": "10th term: 1024"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_multiples_of_7",
+    "entity_name": "Multiples of 7",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Multiples of 7",
+        "de": "Vielfache von 7",
+        "local_display": "Multiples of 7"
+      },
+      "first_terms": {
+        "en": "7, 14, 21",
+        "de": "7, 14, 21",
+        "local_display": "7, 14, 21"
+      },
+      "later_term": {
+        "en": "10th term: 70",
+        "de": "10. Glied: 70",
+        "local_display": "10th term: 70"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_multiples_of_11",
+    "entity_name": "Multiples of 11",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Multiples of 11",
+        "de": "Vielfache von 11",
+        "local_display": "Multiples of 11"
+      },
+      "first_terms": {
+        "en": "11, 22, 33",
+        "de": "11, 22, 33",
+        "local_display": "11, 22, 33"
+      },
+      "later_term": {
+        "en": "10th term: 110",
+        "de": "10. Glied: 110",
+        "local_display": "10th term: 110"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_primes",
+    "entity_name": "Prime numbers",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Prime numbers",
+        "de": "Primzahlen",
+        "local_display": "Prime numbers"
+      },
+      "first_terms": {
+        "en": "2, 3, 5",
+        "de": "2, 3, 5",
+        "local_display": "2, 3, 5"
+      },
+      "later_term": {
+        "en": "10th term: 29",
+        "de": "10. Glied: 29",
+        "local_display": "10th term: 29"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_composites",
+    "entity_name": "Composite numbers",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Composite numbers",
+        "de": "Zusammengesetzte Zahlen",
+        "local_display": "Composite numbers"
+      },
+      "first_terms": {
+        "en": "4, 6, 8",
+        "de": "4, 6, 8",
+        "local_display": "4, 6, 8"
+      },
+      "later_term": {
+        "en": "10th term: 18",
+        "de": "10. Glied: 18",
+        "local_display": "10th term: 18"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_pentagonal",
+    "entity_name": "Pentagonal numbers",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Pentagonal numbers",
+        "de": "Fünfeckszahlen",
+        "local_display": "Pentagonal numbers"
+      },
+      "first_terms": {
+        "en": "1, 5, 12",
+        "de": "1, 5, 12",
+        "local_display": "1, 5, 12"
+      },
+      "later_term": {
+        "en": "10th term: 145",
+        "de": "10. Glied: 145",
+        "local_display": "10th term: 145"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_hexagonal",
+    "entity_name": "Hexagonal numbers",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Hexagonal numbers",
+        "de": "Sechseckszahlen",
+        "local_display": "Hexagonal numbers"
+      },
+      "first_terms": {
+        "en": "1, 6, 15",
+        "de": "1, 6, 15",
+        "local_display": "1, 6, 15"
+      },
+      "later_term": {
+        "en": "10th term: 190",
+        "de": "10. Glied: 190",
+        "local_display": "10th term: 190"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_tetrahedral",
+    "entity_name": "Tetrahedral numbers",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Tetrahedral numbers",
+        "de": "Tetraederzahlen",
+        "local_display": "Tetrahedral numbers"
+      },
+      "first_terms": {
+        "en": "1, 4, 10",
+        "de": "1, 4, 10",
+        "local_display": "1, 4, 10"
+      },
+      "later_term": {
+        "en": "10th term: 220",
+        "de": "10. Glied: 220",
+        "local_display": "10th term: 220"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_powers_of_3",
+    "entity_name": "Powers of 3 (3ⁿ)",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Powers of 3 (3ⁿ)",
+        "de": "Dreierpotenzen (3ⁿ)",
+        "local_display": "Powers of 3 (3ⁿ)"
+      },
+      "first_terms": {
+        "en": "3, 9, 27",
+        "de": "3, 9, 27",
+        "local_display": "3, 9, 27"
+      },
+      "later_term": {
+        "en": "8th term: 6561",
+        "de": "8. Glied: 6561",
+        "local_display": "8th term: 6561"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_factorials",
+    "entity_name": "Factorials (n!)",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Factorials (n!)",
+        "de": "Fakultäten (n!)",
+        "local_display": "Factorials (n!)"
+      },
+      "first_terms": {
+        "en": "1, 2, 6",
+        "de": "1, 2, 6",
+        "local_display": "1, 2, 6"
+      },
+      "later_term": {
+        "en": "6th term: 720",
+        "de": "6. Glied: 720",
+        "local_display": "6th term: 720"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_fibonacci",
+    "entity_name": "Fibonacci numbers",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Fibonacci numbers",
+        "de": "Fibonacci-Zahlen",
+        "local_display": "Fibonacci numbers"
+      },
+      "first_terms": {
+        "en": "1, 1, 2",
+        "de": "1, 1, 2",
+        "local_display": "1, 1, 2"
+      },
+      "later_term": {
+        "en": "12th term: 144",
+        "de": "12. Glied: 144",
+        "local_display": "12th term: 144"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  },
+  {
+    "entity_id": "seq_square_pyramidal",
+    "entity_name": "Square pyramidal numbers",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "sequences_pack_v0.1_draft",
+    "provenance": "Standard mathematical sequences (OEIS-aligned references); positions chosen so each later-term value is unique across the active pool.",
+    "label_variants": {
+      "rule": {
+        "en": "Square pyramidal numbers",
+        "de": "Quadratpyramidenzahlen",
+        "local_display": "Square pyramidal numbers"
+      },
+      "first_terms": {
+        "en": "1, 5, 14",
+        "de": "1, 5, 14",
+        "local_display": "1, 5, 14"
+      },
+      "later_term": {
+        "en": "10th term: 385",
+        "de": "10. Glied: 385",
+        "local_display": "10th term: 385"
+      }
+    },
+    "facts": {
+      "rule": [],
+      "first_terms": [],
+      "later_term": []
+    }
+  }
+]

@@ -1,0 +1,63 @@
+{
+  "pack_id": "sequences",
+  "pack_name": "Sequences — Rules, First Terms, Later Terms",
+  "pack_version": "0.1",
+  "endorsement_marker": "sequences_pack_v0.1_draft",
+  "card_types": [
+    {
+      "type_id": "rule",
+      "display_name": "Rule",
+      "display_names": { "en": "Rule", "de": "Regel" },
+      "icon": "icons/rule.svg",
+      "aria_label_template": "Rule: {label}",
+      "aria_label_templates": {
+        "en": "Rule: {label}",
+        "de": "Regel: {label}"
+      },
+      "tutorial_phrase": { "en": "one rule", "de": "eine Regel" }
+    },
+    {
+      "type_id": "first_terms",
+      "display_name": "First terms",
+      "display_names": { "en": "First terms", "de": "Erste Glieder" },
+      "icon": "icons/first_terms.svg",
+      "aria_label_template": "First terms: {label}",
+      "aria_label_templates": {
+        "en": "First terms: {label}",
+        "de": "Erste Glieder: {label}"
+      },
+      "tutorial_phrase": { "en": "one first-terms card", "de": "eine Karte mit den ersten Gliedern" }
+    },
+    {
+      "type_id": "later_term",
+      "display_name": "Later term",
+      "display_names": { "en": "Later term", "de": "Späteres Glied" },
+      "icon": "icons/later_term.svg",
+      "aria_label_template": "Later term: {label}",
+      "aria_label_templates": {
+        "en": "Later term: {label}",
+        "de": "Späteres Glied: {label}"
+      },
+      "tutorial_phrase": { "en": "one later-term card", "de": "eine Karte mit einem späteren Glied" }
+    }
+  ],
+  "shared_entity_field": "entity_id",
+  "supported_modes": [
+    "shared_entity"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true
+  }
+}
