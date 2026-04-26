@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Name — alphabet tile</title>
+  <rect x="18" y="18" width="64" height="64" rx="6"/>
+  <text x="50" y="62" text-anchor="middle" font-family="serif" font-size="36" font-weight="700" fill="currentColor" stroke="none">A</text>
+</svg>

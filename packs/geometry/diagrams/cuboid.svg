@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-hidden="true">
+  <title>Cuboid</title>
+  <polygon points="12,42 70,42 70,78 12,78"/>
+  <polyline points="12,42 28,26 86,26 70,42"/>
+  <polyline points="70,42 86,26 86,62 70,78"/>
+</svg>

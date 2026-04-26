@@ -1,0 +1,890 @@
+[
+  {
+    "card_id": "g_square_name",
+    "entity_id": "g_square",
+    "card_type": "name",
+    "label": "Square",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_square_diagram",
+    "entity_id": "g_square",
+    "card_type": "diagram",
+    "label": "Square",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/square.svg"
+  },
+  {
+    "card_id": "g_square_properties",
+    "entity_id": "g_square",
+    "card_type": "properties",
+    "label": "4 sides · 4 right angles · all sides equal",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_rectangle_name",
+    "entity_id": "g_rectangle",
+    "card_type": "name",
+    "label": "Rectangle",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_rectangle_diagram",
+    "entity_id": "g_rectangle",
+    "card_type": "diagram",
+    "label": "Rectangle",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/rectangle.svg"
+  },
+  {
+    "card_id": "g_rectangle_properties",
+    "entity_id": "g_rectangle",
+    "card_type": "properties",
+    "label": "4 sides · 4 right angles · 2 pairs of equal sides",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_circle_name",
+    "entity_id": "g_circle",
+    "card_type": "name",
+    "label": "Circle",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_circle_diagram",
+    "entity_id": "g_circle",
+    "card_type": "diagram",
+    "label": "Circle",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/circle.svg"
+  },
+  {
+    "card_id": "g_circle_properties",
+    "entity_id": "g_circle",
+    "card_type": "properties",
+    "label": "curved boundary · constant radius · infinite symmetries",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_equilateral_triangle_name",
+    "entity_id": "g_equilateral_triangle",
+    "card_type": "name",
+    "label": "Equilateral triangle",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_equilateral_triangle_diagram",
+    "entity_id": "g_equilateral_triangle",
+    "card_type": "diagram",
+    "label": "Equilateral triangle",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/equilateral_triangle.svg"
+  },
+  {
+    "card_id": "g_equilateral_triangle_properties",
+    "entity_id": "g_equilateral_triangle",
+    "card_type": "properties",
+    "label": "3 sides · all sides equal · all angles 60°",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_right_triangle_name",
+    "entity_id": "g_right_triangle",
+    "card_type": "name",
+    "label": "Right triangle",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_right_triangle_diagram",
+    "entity_id": "g_right_triangle",
+    "card_type": "diagram",
+    "label": "Right triangle",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/right_triangle.svg"
+  },
+  {
+    "card_id": "g_right_triangle_properties",
+    "entity_id": "g_right_triangle",
+    "card_type": "properties",
+    "label": "3 sides · 1 right angle · other angles vary",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_isosceles_triangle_name",
+    "entity_id": "g_isosceles_triangle",
+    "card_type": "name",
+    "label": "Isosceles triangle",
+    "label_script": "latin",
+    "initial_letter": "I",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_isosceles_triangle_diagram",
+    "entity_id": "g_isosceles_triangle",
+    "card_type": "diagram",
+    "label": "Isosceles triangle",
+    "label_script": "latin",
+    "initial_letter": "I",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/isosceles_triangle.svg"
+  },
+  {
+    "card_id": "g_isosceles_triangle_properties",
+    "entity_id": "g_isosceles_triangle",
+    "card_type": "properties",
+    "label": "3 sides · 2 sides equal · 2 angles equal",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_rhombus_name",
+    "entity_id": "g_rhombus",
+    "card_type": "name",
+    "label": "Rhombus",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_rhombus_diagram",
+    "entity_id": "g_rhombus",
+    "card_type": "diagram",
+    "label": "Rhombus",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/rhombus.svg"
+  },
+  {
+    "card_id": "g_rhombus_properties",
+    "entity_id": "g_rhombus",
+    "card_type": "properties",
+    "label": "4 sides · all sides equal · opposite angles equal",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_parallelogram_name",
+    "entity_id": "g_parallelogram",
+    "card_type": "name",
+    "label": "Parallelogram",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_parallelogram_diagram",
+    "entity_id": "g_parallelogram",
+    "card_type": "diagram",
+    "label": "Parallelogram",
+    "label_script": "latin",
+    "initial_letter": "P",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/parallelogram.svg"
+  },
+  {
+    "card_id": "g_parallelogram_properties",
+    "entity_id": "g_parallelogram",
+    "card_type": "properties",
+    "label": "4 sides · 2 pairs of parallel sides · opposite angles equal",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_trapezium_name",
+    "entity_id": "g_trapezium",
+    "card_type": "name",
+    "label": "Trapezium",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_trapezium_diagram",
+    "entity_id": "g_trapezium",
+    "card_type": "diagram",
+    "label": "Trapezium",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/trapezium.svg"
+  },
+  {
+    "card_id": "g_trapezium_properties",
+    "entity_id": "g_trapezium",
+    "card_type": "properties",
+    "label": "4 sides · 1 pair of parallel sides · variable angles",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_kite_name",
+    "entity_id": "g_kite",
+    "card_type": "name",
+    "label": "Kite",
+    "label_script": "latin",
+    "initial_letter": "K",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_kite_diagram",
+    "entity_id": "g_kite",
+    "card_type": "diagram",
+    "label": "Kite",
+    "label_script": "latin",
+    "initial_letter": "K",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/kite.svg"
+  },
+  {
+    "card_id": "g_kite_properties",
+    "entity_id": "g_kite",
+    "card_type": "properties",
+    "label": "4 sides · 2 pairs of adjacent equal sides · 1 axis of symmetry",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_scalene_triangle_name",
+    "entity_id": "g_scalene_triangle",
+    "card_type": "name",
+    "label": "Scalene triangle",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_scalene_triangle_diagram",
+    "entity_id": "g_scalene_triangle",
+    "card_type": "diagram",
+    "label": "Scalene triangle",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/scalene_triangle.svg"
+  },
+  {
+    "card_id": "g_scalene_triangle_properties",
+    "entity_id": "g_scalene_triangle",
+    "card_type": "properties",
+    "label": "3 sides · all sides different · all angles different",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_ellipse_name",
+    "entity_id": "g_ellipse",
+    "card_type": "name",
+    "label": "Ellipse",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_ellipse_diagram",
+    "entity_id": "g_ellipse",
+    "card_type": "diagram",
+    "label": "Ellipse",
+    "label_script": "latin",
+    "initial_letter": "E",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/ellipse.svg"
+  },
+  {
+    "card_id": "g_ellipse_properties",
+    "entity_id": "g_ellipse",
+    "card_type": "properties",
+    "label": "curved boundary · 2 foci · 2 axes of symmetry",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_semicircle_name",
+    "entity_id": "g_semicircle",
+    "card_type": "name",
+    "label": "Semicircle",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_semicircle_diagram",
+    "entity_id": "g_semicircle",
+    "card_type": "diagram",
+    "label": "Semicircle",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/semicircle.svg"
+  },
+  {
+    "card_id": "g_semicircle_properties",
+    "entity_id": "g_semicircle",
+    "card_type": "properties",
+    "label": "half a circle · 1 straight edge · 1 axis of symmetry",
+    "label_script": "latin",
+    "initial_letter": "H",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_pentagon_name",
+    "entity_id": "g_regular_pentagon",
+    "card_type": "name",
+    "label": "Regular pentagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_pentagon_diagram",
+    "entity_id": "g_regular_pentagon",
+    "card_type": "diagram",
+    "label": "Regular pentagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/regular_pentagon.svg"
+  },
+  {
+    "card_id": "g_regular_pentagon_properties",
+    "entity_id": "g_regular_pentagon",
+    "card_type": "properties",
+    "label": "5 sides · all sides equal · all angles 108°",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_hexagon_name",
+    "entity_id": "g_regular_hexagon",
+    "card_type": "name",
+    "label": "Regular hexagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_hexagon_diagram",
+    "entity_id": "g_regular_hexagon",
+    "card_type": "diagram",
+    "label": "Regular hexagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/regular_hexagon.svg"
+  },
+  {
+    "card_id": "g_regular_hexagon_properties",
+    "entity_id": "g_regular_hexagon",
+    "card_type": "properties",
+    "label": "6 sides · all sides equal · all angles 120°",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_octagon_name",
+    "entity_id": "g_regular_octagon",
+    "card_type": "name",
+    "label": "Regular octagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_regular_octagon_diagram",
+    "entity_id": "g_regular_octagon",
+    "card_type": "diagram",
+    "label": "Regular octagon",
+    "label_script": "latin",
+    "initial_letter": "R",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/regular_octagon.svg"
+  },
+  {
+    "card_id": "g_regular_octagon_properties",
+    "entity_id": "g_regular_octagon",
+    "card_type": "properties",
+    "label": "8 sides · all sides equal · all angles 135°",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cube_name",
+    "entity_id": "g_cube",
+    "card_type": "name",
+    "label": "Cube",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cube_diagram",
+    "entity_id": "g_cube",
+    "card_type": "diagram",
+    "label": "Cube",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/cube.svg"
+  },
+  {
+    "card_id": "g_cube_properties",
+    "entity_id": "g_cube",
+    "card_type": "properties",
+    "label": "6 square faces · 8 vertices · 12 edges",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cuboid_name",
+    "entity_id": "g_cuboid",
+    "card_type": "name",
+    "label": "Cuboid",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cuboid_diagram",
+    "entity_id": "g_cuboid",
+    "card_type": "diagram",
+    "label": "Cuboid",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/cuboid.svg"
+  },
+  {
+    "card_id": "g_cuboid_properties",
+    "entity_id": "g_cuboid",
+    "card_type": "properties",
+    "label": "6 rectangular faces · 8 vertices · 12 edges",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_sphere_name",
+    "entity_id": "g_sphere",
+    "card_type": "name",
+    "label": "Sphere",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_sphere_diagram",
+    "entity_id": "g_sphere",
+    "card_type": "diagram",
+    "label": "Sphere",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/sphere.svg"
+  },
+  {
+    "card_id": "g_sphere_properties",
+    "entity_id": "g_sphere",
+    "card_type": "properties",
+    "label": "0 flat faces · 1 curved surface · 0 edges",
+    "label_script": "latin",
+    "initial_letter": "0",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cylinder_name",
+    "entity_id": "g_cylinder",
+    "card_type": "name",
+    "label": "Cylinder",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cylinder_diagram",
+    "entity_id": "g_cylinder",
+    "card_type": "diagram",
+    "label": "Cylinder",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/cylinder.svg"
+  },
+  {
+    "card_id": "g_cylinder_properties",
+    "entity_id": "g_cylinder",
+    "card_type": "properties",
+    "label": "2 circular faces · 1 curved face · 0 vertices",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cone_name",
+    "entity_id": "g_cone",
+    "card_type": "name",
+    "label": "Cone",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_cone_diagram",
+    "entity_id": "g_cone",
+    "card_type": "diagram",
+    "label": "Cone",
+    "label_script": "latin",
+    "initial_letter": "C",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/cone.svg"
+  },
+  {
+    "card_id": "g_cone_properties",
+    "entity_id": "g_cone",
+    "card_type": "properties",
+    "label": "1 circular face · 1 curved face · 1 vertex",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_square_pyramid_name",
+    "entity_id": "g_square_pyramid",
+    "card_type": "name",
+    "label": "Square pyramid",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_square_pyramid_diagram",
+    "entity_id": "g_square_pyramid",
+    "card_type": "diagram",
+    "label": "Square pyramid",
+    "label_script": "latin",
+    "initial_letter": "S",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/square_pyramid.svg"
+  },
+  {
+    "card_id": "g_square_pyramid_properties",
+    "entity_id": "g_square_pyramid",
+    "card_type": "properties",
+    "label": "1 square base · 4 triangular faces · 5 vertices",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_triangular_prism_name",
+    "entity_id": "g_triangular_prism",
+    "card_type": "name",
+    "label": "Triangular prism",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_triangular_prism_diagram",
+    "entity_id": "g_triangular_prism",
+    "card_type": "diagram",
+    "label": "Triangular prism",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/triangular_prism.svg"
+  },
+  {
+    "card_id": "g_triangular_prism_properties",
+    "entity_id": "g_triangular_prism",
+    "card_type": "properties",
+    "label": "2 triangular faces · 3 rectangular faces · 6 vertices",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_tetrahedron_name",
+    "entity_id": "g_tetrahedron",
+    "card_type": "name",
+    "label": "Tetrahedron",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "g_tetrahedron_diagram",
+    "entity_id": "g_tetrahedron",
+    "card_type": "diagram",
+    "label": "Tetrahedron",
+    "label_script": "latin",
+    "initial_letter": "T",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ],
+    "diagram": "diagrams/tetrahedron.svg"
+  },
+  {
+    "card_id": "g_tetrahedron_properties",
+    "entity_id": "g_tetrahedron",
+    "card_type": "properties",
+    "label": "4 triangular faces · 4 vertices · 6 edges",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  }
+]

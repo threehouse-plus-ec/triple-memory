@@ -1,0 +1,65 @@
+{
+  "pack_id": "geometry",
+  "pack_name": "Geometry — Shapes, Diagrams, Properties",
+  "pack_version": "0.1",
+  "endorsement_marker": "geometry_pack_v0.1_draft",
+  "card_types": [
+    {
+      "type_id": "name",
+      "display_name": "Name",
+      "display_names": { "en": "Name", "de": "Name" },
+      "icon": "icons/name.svg",
+      "aria_label_template": "Name: {label}",
+      "aria_label_templates": {
+        "en": "Name: {label}",
+        "de": "Name: {label}"
+      },
+      "tutorial_phrase": { "en": "one name", "de": "einen Namen" }
+    },
+    {
+      "type_id": "diagram",
+      "display_name": "Diagram",
+      "display_names": { "en": "Diagram", "de": "Diagramm" },
+      "icon": "icons/diagram.svg",
+      "aria_label_template": "Diagram: {label}",
+      "aria_label_templates": {
+        "en": "Diagram: {label}",
+        "de": "Diagramm: {label}"
+      },
+      "tutorial_phrase": { "en": "one diagram", "de": "ein Diagramm" }
+    },
+    {
+      "type_id": "properties",
+      "display_name": "Properties",
+      "display_names": { "en": "Properties", "de": "Eigenschaften" },
+      "icon": "icons/properties.svg",
+      "aria_label_template": "Properties: {label}",
+      "aria_label_templates": {
+        "en": "Properties: {label}",
+        "de": "Eigenschaften: {label}"
+      },
+      "tutorial_phrase": { "en": "one properties card", "de": "eine Eigenschaftskarte" }
+    }
+  ],
+  "shared_entity_field": "entity_id",
+  "supported_modes": [
+    "shared_entity"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true,
+    "diagram_cards_require_sight": true,
+    "diagram_cards_aria_label": "generic-until-matched"
+  }
+}

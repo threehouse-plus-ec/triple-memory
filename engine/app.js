@@ -6,7 +6,8 @@ const AVAILABLE_PACKS = [
     { id: 'geography',  display: { en: 'Geography', de: 'Geografie' } },
     { id: 'chemistry',  display: { en: 'Chemistry', de: 'Chemie' } },
     { id: 'music',      display: { en: 'Music',     de: 'Musik'    } },
-    { id: 'math',       display: { en: 'Math',      de: 'Mathe'    } }
+    { id: 'math',       display: { en: 'Math',      de: 'Mathe'    } },
+    { id: 'geometry',   display: { en: 'Geometry',  de: 'Geometrie'} }
 ];
 
 // Perfect-memory optimal play — Monte Carlo mean (20000 trials each).
