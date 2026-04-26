@@ -1,0 +1,901 @@
+[
+  {
+    "entity_id": "n4",
+    "entity_name": "Number 4",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 4,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "1 + 3",
+        "de": "1 + 3",
+        "local_display": "1 + 3"
+      },
+      "muldiv": {
+        "en": "2 × 2",
+        "de": "2 · 2",
+        "local_display": "2 · 2"
+      },
+      "number": {
+        "en": "4",
+        "de": "4",
+        "local_display": "4"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n6",
+    "entity_name": "Number 6",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 6,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "10 - 4",
+        "de": "10 - 4",
+        "local_display": "10 - 4"
+      },
+      "muldiv": {
+        "en": "2 × 3",
+        "de": "2 · 3",
+        "local_display": "2 · 3"
+      },
+      "number": {
+        "en": "6",
+        "de": "6",
+        "local_display": "6"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n8",
+    "entity_name": "Number 8",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 8,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "3 + 5",
+        "de": "3 + 5",
+        "local_display": "3 + 5"
+      },
+      "muldiv": {
+        "en": "16 ÷ 2",
+        "de": "16 : 2",
+        "local_display": "16 : 2"
+      },
+      "number": {
+        "en": "8",
+        "de": "8",
+        "local_display": "8"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n9",
+    "entity_name": "Number 9",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 9,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "12 - 3",
+        "de": "12 - 3",
+        "local_display": "12 - 3"
+      },
+      "muldiv": {
+        "en": "3 × 3",
+        "de": "3 · 3",
+        "local_display": "3 · 3"
+      },
+      "number": {
+        "en": "9",
+        "de": "9",
+        "local_display": "9"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n10",
+    "entity_name": "Number 10",
+    "difficulty": 1,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 10,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "4 + 6",
+        "de": "4 + 6",
+        "local_display": "4 + 6"
+      },
+      "muldiv": {
+        "en": "30 ÷ 3",
+        "de": "30 : 3",
+        "local_display": "30 : 3"
+      },
+      "number": {
+        "en": "10",
+        "de": "10",
+        "local_display": "10"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n12",
+    "entity_name": "Number 12",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 12,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "15 - 3",
+        "de": "15 - 3",
+        "local_display": "15 - 3"
+      },
+      "muldiv": {
+        "en": "3 × 4",
+        "de": "3 · 4",
+        "local_display": "3 · 4"
+      },
+      "number": {
+        "en": "12",
+        "de": "12",
+        "local_display": "12"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n14",
+    "entity_name": "Number 14",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 14,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "9 + 5",
+        "de": "9 + 5",
+        "local_display": "9 + 5"
+      },
+      "muldiv": {
+        "en": "28 ÷ 2",
+        "de": "28 : 2",
+        "local_display": "28 : 2"
+      },
+      "number": {
+        "en": "14",
+        "de": "14",
+        "local_display": "14"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n15",
+    "entity_name": "Number 15",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 15,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "20 - 5",
+        "de": "20 - 5",
+        "local_display": "20 - 5"
+      },
+      "muldiv": {
+        "en": "3 × 5",
+        "de": "3 · 5",
+        "local_display": "3 · 5"
+      },
+      "number": {
+        "en": "15",
+        "de": "15",
+        "local_display": "15"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n16",
+    "entity_name": "Number 16",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 16,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "9 + 7",
+        "de": "9 + 7",
+        "local_display": "9 + 7"
+      },
+      "muldiv": {
+        "en": "4 × 4",
+        "de": "4 · 4",
+        "local_display": "4 · 4"
+      },
+      "number": {
+        "en": "16",
+        "de": "16",
+        "local_display": "16"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n18",
+    "entity_name": "Number 18",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 18,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "25 - 7",
+        "de": "25 - 7",
+        "local_display": "25 - 7"
+      },
+      "muldiv": {
+        "en": "36 ÷ 2",
+        "de": "36 : 2",
+        "local_display": "36 : 2"
+      },
+      "number": {
+        "en": "18",
+        "de": "18",
+        "local_display": "18"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n20",
+    "entity_name": "Number 20",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 20,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "11 + 9",
+        "de": "11 + 9",
+        "local_display": "11 + 9"
+      },
+      "muldiv": {
+        "en": "4 × 5",
+        "de": "4 · 5",
+        "local_display": "4 · 5"
+      },
+      "number": {
+        "en": "20",
+        "de": "20",
+        "local_display": "20"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n21",
+    "entity_name": "Number 21",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 21,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "28 - 7",
+        "de": "28 - 7",
+        "local_display": "28 - 7"
+      },
+      "muldiv": {
+        "en": "3 × 7",
+        "de": "3 · 7",
+        "local_display": "3 · 7"
+      },
+      "number": {
+        "en": "21",
+        "de": "21",
+        "local_display": "21"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n24",
+    "entity_name": "Number 24",
+    "difficulty": 2,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 24,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "15 + 9",
+        "de": "15 + 9",
+        "local_display": "15 + 9"
+      },
+      "muldiv": {
+        "en": "4 × 6",
+        "de": "4 · 6",
+        "local_display": "4 · 6"
+      },
+      "number": {
+        "en": "24",
+        "de": "24",
+        "local_display": "24"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n25",
+    "entity_name": "Number 25",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 25,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "30 - 5",
+        "de": "30 - 5",
+        "local_display": "30 - 5"
+      },
+      "muldiv": {
+        "en": "5 × 5",
+        "de": "5 · 5",
+        "local_display": "5 · 5"
+      },
+      "number": {
+        "en": "25",
+        "de": "25",
+        "local_display": "25"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n27",
+    "entity_name": "Number 27",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 27,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "18 + 9",
+        "de": "18 + 9",
+        "local_display": "18 + 9"
+      },
+      "muldiv": {
+        "en": "81 ÷ 3",
+        "de": "81 : 3",
+        "local_display": "81 : 3"
+      },
+      "number": {
+        "en": "27",
+        "de": "27",
+        "local_display": "27"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n28",
+    "entity_name": "Number 28",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 28,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "35 - 7",
+        "de": "35 - 7",
+        "local_display": "35 - 7"
+      },
+      "muldiv": {
+        "en": "4 × 7",
+        "de": "4 · 7",
+        "local_display": "4 · 7"
+      },
+      "number": {
+        "en": "28",
+        "de": "28",
+        "local_display": "28"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n30",
+    "entity_name": "Number 30",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 30,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "22 + 8",
+        "de": "22 + 8",
+        "local_display": "22 + 8"
+      },
+      "muldiv": {
+        "en": "5 × 6",
+        "de": "5 · 6",
+        "local_display": "5 · 6"
+      },
+      "number": {
+        "en": "30",
+        "de": "30",
+        "local_display": "30"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n32",
+    "entity_name": "Number 32",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 32,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "40 - 8",
+        "de": "40 - 8",
+        "local_display": "40 - 8"
+      },
+      "muldiv": {
+        "en": "4 × 8",
+        "de": "4 · 8",
+        "local_display": "4 · 8"
+      },
+      "number": {
+        "en": "32",
+        "de": "32",
+        "local_display": "32"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n35",
+    "entity_name": "Number 35",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 35,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "28 + 7",
+        "de": "28 + 7",
+        "local_display": "28 + 7"
+      },
+      "muldiv": {
+        "en": "70 ÷ 2",
+        "de": "70 : 2",
+        "local_display": "70 : 2"
+      },
+      "number": {
+        "en": "35",
+        "de": "35",
+        "local_display": "35"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n36",
+    "entity_name": "Number 36",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 36,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "40 - 4",
+        "de": "40 - 4",
+        "local_display": "40 - 4"
+      },
+      "muldiv": {
+        "en": "6 × 6",
+        "de": "6 · 6",
+        "local_display": "6 · 6"
+      },
+      "number": {
+        "en": "36",
+        "de": "36",
+        "local_display": "36"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n42",
+    "entity_name": "Number 42",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 42,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "35 + 7",
+        "de": "35 + 7",
+        "local_display": "35 + 7"
+      },
+      "muldiv": {
+        "en": "6 × 7",
+        "de": "6 · 7",
+        "local_display": "6 · 7"
+      },
+      "number": {
+        "en": "42",
+        "de": "42",
+        "local_display": "42"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n48",
+    "entity_name": "Number 48",
+    "difficulty": 3,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 48,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "56 - 8",
+        "de": "56 - 8",
+        "local_display": "56 - 8"
+      },
+      "muldiv": {
+        "en": "6 × 8",
+        "de": "6 · 8",
+        "local_display": "6 · 8"
+      },
+      "number": {
+        "en": "48",
+        "de": "48",
+        "local_display": "48"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n49",
+    "entity_name": "Number 49",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 49,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "41 + 8",
+        "de": "41 + 8",
+        "local_display": "41 + 8"
+      },
+      "muldiv": {
+        "en": "7 × 7",
+        "de": "7 · 7",
+        "local_display": "7 · 7"
+      },
+      "number": {
+        "en": "49",
+        "de": "49",
+        "local_display": "49"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n54",
+    "entity_name": "Number 54",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 54,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "60 - 6",
+        "de": "60 - 6",
+        "local_display": "60 - 6"
+      },
+      "muldiv": {
+        "en": "6 × 9",
+        "de": "6 · 9",
+        "local_display": "6 · 9"
+      },
+      "number": {
+        "en": "54",
+        "de": "54",
+        "local_display": "54"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n56",
+    "entity_name": "Number 56",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 56,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "48 + 8",
+        "de": "48 + 8",
+        "local_display": "48 + 8"
+      },
+      "muldiv": {
+        "en": "7 × 8",
+        "de": "7 · 8",
+        "local_display": "7 · 8"
+      },
+      "number": {
+        "en": "56",
+        "de": "56",
+        "local_display": "56"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n63",
+    "entity_name": "Number 63",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 63,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "70 - 7",
+        "de": "70 - 7",
+        "local_display": "70 - 7"
+      },
+      "muldiv": {
+        "en": "7 × 9",
+        "de": "7 · 9",
+        "local_display": "7 · 9"
+      },
+      "number": {
+        "en": "63",
+        "de": "63",
+        "local_display": "63"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n64",
+    "entity_name": "Number 64",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 64,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "55 + 9",
+        "de": "55 + 9",
+        "local_display": "55 + 9"
+      },
+      "muldiv": {
+        "en": "8 × 8",
+        "de": "8 · 8",
+        "local_display": "8 · 8"
+      },
+      "number": {
+        "en": "64",
+        "de": "64",
+        "local_display": "64"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n72",
+    "entity_name": "Number 72",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 72,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "81 - 9",
+        "de": "81 - 9",
+        "local_display": "81 - 9"
+      },
+      "muldiv": {
+        "en": "8 × 9",
+        "de": "8 · 9",
+        "local_display": "8 · 9"
+      },
+      "number": {
+        "en": "72",
+        "de": "72",
+        "local_display": "72"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  },
+  {
+    "entity_id": "n81",
+    "entity_name": "Number 81",
+    "difficulty": 4,
+    "is_active": true,
+    "endorsement_marker": "math_pack_v0.1_draft",
+    "result_value": 81,
+    "provenance": "Standard arithmetic; expressions chosen to suit elementary-school practice.",
+    "label_variants": {
+      "addsub": {
+        "en": "72 + 9",
+        "de": "72 + 9",
+        "local_display": "72 + 9"
+      },
+      "muldiv": {
+        "en": "9 × 9",
+        "de": "9 · 9",
+        "local_display": "9 · 9"
+      },
+      "number": {
+        "en": "81",
+        "de": "81",
+        "local_display": "81"
+      }
+    },
+    "facts": {
+      "addsub": [],
+      "muldiv": [],
+      "number": []
+    }
+  }
+]

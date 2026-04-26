@@ -5,7 +5,8 @@
 const AVAILABLE_PACKS = [
     { id: 'geography',  display: { en: 'Geography', de: 'Geografie' } },
     { id: 'chemistry',  display: { en: 'Chemistry', de: 'Chemie' } },
-    { id: 'music',      display: { en: 'Music',     de: 'Musik'    } }
+    { id: 'music',      display: { en: 'Music',     de: 'Musik'    } },
+    { id: 'math',       display: { en: 'Math',      de: 'Mathe'    } }
 ];
 
 // Perfect-memory optimal play — Monte Carlo mean (20000 trials each).
@@ -1025,6 +1026,14 @@ class TripleMemoryEngine {
             this.render();
             
         } else if (this.tutorialStep === 3) {
+            // Skip the Shared Letter Mode walkthrough for packs that don't
+            // support it (e.g. math, where number-keyed letter groups would
+            // be meaningless).
+            if (!(this.pack.manifest.supported_modes || []).includes('shared_letter')) {
+                this.tutorialStep = 4;
+                this.setupTutorialStep();
+                return;
+            }
             const [lg1, lg2] = this.getTutorialLetterGroups(2);
             let cards = [];
             [lg1, lg2].forEach(lg => {
@@ -1040,7 +1049,7 @@ class TripleMemoryEngine {
                 boardIndex: index
             }));
             this.render();
-            
+
         } else if (this.tutorialStep === 4) {
             // Step 3: Mini-round
             this.boardSize = 6;
@@ -1329,8 +1338,12 @@ class TripleMemoryEngine {
 
                         <div class="menu-actions">
                             <button onclick="game.startTutorial()">${this.t('playTutorial')}</button>
-                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_entity')">${this.t('playSharedEntity')}</button>
-                            <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">${this.t('playSharedLetter')}</button>
+                            ${(this.pack.manifest.supported_modes || []).includes('shared_entity') ? `
+                                <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_entity')">${this.t('playSharedEntity')}</button>
+                            ` : ''}
+                            ${(this.pack.manifest.supported_modes || []).includes('shared_letter') ? `
+                                <button onclick="game.boardSize = game.selectedBoardSize; game.startGame('shared_letter')">${this.t('playSharedLetter')}</button>
+                            ` : ''}
                             <button class="menu-secondary" onclick="game.showStatistics()">${this.t('viewStatistics')}</button>
                         </div>
 
@@ -1403,7 +1416,7 @@ class TripleMemoryEngine {
                 appRoot.innerHTML = `
                     <div class="screen tutorial">
                         <header>
-                            <h2>${this.t('tutorialHeader', { n: this.tutorialStep, total: 3 })}</h2>
+                            <h2>${this.t('tutorialHeader', { n: this.tutorialStep, total: (this.pack.manifest.supported_modes || []).includes('shared_letter') ? 3 : 2 })}</h2>
                             <button onclick="game.isTutorial = false; game.state = 'MENU'; game.render()">${this.t('skipTutorial')}</button>
                         </header>
                         <div class="tutorial-instructions">
