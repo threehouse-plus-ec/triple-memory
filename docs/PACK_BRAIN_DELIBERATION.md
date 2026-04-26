@@ -24,12 +24,19 @@ entity". Packs that don't fit this mould are out of scope here.
 | Chemistry | element / symbol / group | Verbal-declarative + symbol-name binding + categorical reasoning |
 | Music | composer / work / instrument | Verbal-declarative + cultural-temporal placement |
 | Math | + / − expression / × / ÷ expression / number | Numerical computation + **equivalence reasoning** |
+| Geometry | name / diagram (SVG) / property triplet | **Visuospatial recognition** + property recall |
+| Sequences | rule / first three terms / later term | **Pattern induction** + arithmetic |
 
-**Honest read:** three of four packs are flavours of declarative-memory
-training. Math is the only one whose triple structure forces *equivalence
-reasoning* — recognising that `7 + 5`, `3 × 4`, and `12` denote the same
-quantity. That equivalence step is the most cognitively distinctive thing the
-engine currently exercises.
+**Honest read:** of the six shipped packs, three (Geography, Chemistry,
+Music) are flavours of declarative-memory training. The other three each
+exercise a distinct cognitive faculty: Math forces *equivalence reasoning*
+across multiple representations of the same quantity; Geometry forces
+*visuospatial recognition* (the engine ships an in-card diagram surface so
+the diagram card carries real perceptual load rather than collapsing to a
+name label); Sequences forces *pattern induction*, the only structure where
+the player must keep recognising a rule across different representations
+rather than rehearsing a name pairing. The engine now exercises four fairly
+distinct kinds of mental work, not just one.
 
 ## 2. Faculty axes worth covering
 
@@ -38,23 +45,24 @@ memory game can plausibly train, plus how each currently fares:
 
 | Axis | Examples | Existing coverage |
 |------|----------|--------------------|
-| **Verbal-declarative recall** | vocabulary, names, facts | over-represented (3/4 packs) |
+| **Verbal-declarative recall** | vocabulary, names, facts | over-represented (3/6 packs: Geography, Chemistry, Music) |
 | **Symbol-name binding** | element symbols, written notation | partial (Chemistry) |
 | **Categorical reasoning** | "what group does X belong to?" | partial (Chemistry groups, Music era) |
 | **Numerical computation** | arithmetic, algebra | Math |
-| **Equivalence / multi-representation reasoning** | same value, different forms | **Math is the only example** |
-| **Visuospatial recognition** | identifying shapes, diagrams | **uncovered** |
+| **Equivalence / multi-representation reasoning** | same value, different forms | Math (the only example) |
+| **Visuospatial recognition** | identifying shapes, diagrams | Geometry (the in-card diagram surface lets the diagram card do the recognition work) |
 | **Mental rotation / spatial transforms** | matching rotated forms | **uncovered** |
-| **Pattern induction** | finding rules from examples | **uncovered** |
+| **Pattern induction** | finding rules from examples | Sequences (rule ↔ first terms ↔ later term forces re-recognition each round) |
 | **Logical / formal reasoning** | equivalent propositions | **uncovered** |
-| **Cross-modal mapping** | linking text ↔ visual ↔ formula | **uncovered** |
+| **Cross-modal mapping** | linking text ↔ visual ↔ formula | partial (Geometry maps name ↔ diagram); the heavier algebra ↔ graph pairing is **uncovered** |
 | **Cross-linguistic mapping** | same concept across languages | partial via `label_variants`, but no pack centred on it |
 | **Phonological / auditory** | rhyme, melody | **out of scope** (no audio in engine) |
 | **Procedural / motor sequencing** | gesture, key-press order | **out of scope** (engine is pointer-only) |
 
-The big gaps are visuospatial work, pattern induction, formal reasoning, and
-cross-modal mapping. Those are the directions that promise the most
-*distinct* cognitive value per new pack.
+The remaining gaps worth opening are **formal reasoning**, **mental
+rotation**, and the **algebra ↔ graph** flavour of cross-modal mapping.
+Those are now the directions that promise the most *distinct* cognitive
+value per new pack.
 
 ## 2.1 Extra screening questions
 
@@ -92,13 +100,16 @@ implementation dependency, and key open questions.
 | Engine dependency | Strongly prefers an in-card diagram surface; type icons alone are not enough if the diagram is meant to carry the recognition load |
 | Open questions | (a) Property card needs to be unique across the pack to play cleanly with the unique-labels-per-board constraint; "4 sides" alone is not unique. Use a compact property fingerprint (e.g. `4 sides · 4 right angles · 4 equal sides`) or name it after the most distinctive feature. (b) For 3-D shapes, do diagrams need a perspective convention, or is iso-net enough? |
 
-**Verdict:** strongest content candidate, but its cognitive payoff is
-*gated on* first paying the engine cost called out as §4 priority 1. It cleanly fills the
-visuospatial gap and has ample pool depth; what it does *not* do is offer a
-cheap shortcut. If we ship it before the in-card diagram surface exists, the
-diagram card collapses to a name-only label and the player can win by
-reading text alone — which forfeits the visuospatial training the pack
-exists to deliver.
+**Status: shipped** as Geometry pack v0.1 draft (24 shapes across difficulty
+tiers 1–4; in-card diagram surface in the engine).
+
+**Verdict (retained for reference):** strongest content candidate, but its
+cognitive payoff was *gated on* first paying the engine cost. It cleanly
+fills the visuospatial gap and has ample pool depth; what it does *not* do
+is offer a cheap shortcut. Shipping it before the in-card diagram surface
+existed would have collapsed the diagram card to a name-only label and let
+the player win by reading text alone — which would have forfeited the
+visuospatial training the pack exists to deliver.
 
 ### 3.2 Geometry — Area/Perimeter Formulas
 
@@ -127,10 +138,16 @@ pool is formally too small.
 | Engine dependency | None beyond normal text rendering |
 | Open questions | (a) "First three terms" might overlap between sequences (e.g. `1, 1, 2` is Fibonacci's start but also occurs elsewhere). The unique-labels constraint will prevent collisions on board, but pool needs to be designed so collisions are rare. (b) "Later term" cards risk being numerically large and visually noisy. |
 
-**Verdict:** strong candidate; the only pack that genuinely trains *pattern
-induction*. It also has good repeated-play durability because the player must
-keep recognising a rule across different representations, not just rehearse a
-name pairing. Slight curation risk around term overlap.
+**Status: shipped** as Sequences pack v0.1 draft (20 sequences across
+difficulty tiers 1–4; pure-text, no engine prerequisite). Catalan and Pell
+were intentionally deferred from v0.1 because their first-three-terms
+windows (`1, 1, 2` and `0, 1, 2`) would have collided with Fibonacci's
+under the unique-labels-per-board constraint.
+
+**Verdict (retained for reference):** the only pack that genuinely trains
+*pattern induction*. Good repeated-play durability because the player has
+to keep recognising a rule across different representations, not just
+rehearse a name pairing.
 
 ### 3.4 Logic — Equivalent Statements
 
@@ -209,36 +226,41 @@ near-zero curation cost.
 
 ## 4. Recommended priorities
 
-The original recommended sequence was:
+**Shipped to date:**
 
-1. add an in-card diagram surface to the engine;
-2. ship **Geometry — Shapes** (§3.1);
-3. then choose between **Sequences** (§3.3) and **Coordinates & Maps** (§3.8);
-4. then consider **Geometry — Formulas** (§3.2);
-5. defer **Logic** (§3.4) and **Algebra/Graph** (§3.5) until later.
+1. ✓ In-card diagram surface (engine).
+2. ✓ Geometry — Shapes v0.1 draft (§3.1) — fills the visuospatial gap; uses
+   the diagram surface above as its live proof case.
+3. ✓ Sequences v0.1 draft (§3.3) — fills the pattern-induction gap; pure
+   text, no engine prerequisite.
 
-**Current status:** priorities 1 and 2 are now in flight together. That is a
-sound pairing: Geometry — Shapes is the content case that justifies the
-diagram-surface work, and the diagram surface is the engine feature that keeps
-Geometry — Shapes from collapsing into a text-only naming exercise.
+The pair (1+2) was the right way to ship: Geometry — Shapes was the content
+case that justified the diagram surface, and the diagram surface was the
+engine feature that kept Geometry — Shapes from collapsing into a text-only
+naming exercise. (3) was the cheapest cognitive expansion next, because it
+landed on top of normal text rendering without waiting on the geometry
+pipeline.
 
-With that combined track underway, the next pickups are clearer:
+**Next picks:**
 
-1. **Next for broader cognitive coverage:** **Sequences** (§3.3). This is the
-   natural follow-on if the goal is to expand the distinct kinds of mental
-   work the game trains, because it adds pattern induction without depending
-   on the geometry rendering path.
-2. **Next once the diagram surface is proven on Geometry — Shapes:**
-   **Geometry — Formulas** (§3.2). This is the natural follow-on if the goal
-   is to deepen the geometry line after §3.1 has validated the diagram-card
-   pipeline in actual play.
-3. **Later:** **Logic** (§3.4) and **Algebra/Graph** (§3.5). Both remain
-   attractive, but both should wait until the next pack after Geometry is no
-   longer carrying engine-level uncertainty.
-
-**Coordinates & Maps** (§3.8) still has value as a low-curation companion
-pack, but once Geometry — Shapes itself is serving as the live proof case for
-diagram cards, its role as the cheapest rendering pilot matters less.
+1. **Next once the diagram surface is proven in actual play:**
+   **Geometry — Formulas** (§3.2). Geometry — Shapes is now the live test of
+   the diagram-card pipeline; the formulas pack deepens the geometry line by
+   adding cross-modal mapping (shape ↔ algebra) on top of an already-proven
+   rendering surface. The remaining open question is the formula-rendering
+   policy (HTML with Unicode glyphs vs. MathML) — answer that early.
+2. **Next for the formal-reasoning gap:** **Logic** (§3.4). The only
+   candidate that genuinely trains formal reasoning, no engine prerequisite.
+   Audience skews older students / adults rather than primary-school, so
+   queue accordingly.
+3. **Then:** **Algebra/Graph** (§3.5). The most cognitively rich cross-modal
+   proposal — but still the most expensive, because each entity needs a
+   pre-rendered SVG plot. Defer until the lighter packs above have settled
+   the rendering-pipeline expectations.
+4. **Companion pack:** **Coordinates & Maps** (§3.8). Slim, near-zero
+   curation cost; still attractive as a Geography cross-pollination. Lower
+   priority now that its role as the cheapest rendering pilot is no longer
+   needed (Geometry — Shapes serves that purpose).
 
 Park the declarative-only candidates (anatomy, trilingual vocab, constants)
 unless a specific user need surfaces — they don't expand cognitive coverage.
@@ -247,17 +269,26 @@ unless a specific user need surfaces — they don't expand cognitive coverage.
 
 - Do we want each pack to declare a `cognitive_axis` field in its manifest,
   so the menu can group packs by faculty? Cheap to add and would make the
-  cognitive-coverage framing visible to users.
+  cognitive-coverage framing visible to users. With six packs now live, the
+  payoff for grouping is higher than it was at four.
 - Must every future pack support Shared Letter Mode, or is `shared_entity`
-  support alone acceptable for specialised packs? The manifest already has a
-  `supported_modes` slot, so this is mainly a product-policy decision.
-- Should the engine support a fourth display style for "diagram" cards
-  (SVG content rendered in the card body, not just an icon)? Several
-  candidates above (Geometry shapes, Algebra graphs, Coordinates) lean on
-  it. Currently icons only appear on the card *type*, not as the *label*
-  itself.
+  support alone acceptable for specialised packs? Math, Geometry, and
+  Sequences all ship `shared_entity` only and the engine already hides the
+  Shared Letter button accordingly — so de facto the answer is "no, opt-in is
+  fine". Worth confirming as policy.
 - Do we want a pack-level field that distinguishes `primary_faculty` from
   `secondary_faculties`, or is one axis enough for MVP menu grouping?
 - Do we want age-range metadata per pack so the menu can suggest a
   starting pack? `target_age_band` might pair well with `difficulty`
   per entity.
+- For Geometry — Formulas (§3.2), what is the **formula-rendering policy**?
+  HTML with Unicode glyphs (`π`, `²`, `√`) keeps the engine simple and
+  works today; MathML is more accessible and more typographically correct
+  but adds a rendering surface. Decide before drafting the pack.
+
+**Resolved during the iterations to date:**
+
+- *Should the engine support a "diagram" card body (SVG content rendered in
+  the card body rather than only as a card-type icon)?* — yes, shipped as
+  the in-card diagram surface; used by Geometry. Future visuospatial packs
+  can lean on it.
