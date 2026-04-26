@@ -209,24 +209,36 @@ near-zero curation cost.
 
 ## 4. Recommended priorities
 
-If we ship one new pack at a time, the real sequence is:
+The original recommended sequence was:
 
-1. **Add an in-card diagram surface to the engine.** Several of the most
-   valuable future packs depend on SVG content appearing as the card's main
-   representation, not merely as a card-type icon.
-2. **Geometry — Shapes** (§3.1), initially as a 2-D-only v0.1. Highest
-   cognitive return per unit of effort once the diagram surface exists:
-   fills the visuospatial gap, has ample pool depth, and supports natural
-   difficulty tiers.
-3. **Sequences** (§3.3) *or* **Coordinates & Maps** (§3.8), depending on
-   what we want next. Choose Sequences for maximum cognitive spread; choose
-   Coordinates for the cheapest way to prove the diagram-card pipeline on
-   real content.
-4. **Geometry — Formulas** (§3.2). A compact but worthwhile specialist pack
-   after the geometry rendering path is proven.
-5. **Logic** (§3.4) and **Algebra/Graph** (§3.5). Larger projects; defer
-   until a couple of the above have shipped and the diagram/formula surface
-   has settled.
+1. add an in-card diagram surface to the engine;
+2. ship **Geometry — Shapes** (§3.1);
+3. then choose between **Sequences** (§3.3) and **Coordinates & Maps** (§3.8);
+4. then consider **Geometry — Formulas** (§3.2);
+5. defer **Logic** (§3.4) and **Algebra/Graph** (§3.5) until later.
+
+**Current status:** priorities 1 and 2 are now in flight together. That is a
+sound pairing: Geometry — Shapes is the content case that justifies the
+diagram-surface work, and the diagram surface is the engine feature that keeps
+Geometry — Shapes from collapsing into a text-only naming exercise.
+
+With that combined track underway, the next pickups are clearer:
+
+1. **Next for broader cognitive coverage:** **Sequences** (§3.3). This is the
+   natural follow-on if the goal is to expand the distinct kinds of mental
+   work the game trains, because it adds pattern induction without depending
+   on the geometry rendering path.
+2. **Next once the diagram surface is proven on Geometry — Shapes:**
+   **Geometry — Formulas** (§3.2). This is the natural follow-on if the goal
+   is to deepen the geometry line after §3.1 has validated the diagram-card
+   pipeline in actual play.
+3. **Later:** **Logic** (§3.4) and **Algebra/Graph** (§3.5). Both remain
+   attractive, but both should wait until the next pack after Geometry is no
+   longer carrying engine-level uncertainty.
+
+**Coordinates & Maps** (§3.8) still has value as a low-curation companion
+pack, but once Geometry — Shapes itself is serving as the live proof case for
+diagram cards, its role as the cheapest rendering pilot matters less.
 
 Park the declarative-only candidates (anatomy, trilingual vocab, constants)
 unless a specific user need surfaces — they don't expand cognitive coverage.
