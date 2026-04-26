@@ -168,6 +168,10 @@ The chemistry pack uses a narrower set of domain fields: `element_symbol`, `grou
       "mode_tags": {
         "type": "array",
         "items": { "type": "string", "enum": ["shared_entity", "shared_letter"] }
+      },
+      "diagram": {
+        "type": "string",
+        "description": "Optional. Pack-relative path to an SVG file (e.g. 'diagrams/square.svg') that the engine inlines as the card's main visible content, in place of the text label. Used by visuospatial packs (geometry, coordinates) where the diagram, not the label, carries the recognition load. When set, the engine uses a generic aria-label so screen-reader play does not reveal the entity; such packs should declare the limitation in their accessibility_declaration."
       }
     }
   }

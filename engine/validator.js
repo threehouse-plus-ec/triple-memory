@@ -113,6 +113,13 @@ class PackValidator {
             if (Array.isArray(card.mode_tags)) {
                 card.mode_tags.forEach(mode => this.checkEnum(mode, ["shared_entity", "shared_letter"], `${ctx}.mode_tags`));
             }
+            // Optional in-card diagram: pack-relative path to an SVG file
+            // rendered as the card's main visible content. Used by visuospatial
+            // packs (geometry, coordinates) where the diagram, not the label,
+            // carries the recognition load.
+            if (card.diagram !== undefined && typeof card.diagram !== 'string') {
+                this.errors.push(`[${ctx}] 'diagram', when present, must be a string path.`);
+            }
 
             const exactLetterMatch = `${card.entity_id}::${card.card_type}::${card.label}`;
             if (sharedLetterCardKeys.has(exactLetterMatch) && (!Array.isArray(card.mode_tags) || !card.mode_tags.includes('shared_letter'))) {
