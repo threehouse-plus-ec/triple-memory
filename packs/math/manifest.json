@@ -1,0 +1,63 @@
+{
+  "pack_id": "math",
+  "pack_name": "Math — Add/Subtract, Multiply/Divide, Result",
+  "pack_version": "0.1",
+  "endorsement_marker": "math_pack_v0.1_draft",
+  "card_types": [
+    {
+      "type_id": "addsub",
+      "display_name": "+ / −",
+      "display_names": { "en": "+ / −", "de": "+ / −" },
+      "icon": "icons/addsub.svg",
+      "aria_label_template": "Addition or subtraction: {label}",
+      "aria_label_templates": {
+        "en": "Addition or subtraction: {label}",
+        "de": "Addition oder Subtraktion: {label}"
+      },
+      "tutorial_phrase": { "en": "one + / − card", "de": "eine + / − Karte" }
+    },
+    {
+      "type_id": "muldiv",
+      "display_name": "× / ÷",
+      "display_names": { "en": "× / ÷", "de": "· / :" },
+      "icon": "icons/muldiv.svg",
+      "aria_label_template": "Multiplication or division: {label}",
+      "aria_label_templates": {
+        "en": "Multiplication or division: {label}",
+        "de": "Multiplikation oder Division: {label}"
+      },
+      "tutorial_phrase": { "en": "one × / ÷ card", "de": "eine · / : Karte" }
+    },
+    {
+      "type_id": "number",
+      "display_name": "Number",
+      "display_names": { "en": "Number", "de": "Zahl" },
+      "icon": "icons/number.svg",
+      "aria_label_template": "Number: {label}",
+      "aria_label_templates": {
+        "en": "Number: {label}",
+        "de": "Zahl: {label}"
+      },
+      "tutorial_phrase": { "en": "one number", "de": "eine Zahl" }
+    }
+  ],
+  "shared_entity_field": "entity_id",
+  "supported_modes": [
+    "shared_entity"
+  ],
+  "supported_locales": [
+    "en",
+    "de"
+  ],
+  "primary_locale": "en",
+  "supported_board_sizes": [
+    12,
+    18,
+    24
+  ],
+  "curation_statement_path": "CURATION_STATEMENT.md",
+  "accessibility_declaration": {
+    "icons_shape_distinct": true,
+    "icons_colour_independent": true
+  }
+}

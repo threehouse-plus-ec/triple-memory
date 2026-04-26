@@ -1,0 +1,1046 @@
+[
+  {
+    "card_id": "n4_addsub",
+    "entity_id": "n4",
+    "card_type": "addsub",
+    "label": "1 + 3",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n4_muldiv",
+    "entity_id": "n4",
+    "card_type": "muldiv",
+    "label": "2 × 2",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n4_number",
+    "entity_id": "n4",
+    "card_type": "number",
+    "label": "4",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n6_addsub",
+    "entity_id": "n6",
+    "card_type": "addsub",
+    "label": "10 - 4",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n6_muldiv",
+    "entity_id": "n6",
+    "card_type": "muldiv",
+    "label": "2 × 3",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n6_number",
+    "entity_id": "n6",
+    "card_type": "number",
+    "label": "6",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n8_addsub",
+    "entity_id": "n8",
+    "card_type": "addsub",
+    "label": "3 + 5",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n8_muldiv",
+    "entity_id": "n8",
+    "card_type": "muldiv",
+    "label": "16 ÷ 2",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n8_number",
+    "entity_id": "n8",
+    "card_type": "number",
+    "label": "8",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n9_addsub",
+    "entity_id": "n9",
+    "card_type": "addsub",
+    "label": "12 - 3",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n9_muldiv",
+    "entity_id": "n9",
+    "card_type": "muldiv",
+    "label": "3 × 3",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n9_number",
+    "entity_id": "n9",
+    "card_type": "number",
+    "label": "9",
+    "label_script": "latin",
+    "initial_letter": "9",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n10_addsub",
+    "entity_id": "n10",
+    "card_type": "addsub",
+    "label": "4 + 6",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n10_muldiv",
+    "entity_id": "n10",
+    "card_type": "muldiv",
+    "label": "30 ÷ 3",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n10_number",
+    "entity_id": "n10",
+    "card_type": "number",
+    "label": "10",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n12_addsub",
+    "entity_id": "n12",
+    "card_type": "addsub",
+    "label": "15 - 3",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n12_muldiv",
+    "entity_id": "n12",
+    "card_type": "muldiv",
+    "label": "3 × 4",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n12_number",
+    "entity_id": "n12",
+    "card_type": "number",
+    "label": "12",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n14_addsub",
+    "entity_id": "n14",
+    "card_type": "addsub",
+    "label": "9 + 5",
+    "label_script": "latin",
+    "initial_letter": "9",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n14_muldiv",
+    "entity_id": "n14",
+    "card_type": "muldiv",
+    "label": "28 ÷ 2",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n14_number",
+    "entity_id": "n14",
+    "card_type": "number",
+    "label": "14",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n15_addsub",
+    "entity_id": "n15",
+    "card_type": "addsub",
+    "label": "20 - 5",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n15_muldiv",
+    "entity_id": "n15",
+    "card_type": "muldiv",
+    "label": "3 × 5",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n15_number",
+    "entity_id": "n15",
+    "card_type": "number",
+    "label": "15",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n16_addsub",
+    "entity_id": "n16",
+    "card_type": "addsub",
+    "label": "9 + 7",
+    "label_script": "latin",
+    "initial_letter": "9",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n16_muldiv",
+    "entity_id": "n16",
+    "card_type": "muldiv",
+    "label": "4 × 4",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n16_number",
+    "entity_id": "n16",
+    "card_type": "number",
+    "label": "16",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n18_addsub",
+    "entity_id": "n18",
+    "card_type": "addsub",
+    "label": "25 - 7",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n18_muldiv",
+    "entity_id": "n18",
+    "card_type": "muldiv",
+    "label": "36 ÷ 2",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n18_number",
+    "entity_id": "n18",
+    "card_type": "number",
+    "label": "18",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n20_addsub",
+    "entity_id": "n20",
+    "card_type": "addsub",
+    "label": "11 + 9",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n20_muldiv",
+    "entity_id": "n20",
+    "card_type": "muldiv",
+    "label": "4 × 5",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n20_number",
+    "entity_id": "n20",
+    "card_type": "number",
+    "label": "20",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n21_addsub",
+    "entity_id": "n21",
+    "card_type": "addsub",
+    "label": "28 - 7",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n21_muldiv",
+    "entity_id": "n21",
+    "card_type": "muldiv",
+    "label": "3 × 7",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n21_number",
+    "entity_id": "n21",
+    "card_type": "number",
+    "label": "21",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n24_addsub",
+    "entity_id": "n24",
+    "card_type": "addsub",
+    "label": "15 + 9",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n24_muldiv",
+    "entity_id": "n24",
+    "card_type": "muldiv",
+    "label": "4 × 6",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n24_number",
+    "entity_id": "n24",
+    "card_type": "number",
+    "label": "24",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n25_addsub",
+    "entity_id": "n25",
+    "card_type": "addsub",
+    "label": "30 - 5",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n25_muldiv",
+    "entity_id": "n25",
+    "card_type": "muldiv",
+    "label": "5 × 5",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n25_number",
+    "entity_id": "n25",
+    "card_type": "number",
+    "label": "25",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n27_addsub",
+    "entity_id": "n27",
+    "card_type": "addsub",
+    "label": "18 + 9",
+    "label_script": "latin",
+    "initial_letter": "1",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n27_muldiv",
+    "entity_id": "n27",
+    "card_type": "muldiv",
+    "label": "81 ÷ 3",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n27_number",
+    "entity_id": "n27",
+    "card_type": "number",
+    "label": "27",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n28_addsub",
+    "entity_id": "n28",
+    "card_type": "addsub",
+    "label": "35 - 7",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n28_muldiv",
+    "entity_id": "n28",
+    "card_type": "muldiv",
+    "label": "4 × 7",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n28_number",
+    "entity_id": "n28",
+    "card_type": "number",
+    "label": "28",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n30_addsub",
+    "entity_id": "n30",
+    "card_type": "addsub",
+    "label": "22 + 8",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n30_muldiv",
+    "entity_id": "n30",
+    "card_type": "muldiv",
+    "label": "5 × 6",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n30_number",
+    "entity_id": "n30",
+    "card_type": "number",
+    "label": "30",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n32_addsub",
+    "entity_id": "n32",
+    "card_type": "addsub",
+    "label": "40 - 8",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n32_muldiv",
+    "entity_id": "n32",
+    "card_type": "muldiv",
+    "label": "4 × 8",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n32_number",
+    "entity_id": "n32",
+    "card_type": "number",
+    "label": "32",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n35_addsub",
+    "entity_id": "n35",
+    "card_type": "addsub",
+    "label": "28 + 7",
+    "label_script": "latin",
+    "initial_letter": "2",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n35_muldiv",
+    "entity_id": "n35",
+    "card_type": "muldiv",
+    "label": "70 ÷ 2",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n35_number",
+    "entity_id": "n35",
+    "card_type": "number",
+    "label": "35",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n36_addsub",
+    "entity_id": "n36",
+    "card_type": "addsub",
+    "label": "40 - 4",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n36_muldiv",
+    "entity_id": "n36",
+    "card_type": "muldiv",
+    "label": "6 × 6",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n36_number",
+    "entity_id": "n36",
+    "card_type": "number",
+    "label": "36",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n42_addsub",
+    "entity_id": "n42",
+    "card_type": "addsub",
+    "label": "35 + 7",
+    "label_script": "latin",
+    "initial_letter": "3",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n42_muldiv",
+    "entity_id": "n42",
+    "card_type": "muldiv",
+    "label": "6 × 7",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n42_number",
+    "entity_id": "n42",
+    "card_type": "number",
+    "label": "42",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n48_addsub",
+    "entity_id": "n48",
+    "card_type": "addsub",
+    "label": "56 - 8",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n48_muldiv",
+    "entity_id": "n48",
+    "card_type": "muldiv",
+    "label": "6 × 8",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n48_number",
+    "entity_id": "n48",
+    "card_type": "number",
+    "label": "48",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n49_addsub",
+    "entity_id": "n49",
+    "card_type": "addsub",
+    "label": "41 + 8",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n49_muldiv",
+    "entity_id": "n49",
+    "card_type": "muldiv",
+    "label": "7 × 7",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n49_number",
+    "entity_id": "n49",
+    "card_type": "number",
+    "label": "49",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n54_addsub",
+    "entity_id": "n54",
+    "card_type": "addsub",
+    "label": "60 - 6",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n54_muldiv",
+    "entity_id": "n54",
+    "card_type": "muldiv",
+    "label": "6 × 9",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n54_number",
+    "entity_id": "n54",
+    "card_type": "number",
+    "label": "54",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n56_addsub",
+    "entity_id": "n56",
+    "card_type": "addsub",
+    "label": "48 + 8",
+    "label_script": "latin",
+    "initial_letter": "4",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n56_muldiv",
+    "entity_id": "n56",
+    "card_type": "muldiv",
+    "label": "7 × 8",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n56_number",
+    "entity_id": "n56",
+    "card_type": "number",
+    "label": "56",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n63_addsub",
+    "entity_id": "n63",
+    "card_type": "addsub",
+    "label": "70 - 7",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n63_muldiv",
+    "entity_id": "n63",
+    "card_type": "muldiv",
+    "label": "7 × 9",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n63_number",
+    "entity_id": "n63",
+    "card_type": "number",
+    "label": "63",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n64_addsub",
+    "entity_id": "n64",
+    "card_type": "addsub",
+    "label": "55 + 9",
+    "label_script": "latin",
+    "initial_letter": "5",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n64_muldiv",
+    "entity_id": "n64",
+    "card_type": "muldiv",
+    "label": "8 × 8",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n64_number",
+    "entity_id": "n64",
+    "card_type": "number",
+    "label": "64",
+    "label_script": "latin",
+    "initial_letter": "6",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n72_addsub",
+    "entity_id": "n72",
+    "card_type": "addsub",
+    "label": "81 - 9",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n72_muldiv",
+    "entity_id": "n72",
+    "card_type": "muldiv",
+    "label": "8 × 9",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n72_number",
+    "entity_id": "n72",
+    "card_type": "number",
+    "label": "72",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n81_addsub",
+    "entity_id": "n81",
+    "card_type": "addsub",
+    "label": "72 + 9",
+    "label_script": "latin",
+    "initial_letter": "7",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n81_muldiv",
+    "entity_id": "n81",
+    "card_type": "muldiv",
+    "label": "9 × 9",
+    "label_script": "latin",
+    "initial_letter": "9",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  },
+  {
+    "card_id": "n81_number",
+    "entity_id": "n81",
+    "card_type": "number",
+    "label": "81",
+    "label_script": "latin",
+    "initial_letter": "8",
+    "romanisation_source": "standard_english",
+    "mode_tags": [
+      "shared_entity"
+    ]
+  }
+]
